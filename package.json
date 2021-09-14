@@ -8,8 +8,18 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.21.4",
+    "constate": "^3.3.0",
     "next": "11.1.0",
+    "next-compose-plugins": "^2.2.1",
+    "next-optimized-images": "^3.0.0-canary.10",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-burger-menu": "^3.0.6",
+    "react-dom": "17.0.2",
+    "react-ga": "^3.3.0",
+    "react-modal": "^3.14.3",
+    "react-toastify": "^8.0.2",
+    "styled-components": "^5.3.1",
+    "styled-normalize": "^8.0.7"
   }
 }
