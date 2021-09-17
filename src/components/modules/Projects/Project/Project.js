@@ -17,6 +17,8 @@ import Vision from "./Vision";
 import Role from "./Role/Role";
 import Description from "./Description/Description";
 import Milestones from "./Milestones";
+import JoinSupport from "./JoinSupport";
+import HelpBuild from "./HelpBuild";
 
 const Project = ({ project, theme }) => {
   const router = useRouter();
@@ -32,6 +34,8 @@ const Project = ({ project, theme }) => {
       <Description />
       <Role />
       <Milestones data={project?.board?.ProjectMilestone} />
+      <JoinSupport/>
+      <HelpBuild/>
       <Team />
     </Wrapper>
   );
