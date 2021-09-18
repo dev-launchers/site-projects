@@ -3,38 +3,26 @@ import arrow from './images/arrow.svg'
 
 export const Wrapper = styled.div`
   color: ${({ theme }) => theme.colors.NEUTRAL_2};
-  background-color: ${({ theme }) => theme.colors.NEUTRAL_1};
   
   /* Rectangle 926 */
-  width: 315px;
-  height: 111px;
+  /* width: 315px; */
+  /* height: 111px; */
 
   background: #494949;
   border-radius: 5px;
-
-  @media (orientation: portrait) {
-    span {
-      font-size: 1.2rem;
-    }
-  }
 `
 export const TitleFlex = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   column-gap: 10%;
   height: 35%;
-  margin: 0;
   padding-left: 10px;
 `
 export const Title = styled.h3`
   height: 30px;
-  left: 813px;
-  top: 3339px;
 
   font-family: Abel;
-  font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 142.4%;
@@ -43,11 +31,7 @@ export const Title = styled.h3`
 `
 
 export const SubHeading = styled.h5`
-  width: 174px;
-  height: 30px;
-
   font-family: Abel;
-  font-style: normal;
   font-weight: normal;
   font-size: 22px;
   line-height: 142.4%;
@@ -55,10 +39,7 @@ export const SubHeading = styled.h5`
   
   color: #FCFCFC;
 
-  margin: 0;
-
-  position: relative;
-  left: 10px;
+  margin: 0 0 0 10px;
 `
 
 export const Button = styled.button`
@@ -75,9 +56,6 @@ export const ButtonText = styled.div`
   align-items: center;
   column-gap: 10px;
   padding-left: 10px;
-
-  width: 89px;
-  height: 19px;
 
   font-family: Abel;
   font-style: normal;

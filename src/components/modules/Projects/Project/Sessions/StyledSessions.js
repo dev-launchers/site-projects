@@ -50,7 +50,7 @@ export const Descript = styled.div`
   align-items: center;
 
   color: #fcfcfc;
-  margin: 0;
+  margin-bottom: 1rem;
 `;
 
 export const Title = styled.div`
