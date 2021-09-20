@@ -17,6 +17,8 @@ import Vision from "./Vision";
 import Role from "./Role/Role";
 import Description from "./Description/Description";
 import Milestones from "./Milestones";
+import JoinSupport from "./JoinSupport";
+import HelpBuild from "./HelpBuild";
 import Sessions from "./Sessions";
 
 const Project = ({ project, theme }) => {
@@ -36,6 +38,8 @@ const Project = ({ project, theme }) => {
       />
       <Role data={project.openPositions} />
       <Milestones data={project?.board?.ProjectMilestone} />
+      <JoinSupport/>
+      <HelpBuild/>
       <Sessions calendarId={project.calendarId} />
       <Team data={project.team} />
     </Wrapper>
