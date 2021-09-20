@@ -14,12 +14,12 @@ jobs:
           # Number of commits to fetch. 0 indicates all history for all branches and tags.
           fetch-depth: 0
       - name: Docker meta
-        id: docker_meta
-        uses: crazy-max/ghaction-docker-meta@v1
+        id: meta
+        uses: docker/metadata-action@v3
         with:
           images: devlaunchers/site-projects # list of Docker images to use as base name for tags
-          tag-semver: |
-            {{version}}
+          tags: |
+            type=semver,pattern={{version}}
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
