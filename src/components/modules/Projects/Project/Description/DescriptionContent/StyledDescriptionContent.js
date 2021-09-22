@@ -19,9 +19,6 @@ export const ImageHolder = styled.img`
   width: 14rem;
   height: 11.25rem;
   border-radius: 10px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 `;
 
 export const Conatiner = styled.div`
