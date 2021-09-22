@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: site-projects
+  name: site-projects
+  labels:
+    app: site-projects
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: site-projects
+  template:
+    metadata:
+      labels:
+        app: site-projects
+    spec:
+      containers:
+      - name: site-projects
+        image: devlaunchers/site-projects:latest
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: 64m
+            memory: 64Mi
+          requests:
+            cpu: 32m
+            memory: 32Mi
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 120
+          periodSeconds: 10
+          timeoutSeconds: 10
+          failureThreshold: 5
