@@ -29,7 +29,7 @@ const Project = ({ project, theme }) => {
       <HeroSection />
       <Tags />
       <Vision />
-      <Description />
+      <Description description={project?.description} images={project?.Images}/>
       <Role data={project?.openPositions}/>
       <Milestones data={project?.board?.ProjectMilestone} />
       <Team />
