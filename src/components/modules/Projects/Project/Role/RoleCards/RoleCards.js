@@ -18,6 +18,7 @@ const truncateText = (text, truncateAt, replaceWith) => {
 const RoleCards = ({ data }) => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [selectedRole, setSelectedRole] = useState({});
+  
 
   function openModal() {
     setIsOpen(true);
@@ -28,8 +29,9 @@ const RoleCards = ({ data }) => {
   }
   return (
     <Wrapper>
-      {data.map((role, roleIndex) => (
-        <Cards key={roleIndex}>
+      {data.filter(({isHidden})=> !isHidden).map((role) => (
+  
+        <Cards key={role.id}>
           <Container>
             <Title>{role.title}</Title>
             <Subtitle style={{ padding: ".5rem 0" }}>
