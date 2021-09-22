@@ -30,7 +30,7 @@ const Project = ({ project, theme }) => {
       <Tags />
       <Vision />
       <Description />
-      <Role />
+      <Role data={project?.openPositions}/>
       <Milestones data={project?.board?.ProjectMilestone} />
       <Team />
     </Wrapper>
