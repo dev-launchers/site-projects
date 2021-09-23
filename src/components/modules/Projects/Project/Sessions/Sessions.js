@@ -6,12 +6,12 @@ import PercentageBar from './components/PercentageBar'
 import { Wrapper, FlexBoxTitleWrapper, FlexBoxVerticalWrapper, Descript, Title } from './StyledSessions'
 
 // import { env } from "../../../../../utils/EnvironmentVariables";
-const Sessions = () => (
+const Sessions = ({Title}) => (
   <>
     
     <Wrapper>
       <FlexBoxTitleWrapper>
-        <Title>Sessions</Title>
+        {Title && <Title>{Title}</Title>}
         <Descript>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis eleifend nunc, non accumsan lorem. Nulla at rutrum odio, quis laoreet sem. Aliquam venenatis, ipsum eu consequat ultrices, dui dui posuere urna.
         </Descript>

@@ -5,6 +5,7 @@ import { withTheme } from "styled-components";
 import { useRouter } from "next/router";
 import Button from "../../../common/Button";
 
+
 import {
   Wrapper,
   CategoriesContainer,
@@ -14,6 +15,7 @@ import ProjectHero from "./ProjectHero";
 import OpenPositions from "./OpenPositions";
 import Team from "./Team";
 import SignUpButton from "./SignUpButton";
+import Sessions from "./Sessions/Sessions";
 
 // eslint-disable-next-line no-unused-vars
 const truncateText = (text, truncateAt, replaceWith) => {
