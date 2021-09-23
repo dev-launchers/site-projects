@@ -9,7 +9,7 @@ import {
 } from "./StyledRoleCards";
 // import RoleContent from "../RoleContent/RoleContent";
 import { CardButton } from "../Button/StyledButton";
-import RoleModal from "../RoleModal /RoleModal";
+import RoleModal from "../RoleModal";
 
 const truncateText = (text, truncateAt, replaceWith) => {
   if (text.length <= truncateAt) return text;
