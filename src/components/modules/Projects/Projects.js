@@ -12,6 +12,7 @@ const Projects = ({ projects }) => {
   const options = {
     includeScore: true,
     keys: ["keywords.keyword"],
+    threshold: 0.3
   };
 
   const fuse = new Fuse(projects, options);
