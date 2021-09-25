@@ -7,7 +7,8 @@ import PercentageBar from "./components/PercentageBar";
 import { FlexBoxVerticalWrapper, Descript } from "./StyledSessions";
 
 // import { env } from "../../../../../utils/EnvironmentVariables";
-const Sessions = ({ calendarId }) => {
+const Sessions = ({ project, calendarId }) => {
+  console.log(project)
   React.useEffect(() => {
     axios
       .get(

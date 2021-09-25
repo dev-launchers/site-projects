@@ -40,7 +40,7 @@ const Project = ({ project, theme }) => {
       <Milestones data={project?.board?.ProjectMilestone} />
       <JoinSupport/>
       <HelpBuild/>
-      <Sessions calendarId={project.calendarId} />
+      <Sessions project={project} calendarId={project.calendarId} />
       <Team data={project.team} />
     </Wrapper>
   );
