@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: site-projects
+  name: site-projects
+  labels:
+    app: site-projects
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: site-projects
+  template:
+    metadata:
+      labels:
+        app: site-projects
+    spec:
+      containers:
+      - name: site-projects
+        image: devlaunchers/site-projects:latest
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: 256m
+            memory: 256Mi
+          requests:
+            cpu: 128m
+            memory: 128Mi
