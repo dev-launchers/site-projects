@@ -19,8 +19,10 @@
     "react-burger-menu": "^3.0.6",
     "react-dom": "17.0.2",
     "react-ga": "^3.3.0",
+    "react-markdown": "^7.0.1",
     "react-modal": "^3.14.3",
     "react-toastify": "^8.0.2",
+    "remark-gfm": "^2.0.0",
     "styled-components": "^5.3.1",
     "styled-normalize": "^8.0.7"
   },

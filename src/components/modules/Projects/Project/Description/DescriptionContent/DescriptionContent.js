@@ -6,10 +6,13 @@ import {
   Strip,
 } from "./StyledDescriptionContent";
 
+import ReactMarkdown from 'react-markdown';
+
+
 const DescriptionContent = ({ data }) => {
   const { description, images } = data;
   return (<>
-    <Paragrapgh style={{ marginBottom: "1.5625rem" }}>{description}</Paragrapgh>
+    <Paragrapgh style={{ marginBottom: "1.5625rem" }}> <ReactMarkdown children={description}/> </Paragrapgh>
     <Strip>
       <Conatiner>
         <FlexSection>
