@@ -18,7 +18,7 @@ export const Wrapper = Styled.div`
 `;
 
 export const TaskGroup = Styled.div`
-  flex: 1;
+   flex: 1; 
   font-family: ${theme.fonts.headline};
   margin: 1rem 0;
   padding: 5px;
@@ -29,7 +29,7 @@ export const Title = Styled.div`
   font-size: 2rem;
   font-weight: 600;
   margin: 0.5rem;
-  flex: 1;
+  flex: 1; 
 `;
 
 export const Description = Styled.p`
@@ -37,20 +37,4 @@ export const Description = Styled.p`
   font-weight: 100;
   word-break: break-word;
   white-space: normal;
-`;
-
-export const Task = Styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 11rem;
-  margin: 1rem 0.5rem;
-  flex: 1 1 1%;
-  border-radius: 16px;
-  border: 5px solid;
-  background-color: ${(props) =>
-    props.primary ? theme.colors.ACCENT_3 : theme.colors.ACCENT_6};
-  color: white;
-  border-color: ${(props) =>
-    props.primary ? theme.colors.ACCENT_3 : theme.colors.ACCENT_6};
 `;
