@@ -6,7 +6,7 @@ export const Paragrapgh = styled.p`
   margin-bottom: 1.5625rem;
 `;
 
-export const GridSection = styled.div`
+export const FlexSection = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 2.25rem;
@@ -15,8 +15,7 @@ export const GridSection = styled.div`
 
 export const ImageHolder = styled.img`
   max-width: 100%;
-  height: auto;
-  width: 14rem;
+  width: auto;
   height: 11.25rem;
   border-radius: 10px;
 `;

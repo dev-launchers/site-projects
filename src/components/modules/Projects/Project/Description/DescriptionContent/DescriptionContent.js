@@ -1,6 +1,6 @@
 import {
   Paragrapgh,
-  GridSection,
+  FlexSection,
   ImageHolder,
   Conatiner,
   Strip,
@@ -12,11 +12,11 @@ const DescriptionContent = ({ data }) => {
     <Paragrapgh style={{ marginBottom: "1.5625rem" }}>{description}</Paragrapgh>
     <Strip>
       <Conatiner>
-        <GridSection>
+        <FlexSection>
           {images.map((image) => (
-            <ImageHolder src={image.image[0].url}/>
+            <ImageHolder  key={image.image[0].id} src={image.image[0].url}/>
           ))}
-        </GridSection>
+        </FlexSection>
       </Conatiner>
     </Strip>
   </>)

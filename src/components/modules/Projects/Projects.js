@@ -7,19 +7,20 @@ import SearchBar from "./Project/SearchBar";
 import Fuse from "fuse.js";
 
 const Projects = ({ projects }) => {
-  const [searchResult, setSearchResult] = useState(projects);
+  const [searchValue, setSearchValue] = useState('')
 
   const options = {
     includeScore: true,
     keys: ["keywords.keyword"],
-    threshold: 0.3
+    threshold: 0.3,
+    ignoreFieldNorm: true
   };
 
   const fuse = new Fuse(projects, options);
+  const searchResult = fuse.search(searchValue).map(({ item }) => item);
 
   const searchProject = (searchQuery) => {
-    const result = fuse.search(searchQuery).map(({ item }) => item);
-    setSearchResult(result);
+    setSearchValue(searchQuery)
   };
 
   const router = useRouter();
@@ -28,7 +29,7 @@ const Projects = ({ projects }) => {
     return <div>Loading...</div>;
   }
 
-  const items = searchResult.length ? searchResult : projects
+  const items = searchValue ? searchResult : projects
 
   return (
     <div
@@ -42,6 +43,7 @@ const Projects = ({ projects }) => {
       <div
         style={{
           display: "flex",
+          flexWrap:'wrap',
           justifyContent: "space-between",
           alignItems: "center",
         }}
