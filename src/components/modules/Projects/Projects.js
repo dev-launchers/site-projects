@@ -2,15 +2,35 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Card from "../../common/Card";
 import { Layout, ProjectContainer } from "./StyledProjects";
+//Added for pagination
+import { useState } from "react";
+import Pagination from "./Pagination";
 
 const Projects = ({ projects }) => {
-  const router = useRouter();
+  // Set current page and projects per page value
+  const [currentPage, setCurrentPage] = useState(1);
+  const [projsPerPage] = useState(6);
+    const router = useRouter();
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
-
+  // Added for Project pagination
+  const indexOfLastProj = currentPage * projsPerPage;
+  const indexOfFirstProj = indexOfLastProj - projsPerPage;
+  const currentProjects = projects.slice(indexOfFirstProj, indexOfLastProj);
+  const navigatePage = (pageNumber) => setCurrentPage(pageNumber)
+  const prevPage = (pageNumbers) => {
+    if (pageNumbers.includes(currentPage - 1)) {
+      setCurrentPage(currentPage - 1);
+          }
+  };
+  const nextPage = (pageNumbers) => {
+    if (pageNumbers.includes(currentPage + 1)) {
+      setCurrentPage(currentPage + 1);
+          }
+  };
   return (
-    <div
+    <div id='pagination'
       style={{
         width: "90%",
         marginLeft: "auto",
@@ -26,7 +46,7 @@ const Projects = ({ projects }) => {
         while learning valuable skills and meeting awesome people!
       </div>
       <Layout>
-        {projects.map((project, i) => (
+          {currentProjects.map((project, i) => (
           <ProjectContainer key={i}>
             <Card
               isLinkingInside
@@ -53,8 +73,16 @@ const Projects = ({ projects }) => {
             />
           </ProjectContainer>
         ))}
-      </Layout>
-    </div>
+      </Layout>  
+      <Pagination 
+        itemsPerPage={projsPerPage}
+        totalNoOfItems={projects.length}
+        navigatePage={navigatePage}
+        prevPage={prevPage}
+        activePage={currentPage}
+        nextPage={nextPage}
+        />
+      </div>
   );
 };
 export default Projects;
