@@ -41,7 +41,7 @@ const RoleCards = ({ data }) => {
                 {truncateText(role.description, 255, "...")}
               </Subtitle>
               <FlexBox>
-                <CardButton><ReactMarkdown>Apply Now</ReactMarkdown></CardButton>
+                <CardButton>Apply Now</CardButton>
                 <CardButton
                   onClick={() => {
                     openModal();
