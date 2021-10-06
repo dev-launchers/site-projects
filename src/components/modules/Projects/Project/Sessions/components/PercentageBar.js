@@ -16,23 +16,28 @@ import {
 } from "./StyledSessions";
 
 // import { env } from "../../../../../utils/EnvironmentVariables";
-const PercentageBar = (props) => (
+const PercentageBar = ({ percentage, apointmentTime, link, title }) => (
   <Wrapper>
     <TitleFlex>
-      <Title>Happening now!</Title>
-      <Button>
-        <ButtonText>
-          <Img />
-          <p>Join</p>
-        </ButtonText>
-      </Button>
+      <Title>{apointmentTime}</Title>
     </TitleFlex>
-    <SubHeading>General Coworking</SubHeading>
+    <SubHeading>{title}</SubHeading>
+    <Button onClick={(e) => {
+      e.preventDefault()
+      window.location.href = link
+    }}>
+      <ButtonText>
+        <Img />
+        <p>Join</p>
+      </ButtonText>
+    </Button>
+    {/* taking this out untill later implementation
     <PercentageProgress
-      data-text={`${props.percentage}%`}
-      value={props.percentage}
+      data-text={`${percentage}%`}
+      value={percentage}
       max="100"
     />
+    */}
   </Wrapper>
 );
 

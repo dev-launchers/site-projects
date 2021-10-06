@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   color: ${({ theme }) => theme.colors.NEUTRAL_2};
   
   /* Rectangle 926 */
-  /* width: 315px; */
+  width: 315px;
   /* height: 111px; */
 
   background: #494949;
@@ -13,15 +13,15 @@ export const Wrapper = styled.div`
 `
 export const TitleFlex = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-center;
   align-items: center;
   column-gap: 10%;
   height: 35%;
   padding-left: 10px;
 `
 export const Title = styled.h3`
-  height: 30px;
-
+  width: 220px;
+  overflow: hidden;
   font-family: Abel;
   font-weight: normal;
   font-size: 24px;
