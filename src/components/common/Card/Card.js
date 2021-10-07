@@ -36,7 +36,8 @@ import Attachments from "./Attachments";
  */
 export default function Card(props) {
   const router = useRouter();
-
+  console.log("In cards")
+console.log(router)
   return (
     <Container
       style={props.style}

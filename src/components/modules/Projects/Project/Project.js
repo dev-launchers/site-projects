@@ -35,6 +35,8 @@ const Project = ({ project, theme }) => {
       <Description
         descriptionData={project.description}
         images={project.Images}
+        subprojects = {project.subProjects}
+        projectSlug={project.slug}
       />
       <Role data={project.openPositions} />
       <Milestones data={project?.board?.ProjectMilestone} />

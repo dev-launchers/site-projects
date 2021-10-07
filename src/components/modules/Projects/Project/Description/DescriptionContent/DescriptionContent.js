@@ -5,8 +5,8 @@ import {
   Conatiner,
   Strip,
 } from "./StyledDescriptionContent";
-
-const DescriptionContent = ({ descriptionData, images }) => (
+import SubProjects from "../../SubProjects/SubProjects";
+const DescriptionContent = ({ descriptionData, images,subprojects,projectSlug }) => (
   <>
     <Paragrapgh style={{ marginBottom: "1.5625rem" }}>
       {descriptionData}
@@ -32,11 +32,14 @@ const DescriptionContent = ({ descriptionData, images }) => (
       briefed on the overall status of the project ...
     </Paragrapgh> */}
     <Strip>
-      <Conatiner>
-        <GridSection>
-          {images.map((image) => <ImageHolder key={image.id} src={image.image[0].url} />)}
-        </GridSection>
-      </Conatiner>
+            {/* <Conatiner>
+       <GridSection> 
+          {images.map((image) => <ImageHolder key={image.id} src={image.image[0].url} />)} 
+          
+         </GridSection> 
+       
+      </Conatiner> */}
+         <SubProjects subprojects = {subprojects} projectSlug={projectSlug}/>
     </Strip>
   </>
 );

@@ -7,6 +7,8 @@ import { useState } from "react";
 import Pagination from "./Pagination";
 
 const Projects = ({ projects }) => {
+ 
+  // projects.filter(project => project.subProjects.length>0).map(project=>(project.subProjects.map(subProj=>(console.log("subProj="+project.slug)))))
   // Set current page and projects per page value
   const [currentPage, setCurrentPage] = useState(1);
   const [projsPerPage] = useState(6);

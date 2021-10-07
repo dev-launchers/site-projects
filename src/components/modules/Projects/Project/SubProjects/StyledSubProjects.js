@@ -7,7 +7,10 @@ export const Layout = styled.div`
   place-content: center;
   margin: 2em 0;
   row-gap: 2rem;
- `;
+  width: 100%;
+  height: 100%;
+  
+`;
 
 export const ProjectContainer = styled.div`
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -15,7 +18,8 @@ export const ProjectContainer = styled.div`
   width: 100%;
   height: 100%;
   max-width: 530px;
- 
+
+   color:black;
   @media (orientation: portrait) {
     width: 90vw;
   }

@@ -34,7 +34,7 @@ export const Strip = styled.div`
   background-color: #494949;
   min-height: 15.3125rem;
   margin: 0 -1.875rem;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 `;

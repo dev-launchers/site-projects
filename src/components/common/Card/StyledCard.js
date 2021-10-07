@@ -39,7 +39,7 @@ export const ImageHolder = styled.div`
   a {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 26vh;
   }
 `;
 export const TagsContainer = styled.div`
@@ -47,7 +47,10 @@ export const TagsContainer = styled.div`
   position: absolute;
   top: 3%;
   right: 1%;
-  display: grid;
+   display:flex;
+  flex-direction:column;
+  position: absolute;
+  overflow: auto;
   gap: 0.5rem;
 `;
 export const Image = styled.div`
