@@ -60,6 +60,7 @@ const Sessions = ({ project, calendarId }) => {
                     date={date}
                   />)
               })}
+              {events.length === 0 && <h4>There are no meetings scheduled currently</h4>}
             </FlexBoxVerticalWrapper>
           </>
         }
