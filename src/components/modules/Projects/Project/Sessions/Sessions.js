@@ -25,7 +25,7 @@ const Sessions = ({ project, calendarId }) => {
       .then((res) => {
         let items = [...res.data.items]
         let notCancelled = items.filter(item => item.end !== undefined)
-        let now = DateTime.now().minus({ days: 1 })
+        let now = DateTime.now().minus({ days: 6 })
         let currentEvents = notCancelled.filter(item => DateTime.fromISO(item.start.dateTime) > now)
         setEvents([...currentEvents])
         console.log(events)
@@ -49,7 +49,8 @@ const Sessions = ({ project, calendarId }) => {
                 const startTime = DateTime.fromISO(event.start.dateTime).toLocaleString(DateTime.TIME_SIMPLE)
                 const endTime = DateTime.fromISO(event.end.dateTime).toLocaleString(DateTime.TIME_SIMPLE)
                 const date = DateTime.fromISO(event.start.dateTime).toLocaleString()
-                const time = `${startTime}-${endTime}`
+                const timeZone = DateTime.fromISO(event.start.dateTime).zoneName
+                const time = `${startTime}-${endTime} ${timeZone}`
 
                 return (
                   <PercentageBar
