@@ -10,6 +10,9 @@ export const Wrapper = styled.div`
 
   background: #494949;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 export const TitleFlex = styled.div`
   display: flex;
@@ -18,16 +21,18 @@ export const TitleFlex = styled.div`
   column-gap: 10%;
   height: 35%;
   padding-left: 10px;
+  background-color: pink;
 `
 export const Title = styled.h3`
   width: 220px;
   overflow: hidden;
   font-family: Abel;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 142.4%;
   /* or 34px */
   color: #FCFCFC;
+  align-content: center;
 `
 
 export const SubHeading = styled.h5`
@@ -39,7 +44,7 @@ export const SubHeading = styled.h5`
   
   color: #FCFCFC;
 
-  margin: 0 0 0 10px;
+  margin: 0 0 0 0px;
 `
 
 export const Button = styled.button`
@@ -48,7 +53,7 @@ export const Button = styled.button`
 
   background: #FCFCFC;
   border-radius: 2px;
-  margin: 0;
+  margin: 0px auto;
 `
 export const ButtonText = styled.div`
   display: flex;

@@ -25,7 +25,9 @@ const Sessions = ({ project, calendarId }) => {
       .then((res) => {
         let items = [...res.data.items]
         let notCancelled = items.filter(item => item.end !== undefined)
-        setEvents([...notCancelled])
+        let now = DateTime.now().minus({ days: 1 })
+        let currentEvents = notCancelled.filter(item => DateTime.fromISO(item.start.dateTime) > now)
+        setEvents([...currentEvents])
         console.log(events)
       })
   }, [])
@@ -39,20 +41,23 @@ const Sessions = ({ project, calendarId }) => {
         Content={
           <>
             <Descript>
-              oh no
+              Join in on meetings going on right now or see what meetings are coming up.
             </Descript>
 
             <FlexBoxVerticalWrapper>
               {events.length > 0 && events.map((event, index) => {
-                let time = DateTime.fromISO(event.start.dateTime, {
-                  zone: event.start.timeZone
-                }).setZone()
+                const startTime = DateTime.fromISO(event.start.dateTime).toLocaleString(DateTime.TIME_SIMPLE)
+                const endTime = DateTime.fromISO(event.end.dateTime).toLocaleString(DateTime.TIME_SIMPLE)
+                const date = DateTime.fromISO(event.start.dateTime).toLocaleString()
+                const time = `${startTime}-${endTime}`
+
                 return (
                   <PercentageBar
-                    key={`${event.summary}${index}`}
+                    key={`${event.summary}${index} ${date}`}
                     apointmentTime={time}
                     title={event.summary}
                     link={event.htmlLink}
+                    date={date}
                   />)
               })}
             </FlexBoxVerticalWrapper>

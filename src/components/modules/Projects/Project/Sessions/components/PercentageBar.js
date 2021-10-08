@@ -16,11 +16,10 @@ import {
 } from "./StyledSessions";
 
 // import { env } from "../../../../../utils/EnvironmentVariables";
-const PercentageBar = ({ percentage, apointmentTime, link, title }) => (
+const PercentageBar = ({ percentage, apointmentTime, link, title, date }) => (
   <Wrapper>
-    <TitleFlex>
-      <Title>{apointmentTime}</Title>
-    </TitleFlex>
+    <Title>{apointmentTime}</Title>
+    <Title>{date}</Title>
     <SubHeading>{title}</SubHeading>
     <Button onClick={(e) => {
       e.preventDefault()
