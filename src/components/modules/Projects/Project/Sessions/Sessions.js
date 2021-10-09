@@ -51,13 +51,14 @@ const Sessions = ({ project, calendarId }) => {
                 const date = DateTime.fromISO(event.start.dateTime).toLocaleString()
                 const timeZone = DateTime.fromISO(event.start.dateTime).zoneName
                 const time = `${startTime}-${endTime} ${timeZone}`
+                console.log(event)
 
                 return (
                   <PercentageBar
                     key={`${event.summary}${index} ${date}`}
                     apointmentTime={time}
                     title={event.summary}
-                    link={event.htmlLink}
+                    link={event.hangoutLink}
                     date={date}
                   />)
               })}
