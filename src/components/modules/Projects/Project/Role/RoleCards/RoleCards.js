@@ -11,58 +11,74 @@ import {
 import { CardButton } from "../Button/StyledButton";
 import RoleModal from "../RoleModal";
 
+
 const truncateText = (text, truncateAt, replaceWith) => {
   if (text.length <= truncateAt) return <ReactMarkdown>{text}</ReactMarkdown>
   return <ReactMarkdown>{text.slice(0, truncateAt) + replaceWith}</ReactMarkdown>
 };
 const RoleCards = ({ data }) => {
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedRole, setSelectedRole] = useState({});
-  
+  const [formIsOpen, setFormIsOpen] = useState(false);
 
   function openModal() {
-    setIsOpen(true);
+    setModalIsOpen(true);
   }
 
   function closeModal() {
-    setIsOpen(false);
+    setModalIsOpen(false);
+  }
+
+  function openForm() {
+    setFormIsOpen(true)
+    console.log("Form open");
   }
   return (
     <Wrapper>
-      {data
-        .filter(({ isHidden }) => !isHidden)
-        .map((role) => (
-          <Cards key={role.id}>
-            <Container>
-              <Title>
-                <ReactMarkdown>{role.title}</ReactMarkdown>
-              </Title>
-
-              <Subtitle style={{ padding: ".5rem 0" }}>
-                {truncateText(role.description, 255, "...")}
-              </Subtitle>
-              <FlexBox>
-                <CardButton>Apply Now</CardButton>
-                <CardButton
-                  onClick={() => {
-                    openModal();
-                    setSelectedRole(role);
-                  }}
-                  fontColor
-                  bgColor
-                  border
-                >
-                  Read More
-                </CardButton>
-              </FlexBox>
-              <RoleModal
-                onRequestClose={closeModal}
-                isOpen={modalIsOpen}
-                role={selectedRole}
-              />
-            </Container>
-          </Cards>
-        ))}
+      {data.map((role, roleIndex) => (
+        <Cards key={roleIndex}>
+          <Container>
+            <Title>{role.title}</Title>
+            <Subtitle style={{ padding: ".5rem 0" }}>
+              {truncateText(role.description, 255, "...")}
+            </Subtitle>
+            {/* <RoleContent roleContent={role.expectations} />
+            <Subtitle>Prerequisite skills</Subtitle>
+            <RoleContent roleContent={role.skills} /> */}
+            <FlexBox>
+              <CardButton
+                onClick={() => {
+                  openModal();
+                  openForm();
+                  setSelectedRole(role);
+                }}
+              >
+                Apply Now
+              </CardButton>
+              <CardButton
+                onClick={() => {
+                  openModal();
+                  setSelectedRole(role);
+                  setFormIsOpen(false)
+                }}
+                fontColor
+                bgColor
+                border
+              >
+                Read More
+              </CardButton>
+            </FlexBox>
+            <RoleModal
+              onRequestClose={closeModal}
+              isOpen={modalIsOpen}
+              role={selectedRole}
+              isFormOpen={formIsOpen}
+              onOpenForm={openForm}
+      
+            />
+          </Container>
+        </Cards>
+      ))}
     </Wrapper>
   );
 };
