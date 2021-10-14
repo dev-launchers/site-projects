@@ -20,32 +20,64 @@ import Milestones from "./Milestones";
 import JoinSupport from "./JoinSupport";
 import HelpBuild from "./HelpBuild";
 import Sessions from "./Sessions";
+import SubProjects from "./SubProjects/SubProjects";
 
-const Project = ({ project, theme }) => {
+const Project = ({ project,subProjects, theme }) => {
   const router = useRouter();
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
-  return (
-    <Wrapper>
-      <div id="background" />
-      <HeroSection />
-      <Tags />
-      <Vision />
-      <Description
-        descriptionData={project.description}
-        images={project.Images}
-      />
-      <Role data={project.openPositions} />
-      <Milestones data={project?.board?.ProjectMilestone} />
-      <JoinSupport/>
-      <HelpBuild/>
-      <Sessions calendarId={project.calendarId} />
-      <Team data={project.team} />
-    </Wrapper>
-  );
+   const { slug = [] } = router.query;
+   let isParentProject = true;
+    // Getting all subprojects under the parent and filter it to match with the requested subproject
+     let subProject ="";
+    if(slug.length=== 2){
+      const subProjectList= subProjects?.filter(subproj=> slug[1] === subproj.slug);
+      subProject=subProjectList[0];
+    }
+    // check if its for subproject rendering
+     if((subProject) && (slug.length==2)){
+      isParentProject= false;
+    }
+    // Rendering the components based on,parent project or subproject
+    if(isParentProject) {
+      return (
+        <Wrapper>
+        <div id="background" />
+        <HeroSection />
+        <Tags />
+        <Vision />
+        <Description
+          descriptionData={project.description}
+          images={project.Images}
+        />
+          <SubProjects subprojects = {project.subProjects} projSlug={project.slug}/>
+        <Role data={project.openPositions} />
+        <Milestones data={project?.board?.ProjectMilestone} />
+         <JoinSupport/>
+        <HelpBuild/>
+        <Sessions calendarId={project.calendarId} />
+        <Team data={project.team} />
+      </Wrapper>
+         
+    );
+  } else {
+      return (
+        <Wrapper>
+        <div id="background" />
+        <HeroSection />
+        <Tags />
+        <Vision />
+        <Description
+          descriptionData={subProject.description}
+          images={subProject.Images}
+        />
+         <JoinSupport/>
+        <HelpBuild/>
+        </Wrapper>
+      );
+  }
 };
-
 export default withTheme(Project);
 
 // const Project = (props) => {

@@ -13,21 +13,29 @@ export const getStaticPaths = async () => {
         "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36",
     },
   });
+  // to catch all routes at build time
+ const paths=[]
+ data.forEach(project => 
+  {
+    paths.push({ params: { slug: [project.slug] } },)
+    project.subProjects.forEach(subproj=> {
+      paths.push( { params: { slug: [project.slug,subproj.slug] } },)
 
-  const paths = data.map((project) => ({
-    params: { slug: project.slug },
-  }));
+    })
+    
+  });
 
   return {
-    paths,
-    fallback: false,
+       paths,
+       fallback: false,
   };
 };
 
 export async function getStaticProps(context) {
-  const { slug } = context.params;
-  const { data: project } = await axios.get(
-    `${env().STRAPI_URL}/projects/${slug}`,
+ 
+    const { slug = [] } = context.params;
+      const { data: project } = await axios.get(
+    `${env().STRAPI_URL}/projects/${slug[0]}`,
     {
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -42,16 +50,19 @@ export async function getStaticProps(context) {
       notFound: true,
     };
   }
-
+  // Getting all subprojects under the parent
+  const subProjects = project?.subProjects
   return {
     props: {
       project,
+      subProjects,
     },
     revalidate: 20,
   };
 }
 
-const ProjectRoute = ({ project }) => {
+const ProjectRoute = ({ project,subProjects }) => {
+ 
   const heroImageFormats = project?.heroImage?.formats;
   const heroImage =
     heroImageFormats.large || heroImageFormats.medium || heroImageFormats.small;
@@ -65,7 +76,7 @@ const ProjectRoute = ({ project }) => {
         <meta property="og:type" content="website"></meta>
         <meta
           property="og:url"
-          content={`https://devlaunchers.com/projects/${project?.slug}`}
+          content={`https://devlaunchers.com/projects/${project?.slug[0]}`}
         ></meta>
         <meta property="og:image" content={heroImage?.url}></meta>
         <meta property="og:title" content={project?.title}></meta>
@@ -74,7 +85,7 @@ const ProjectRoute = ({ project }) => {
         <meta property="twitter:card" content="summary_large_image"></meta>
         <meta
           property="twitter:url"
-          content={`https://devlaunchers.com/projects/${project?.slug}`}
+          content={`https://devlaunchers.com/projects/${project?.slug[0]}`}
         ></meta>
         <meta property="twitter:title" content={project?.title}></meta>
         <meta
@@ -87,7 +98,7 @@ const ProjectRoute = ({ project }) => {
       </Head>
       <div>
         <Header />
-        <Project project={project || ""} />
+        <Project project={project || ""}  subProjects={subProjects || ""} />
         <Footer />
       </div>
     </>
