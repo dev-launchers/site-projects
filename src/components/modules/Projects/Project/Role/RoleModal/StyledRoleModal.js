@@ -26,6 +26,9 @@ export const Container = styled.div`
   max-width: 457px;
   margin: auto;
   position: relative;
+  @media (max-width: 924px){
+    margin:0;
+  }
 `;
 
 export const CloseModal = styled.button`

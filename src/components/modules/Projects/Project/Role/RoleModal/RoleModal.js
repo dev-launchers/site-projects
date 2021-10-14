@@ -9,7 +9,7 @@ import {
 } from "./StyledRoleModal";
 import { Title, FlexBox } from "../RoleCards/StyledRoleCards";
 import { CardButton } from "../Button/StyledButton";
-
+import ApplyForm from "../../ApplyForm/ApplyForm";
 const customStyles = {
   content: {
     top: "50%",
@@ -18,14 +18,14 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    maxWidth: "32.5rem",
+    maxWidth: "36.5rem",
     width: "80%",
     color: "#FCFCFC",
     backgroundColor: "#3C3B3C",
     padding: "0",
     display: "flex",
     flexDirection: "column",
-    // justifyContent: "space-between",
+
   },
   overlay: {
     zIndex: "5",
@@ -33,7 +33,7 @@ const customStyles = {
   },
 };
 
-const RoleModal = ({ role, isOpen, onRequestClose }) => {
+const RoleModal = ({ role, isOpen, onRequestClose, isFormOpen, onOpenForm }) => {
   const { title, description } = role;
   return (
     <Wrapper>
@@ -47,8 +47,11 @@ const RoleModal = ({ role, isOpen, onRequestClose }) => {
             <CloseModal onClick={onRequestClose}>X</CloseModal>
             <Title>{title}</Title>
           </ModalHeader>
-
-          <Description>{description}</Description>
+          {isFormOpen ? (
+            <ApplyForm />
+          ) : (
+            <Description>{description}</Description>
+          )}
         </Container>
         <ModalStrip>
           <FlexBox
@@ -58,8 +61,14 @@ const RoleModal = ({ role, isOpen, onRequestClose }) => {
               justifyContent: "space-around",
             }}
           >
-            <p>Is this role right for you?</p>
-            <CardButton style={{ fontFamily: "Abel" }}>Apply Now</CardButton>
+            {isFormOpen ? '' : (
+              <>
+                <p>Is this role right for you?</p>
+                <CardButton onClick={onOpenForm} style={{ fontFamily: "Abel" }}>
+                  Apply Now
+                </CardButton>
+              </>
+            )}
           </FlexBox>
         </ModalStrip>
       </Modal>

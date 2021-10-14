@@ -11,20 +11,27 @@ import {
 import { CardButton } from "../Button/StyledButton";
 import RoleModal from "../RoleModal";
 
+
 const truncateText = (text, truncateAt, replaceWith) => {
   if (text.length <= truncateAt) return text;
   return text.slice(0, truncateAt) + replaceWith;
 };
 const RoleCards = ({ data }) => {
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedRole, setSelectedRole] = useState({});
+  const [formIsOpen, setFormIsOpen] = useState(false);
 
   function openModal() {
-    setIsOpen(true);
+    setModalIsOpen(true);
   }
 
   function closeModal() {
-    setIsOpen(false);
+    setModalIsOpen(false);
+  }
+
+  function openForm() {
+    setFormIsOpen(true)
+    console.log("Form open");
   }
   return (
     <Wrapper>
@@ -39,11 +46,20 @@ const RoleCards = ({ data }) => {
             <Subtitle>Prerequisite skills</Subtitle>
             <RoleContent roleContent={role.skills} /> */}
             <FlexBox>
-              <CardButton>Apply Now</CardButton>
+              <CardButton
+                onClick={() => {
+                  openModal();
+                  openForm();
+                  setSelectedRole(role);
+                }}
+              >
+                Apply Now
+              </CardButton>
               <CardButton
                 onClick={() => {
                   openModal();
                   setSelectedRole(role);
+                  setFormIsOpen(false)
                 }}
                 fontColor
                 bgColor
@@ -56,6 +72,9 @@ const RoleCards = ({ data }) => {
               onRequestClose={closeModal}
               isOpen={modalIsOpen}
               role={selectedRole}
+              isFormOpen={formIsOpen}
+              onOpenForm={openForm}
+      
             />
           </Container>
         </Cards>
