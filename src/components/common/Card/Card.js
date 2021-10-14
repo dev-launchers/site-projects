@@ -36,7 +36,7 @@ import Attachments from "./Attachments";
  */
 export default function Card(props) {
   const router = useRouter();
-
+  
   return (
     <Container
       style={props.style}
@@ -61,7 +61,8 @@ export default function Card(props) {
             </TagsContainer>
           )}
           {props.isLinkingInside ? (
-            <Link href={`${router.pathname}/${props.cardData.href}`} passHref>
+              // <Link href={`${router.pathname}/${props.cardData.href}`} passHref>
+                <Link href={`/projects/${props.cardData.href}`} passHref>
               <a rel="noopener noreferrer">
                 <Image alt="" imageSrc={props.cardData.imageSrc} />
               </a>
@@ -81,7 +82,8 @@ export default function Card(props) {
           <CardTitle
             data={props.cardData}
             isLinkingInside={props.isLinkingInside}
-            pathname={router.pathname}
+            // pathname={router.pathname}
+            pathname="/projects"
           />
           {props.cardData.secondaryText && (
             <SecondaryText>{props.cardData.secondaryText}</SecondaryText>
