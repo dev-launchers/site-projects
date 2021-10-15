@@ -2,11 +2,9 @@ import React from "react";
 import { withTheme } from "styled-components";
 import {
   TeamContentBlock,
-  MembersContainer /* MemberImage */,
+  MembersContainer , MemberImage ,
 } from "./StyledTeam";
 import Section from "../Section";
-// import boyFrontImage from "../../../../../images/people-cutouts/boy-front.png?webp";
-
 const Team = ({ data }) => (
   <Section
     bgColor="#494949"
@@ -16,7 +14,7 @@ const Team = ({ data }) => (
         <div>
           <h4>Leaders</h4>
           <MembersContainer>
-            {data.leaders.map((leader) => (
+            {data.leaders?.map((leader) => (
               <div
                 style={{
                   display: "flex",
@@ -27,12 +25,11 @@ const Team = ({ data }) => (
               >
                 <span>
                   <a href="#">
-                    {/* <MemberImage
-                        // src={boyFrontImage}
-                        // src={leader.image}
-                        src="https://pbs.twimg.com/profile_images/1157313327867092993/a09TxL_1_400x400.jpg"
+                    <MemberImage
+                        src={leader.profile?.profilePictureUrl}
+                        // src="https://pbs.twimg.com/profile_images/1157313327867092993/a09TxL_1_400x400.jpg"
                         alt="Image of Team member"
-                      ></MemberImage> */}
+                      ></MemberImage>
                   </a>
                 </span>
                 <div
@@ -42,7 +39,7 @@ const Team = ({ data }) => (
                     alignItems: "center",
                   }}
                 >
-                  <span>{leader.name}</span>
+                  <span>{leader.profile?.displayName}</span>
                   <span>{leader.role}</span>
                   <span>
                     <a href={`mailto:${leader.email}`}>Send Email</a>
@@ -55,7 +52,7 @@ const Team = ({ data }) => (
         <div>
           <h4>Members</h4>
           <MembersContainer>
-            {data.members.map((member) => (
+            {data.members?.map((member) => (
               <div
                 style={{
                   display: "flex",
@@ -66,12 +63,11 @@ const Team = ({ data }) => (
               >
                 <span>
                   <a href="#">
-                    {/* <MemberImage
-                        //  src={boyFrontImage}
-                        // src={member.image}
-                        src="https://pbs.twimg.com/profile_images/1157313327867092993/a09TxL_1_400x400.jpg"
+                    <MemberImage
+                        src={member.profile?.profilePictureUrl}
+                        // src="https://pbs.twimg.com/profile_images/1157313327867092993/a09TxL_1_400x400.jpg"
                         alt="Image of Team member"
-                      ></MemberImage> */}
+                      ></MemberImage>
                   </a>
                 </span>
                 <div
@@ -81,7 +77,7 @@ const Team = ({ data }) => (
                     alignItems: "center",
                   }}
                 >
-                  <span>{member.name}</span>
+                  <span>{member.profile?.displayName}</span>
                   <span>{member.role}</span>
                 </div>
               </div>
