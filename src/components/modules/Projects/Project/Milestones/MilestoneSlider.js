@@ -55,7 +55,7 @@ function MileStoneSlider({ milestones, slidesToShow, isCyclic, isAutoplay }) {
   return (
     <TaskContentWrapper>
       <Slider {...settings}>
-        {milestones.map((milestone, i) => (
+        {milestones?.map((milestone, i) => (
           <TaskGroup key={i}>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <Title>
