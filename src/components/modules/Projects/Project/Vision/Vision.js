@@ -3,7 +3,7 @@ import { withTheme } from "styled-components";
 import Section from "../Section";
 import { Wrapper, ButtonsContainer, Button } from "./StyledVision";
 
-const Vision = ({ theme }) => (
+const Vision = ({ theme, scrollMethods }) => (
   <Section
     bgColor="#3A7CA5"
     Title="Vision"
@@ -16,10 +16,17 @@ const Vision = ({ theme }) => (
           industry ready experience.
         </p>
         <ButtonsContainer>
-          <Button>
+          <Button
+            style={{ cursor: "pointer" }}
+            onClick={scrollMethods.scrollToRoles}
+          >
             <i className="fas fa-info"></i> Join Now
           </Button>
-          <Button bgColor={theme.colors.ACCENT_2}>
+          <Button
+            style={{ cursor: "pointer" }}
+            onClick={scrollMethods.scrollToDonate}
+            bgColor={theme.colors.ACCENT_2}
+          >
             <i className="fas fa-coins"></i> Donate
           </Button>
         </ButtonsContainer>
