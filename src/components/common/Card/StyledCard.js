@@ -39,22 +39,28 @@ export const ImageHolder = styled.div`
   a {
     display: flex;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    height: 26vh;
   }
 `;
 export const TagsContainer = styled.div`
   text-align: center;
-  position: absolute;
-  top: 3%;
+   top: 3%;
   right: 1%;
-  display: grid;
-  gap: 0.5rem;
+  /* display: grid;
+  gap: 0.5rem;*/
+  height: 24vh; 
+  display:flex;
+  flex-direction:column;
+  position: absolute;
+  overflow: auto;
+  
 `;
 export const Image = styled.div`
   background-color: lightgray;
   width: 100%;
   height: 100%;
-  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
+   /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
   cursor: pointer;
   vertical-align: top;
   margin-left: auto;
