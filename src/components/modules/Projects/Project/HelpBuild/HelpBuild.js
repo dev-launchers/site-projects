@@ -1,28 +1,29 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { withTheme } from "styled-components";
 import Section from "../Section";
 import { Wrapper, ButtonsContainer, Button } from "./StyledHelpBuild";
 
-const HelpBuild = ({ Color }) => (
+const HelpBuild = ({ Color }, ref) => (
   <Section
     bgColor="#494949"
-    Title=" "
+    contentStyle={{ paddingBottom: 0 }}
+    Title=""
+    ref={ref}
     Content={
       <Wrapper>
         <h3>Help build this project!</h3>
-
         <p>
-          Work together with enthusiastic developers (and more, plz someone else
-          write this)
+          We need your financial support, technical experience, and input into
+          the types of skills you want to see in the next generation of
+          developers and your future employees!
         </p>
 
         <ButtonsContainer>
           <Button
             bgColor="#4A9D48"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "https://devlaunchers.com/c/sponsorship/";
-            }}
+            href="https://devlaunchers.com/c/sponsorship/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <i className="fas fa-coins"></i> Become a sponsor
           </Button>
@@ -32,4 +33,4 @@ const HelpBuild = ({ Color }) => (
   />
 );
 
-export default withTheme(HelpBuild);
+export default withTheme(forwardRef(HelpBuild));
