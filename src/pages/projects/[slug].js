@@ -54,7 +54,7 @@ export async function getStaticProps(context) {
 const ProjectRoute = ({ project }) => {
   const heroImageFormats = project?.heroImage?.formats;
   const heroImage =
-    heroImageFormats.large || heroImageFormats.medium || heroImageFormats.small;
+    heroImageFormats?.large || heroImageFormats?.medium || heroImageFormats?.small;
   return (
     <>
       <Head>
