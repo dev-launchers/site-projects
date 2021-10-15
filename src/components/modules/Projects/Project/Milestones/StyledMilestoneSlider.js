@@ -20,3 +20,9 @@ export const TaskContent = Styled.div`
   padding-bottom:0.2rem;
   box-sizing: border-box;
   `;
+
+export const CustomArrow = Styled.div`
+  :before {
+    color: black;
+  }
+`;
