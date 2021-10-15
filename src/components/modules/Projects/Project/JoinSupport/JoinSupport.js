@@ -1,14 +1,15 @@
 import Link from "next/link";
-import React from "react";
+import React, { forwardRef } from "react";
 import { withTheme } from "styled-components";
 import Section from "../Section";
 import { Wrapper, ButtonsContainer, Button } from "./StyledJoinSupport";
 
-const JoinSupport = ({ Color, theme, scrollMethods }) => (
+const JoinSupport = ({ Color, theme, scrollMethods }, ref) => (
   <Section
     bgColor="#3A7CA5"
     Title=""
     contentStyle={{ paddingBottom: 0 }}
+    ref={ref}
     Content={
       <Wrapper>
         <h3>Join and support this project!</h3>
@@ -36,4 +37,4 @@ const JoinSupport = ({ Color, theme, scrollMethods }) => (
   />
 );
 
-export default withTheme(JoinSupport);
+export default withTheme(forwardRef(JoinSupport));

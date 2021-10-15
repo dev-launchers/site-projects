@@ -3,12 +3,11 @@ import { withTheme } from "styled-components";
 import Section from "../Section";
 import { Wrapper, ButtonsContainer, Button } from "./StyledHelpBuild";
 
-const HelpBuild = ({ Color }, ref) => (
+const HelpBuild = ({ Color }) => (
   <Section
     bgColor="#494949"
     contentStyle={{ paddingBottom: 0 }}
     Title=""
-    ref={ref}
     Content={
       <Wrapper>
         <h3>Help build this project!</h3>
@@ -33,4 +32,4 @@ const HelpBuild = ({ Color }, ref) => (
   />
 );
 
-export default withTheme(forwardRef(HelpBuild));
+export default withTheme(HelpBuild);

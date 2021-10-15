@@ -53,11 +53,12 @@ const Project = ({ project, theme }) => {
       <Sessions calendarId={project.calendarId} />
       <Team data={project.team} />
       <JoinSupport
+        ref={donateRef}
         scrollMethods={{
           scrollToRoles: () => excuteScroll(roleRef),
         }}
       />
-      <HelpBuild ref={donateRef} />
+      <HelpBuild />
     </Wrapper>
   );
 };
