@@ -12,17 +12,18 @@ export const ModalStrip = styled.div`
 `;
 
 export const ModalHeader = styled.div`
-  padding: 1rem;
+  /* padding: 1rem; */
 `;
 
 export const Description = styled.p`
   font-size: 1.125rem;
   line-height: 1.601875rem;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 1rem;
   margin: 0;
 `;
 
 export const Container = styled.div`
+  width: 100%;
   max-width: 457px;
   margin: auto;
   position: relative;
@@ -32,7 +33,7 @@ export const CloseModal = styled.button`
   cursor: pointer;
   position: absolute;
   right: 2%;
-  top: 2%;
+  top: 5%;
   width: 2.125rem;
   height: 2.125rem;
   background-color: #3c3b3c;

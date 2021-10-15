@@ -18,7 +18,6 @@ export const ImageHolder = styled.img`
   width: auto;
   height: 11.25rem;
   border-radius: 10px;
- 
 `;
 
 export const Conatiner = styled.div`
