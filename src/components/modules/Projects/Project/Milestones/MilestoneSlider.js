@@ -59,7 +59,6 @@ function MileStoneSlider({ milestones, slidesToShow, isCyclic, isAutoplay }) {
           <TaskGroup key={i}>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <Title>
-                {console.log(milestone.title)}
                 {milestone.title}
                 <Description>{milestone.description}</Description>
               </Title>

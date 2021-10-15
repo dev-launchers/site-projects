@@ -46,10 +46,14 @@ const RoleModal = ({ role, isOpen, onRequestClose }) => {
         <Container>
           <ModalHeader>
             <CloseModal onClick={onRequestClose}>X</CloseModal>
-            <Title><ReactMarkdown>{title}</ReactMarkdown></Title>
+            <Title isOpen={isOpen}>
+              <ReactMarkdown>{title}</ReactMarkdown>
+            </Title>
           </ModalHeader>
 
-          <Description><ReactMarkdown>{description}</ReactMarkdown></Description>
+          <Description>
+            <ReactMarkdown>{description}</ReactMarkdown>
+          </Description>
         </Container>
         <ModalStrip>
           <FlexBox
