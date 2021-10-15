@@ -18,6 +18,7 @@ const truncateText = (text, truncateAt, replaceWith) => {
 const RoleCards = ({ data }) => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [selectedRole, setSelectedRole] = useState({});
+  
 
   function openModal() {
     setIsOpen(true);
