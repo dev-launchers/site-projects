@@ -47,8 +47,8 @@ export const TagsContainer = styled.div`
   text-align: center;
    top: 3%;
   right: 1%;
-  /* display: grid;
-  gap: 0.5rem;*/
+  //display: grid; 
+  gap: 0.5rem;
   height: 24vh; 
   display:flex;
   flex-direction:column;

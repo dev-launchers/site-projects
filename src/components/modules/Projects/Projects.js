@@ -1,13 +1,35 @@
 import Link from "next/link";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import Card from "../../common/Card";
 import { Layout, ProjectContainer } from "./StyledProjects";
+import SearchBar from "./Project/SearchBar";
+import Fuse from "fuse.js";
 
 const Projects = ({ projects }) => {
+  const [searchValue, setSearchValue] = useState('')
+
+  const options = {
+    includeScore: true,
+    keys: ["keywords.keyword"],
+    threshold: 0.3,
+    ignoreFieldNorm: true
+  };
+
+  const fuse = new Fuse(projects, options);
+  const searchResult = fuse.search(searchValue).map(({ item }) => item);
+
+  const searchProject = (searchQuery) => {
+    setSearchValue(searchQuery)
+  };
+
   const router = useRouter();
+
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
+
+  const items = searchValue ? searchResult : projects
 
   return (
     <div
@@ -18,7 +40,18 @@ const Projects = ({ projects }) => {
         marginTop: "3rem",
       }}
     >
-      <h1>Projects you can join!</h1>
+      <div
+        style={{
+          display: "flex",
+          flexWrap:'wrap',
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <h1>Projects you can join!</h1>
+        <SearchBar onChange={searchProject} />
+      </div>
+
       <div>
         Create, discover, and join open-source software projects! We help
         members to contribute meaningfully and gain industry-ready experience
@@ -26,7 +59,7 @@ const Projects = ({ projects }) => {
         while learning valuable skills and meeting awesome people!
       </div>
       <Layout>
-        {projects.map((project, i) => (
+        {items.map((project, i) => (
           <ProjectContainer key={i}>
             <Card
               isLinkingInside

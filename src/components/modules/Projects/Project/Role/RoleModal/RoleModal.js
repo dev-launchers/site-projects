@@ -7,6 +7,7 @@ import {
   Container,
   CloseModal,
 } from "./StyledRoleModal";
+import ReactMarkdown from "react-markdown";
 import { Title, FlexBox } from "../RoleCards/StyledRoleCards";
 import { CardButton } from "../Button/StyledButton";
 
@@ -45,10 +46,14 @@ const RoleModal = ({ role, isOpen, onRequestClose }) => {
         <Container>
           <ModalHeader>
             <CloseModal onClick={onRequestClose}>X</CloseModal>
-            <Title>{title}</Title>
+            <Title isOpen={isOpen}>
+              <ReactMarkdown>{title}</ReactMarkdown>
+            </Title>
           </ModalHeader>
 
-          <Description>{description}</Description>
+          <Description>
+            <ReactMarkdown>{description}</ReactMarkdown>
+          </Description>
         </Container>
         <ModalStrip>
           <FlexBox

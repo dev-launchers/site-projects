@@ -32,7 +32,7 @@ const Project = ({ project, theme }) => {
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
-  
+
   return (
     <Wrapper>
       <div id="background" />
@@ -45,10 +45,10 @@ const Project = ({ project, theme }) => {
         }}
       />
       <Description
-        descriptionData={project.description}
-        images={project.Images}
+        description={project?.description}
+        images={project?.Images}
       />
-      <Role ref={roleRef} data={project.openPositions} />
+      <Role ref={roleRef} data={project?.openPositions} />
       <Milestones data={project?.board?.ProjectMilestone} />
       <Sessions calendarId={project.calendarId} />
       <Team data={project.team} />
