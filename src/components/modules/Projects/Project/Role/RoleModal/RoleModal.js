@@ -34,7 +34,7 @@ const customStyles = {
   },
 };
 
-const RoleModal = ({ role, isOpen, onRequestClose, isFormOpen, onOpenForm }) => {
+const RoleModal = ({ role, isOpen, onRequestClose, isFormOpen, onOpenForm, onCloseForm }) => {
   const { title, description } = role;
   return (
     <Wrapper>
@@ -51,7 +51,7 @@ const RoleModal = ({ role, isOpen, onRequestClose, isFormOpen, onOpenForm }) => 
             </Title>
           </ModalHeader>
           {isFormOpen ? (
-            <ApplyForm />
+            <ApplyForm onCloseForm={onCloseForm}/>
           ) : (
             <Description>{description}</Description>
           )}
