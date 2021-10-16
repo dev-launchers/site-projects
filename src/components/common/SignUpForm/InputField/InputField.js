@@ -30,7 +30,10 @@ const InputField = React.forwardRef((props, ref) => {
   // Build the field
   return (
     <>
-      <FormInput {...getInputProps({ ref, ...rest })} />
+      <FormInput
+        style={{ width: "100%" }}
+        {...getInputProps({ ref, ...rest })}
+      />
       <div style={{ fontSize: "1rem" }}>
         {/*
           Let's inline some validation and error information

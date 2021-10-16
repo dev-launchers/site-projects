@@ -14,6 +14,7 @@ import FormEntry from "./FormEntry";
 import InputField from "./InputField";
 import SelectField from "./SelectField";
 import TextAreaField from "./TextAreaField";
+import { env } from "../../../utils/EnvironmentVariables";
 
 function validateEmail(email) {
   const re =
@@ -155,6 +156,17 @@ export default function SignUpForm(props) {
       if (formPage < formEntries.length - 1) incrementFormPage();
       return;
     }
+    const {
+      project,
+      name,
+      role,
+      email,
+      age,
+      level,
+      experience,
+      reason,
+      accepted,
+    } = values;
 
     setSubmittingForm(true);
 
@@ -168,6 +180,33 @@ export default function SignUpForm(props) {
       .get("/exec", { params: values })
       .then(() => {
         // handle success
+        axios
+          .post(`${env().STRAPI_URL}/applicants`, {
+            email: email,
+            name: name,
+            age: age,
+            role: values.role,
+            zip: 0, //TODO this has to be handled on the front end
+            experience: values.experience,
+            commitment: values.commitment,
+            accepted: values.accepted ? true : false,
+            reason: values.reason,
+            project: project,
+            level: "beginner",
+            skills: [
+              {
+                skill: "string",
+              },
+            ],
+          })
+          .then((res) => {
+            console.log(values);
+            console.log(res.data);
+          })
+          .catch((err) => {
+            console.log(values);
+            console.error(err);
+          });
         setSubmittingForm(false);
         setFormSubmitted(true);
       })
@@ -241,7 +280,7 @@ export default function SignUpForm(props) {
             ) : (
               ""
             )}
-            <div>Join project!</div>
+            {/* <div>Join project!</div> */}
           </div>
           <StyledForm as={Form}>
             {formEntries[formPage]}
