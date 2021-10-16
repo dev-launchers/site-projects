@@ -6,6 +6,7 @@ export const Form = styled.form`
 
 export const Question = styled.div`
   margin-top: 1.875rem;
+  font-size: 0.875rem;
 `;
 
 export const FormLabel = styled.label``;
@@ -23,3 +24,5 @@ export const SubmitInput = styled.input.attrs({ type: "submit" })`
   text-align: center;
   font-family: "Abel";
 `;
+
+

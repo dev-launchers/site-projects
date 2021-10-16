@@ -31,7 +31,9 @@ const RoleCards = ({ data }) => {
 
   function openForm() {
     setFormIsOpen(true)
-    console.log("Form open");
+  }
+  function closeForm () {
+    setFormIsOpen(false)
   }
   return (
     <Wrapper>
@@ -74,6 +76,7 @@ const RoleCards = ({ data }) => {
               role={selectedRole}
               isFormOpen={formIsOpen}
               onOpenForm={openForm}
+              onCloseForm={closeForm}
       
             />
           </Container>
