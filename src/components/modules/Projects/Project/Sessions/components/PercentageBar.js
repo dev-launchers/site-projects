@@ -21,10 +21,7 @@ const PercentageBar = ({ percentage, apointmentTime, link, title, date }) => (
     <Title>{apointmentTime}</Title>
     <Title>{date}</Title>
     <SubHeading>{title}</SubHeading>
-    <Button onClick={(e) => {
-      e.preventDefault()
-      window.location.href = link
-    }}>
+    <Button as="a" href={link} target="_blank" rel="noopener noreferrer">
       <ButtonText>
         <Img />
         <p>Join</p>
