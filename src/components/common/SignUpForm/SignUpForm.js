@@ -14,6 +14,7 @@ import FormEntry from "./FormEntry";
 import InputField from "./InputField";
 import SelectField from "./SelectField";
 import TextAreaField from "./TextAreaField";
+
 import { env } from "../../../utils/EnvironmentVariables";
 
 function validateEmail(email) {
@@ -108,9 +109,8 @@ const formEntries = [
       validate={(value) => (!value ? "This is required!" : false)}
     />
   </FormEntry>,
-
   <FormEntry
-    key={8}
+    key={9}
     label="Experience"
     description="Briefly describe any relevant experience you have [optional]"
   >
@@ -118,7 +118,7 @@ const formEntries = [
   </FormEntry>,
 
   <FormEntry
-    key={9}
+    key={10}
     label="Reason"
     description="Why do you want to join this project? (Hint: Are you looking to learn? Help others learn? Gain experience? Build something epic?) [optional]"
   >
@@ -170,50 +170,54 @@ export default function SignUpForm(props) {
 
     setSubmittingForm(true);
 
-    const axiosInstance = axios.create({
-      baseURL:
-        "https://script.google.com/macros/s/AKfycby9cNYNtLoRg68F8KhibzBam0sonk0Q-h_qQke9qeep5vOw2zICKbBtxOcCCQSyNznHhA",
-      timeout: 10000,
-      headers: { "Content-Type": "multipart/form-data" },
-    });
-    axiosInstance
-      .get("/exec", { params: values })
-      .then(() => {
-        // handle success
-        axios
-          .post(`${env().STRAPI_URL}/applicants`, {
-            email: email,
-            name: name,
-            age: age,
-            role: values.role,
-            zip: 0, //TODO this has to be handled on the front end
-            experience: values.experience,
-            commitment: values.commitment,
-            accepted: values.accepted ? true : false,
-            reason: values.reason,
-            project: project,
-            level: "beginner",
-            skills: [
-              {
-                skill: "string",
-              },
-            ],
-          })
-          .then((res) => {
-            console.log(values);
-            console.log(res.data);
-          })
-          .catch((err) => {
-            console.log(values);
-            console.error(err);
-          });
+    // const axiosInstance = axios.create({
+    //   baseURL:
+    //     "https://script.google.com/macros/s/AKfycby9cNYNtLoRg68F8KhibzBam0sonk0Q-h_qQke9qeep5vOw2zICKbBtxOcCCQSyNznHhA",
+    //   timeout: 10000,
+    //   headers: { "Content-Type": "multipart/form-data" },
+    // });
+    // axiosInstance
+    //   .get("/exec", { params: values })
+    //   .then(() => {
+    //     // handle success
+    //     setSubmittingForm(false);
+    //     setFormSubmitted(true);
+    //   })
+    //   .catch(() => {
+    //     // handle error
+    //     // console.log(response);
+    //   });
+    console.log(level.toLowerCase().split(" (")[0]);
+    const req = axios
+      .post(`https://api.devlaunchers.org/applicants`, {
+        email,
+        name,
+        age: values.age.toString(),
+        role,
+        experience,
+        commitment: 5, //TODO commitment is not part of the values object we're getting from onSubmit, add a field to let users type in their commitment hours on the form and capture it using onSubmit,
+        accepted: accepted ? true : false,
+        reason,
+        project: "site-projects",
+        level: level.toLowerCase().split(" (")[0],
+        skills: [
+          //TODO skills is not part of the values object we're getting from onSubmit, add a field to let users list their skills on the form and capture it using onSubmit
+          {
+            skill: "string",
+          },
+        ],
+      })
+      .then((res) => {
+        console.log(values);
         setSubmittingForm(false);
         setFormSubmitted(true);
+        console.log(res.data);
       })
-      .catch(() => {
-        // handle error
-        // console.log(response);
+      .catch((err) => {
+        console.log(values);
+        console.error(err);
       });
+    console.log(req);
   };
 
   const defaultValues = React.useMemo(

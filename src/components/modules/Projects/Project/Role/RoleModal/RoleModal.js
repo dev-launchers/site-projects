@@ -26,7 +26,6 @@ const customStyles = {
     padding: "0",
     display: "flex",
     flexDirection: "column",
-
   },
   overlay: {
     zIndex: "5",
@@ -34,7 +33,15 @@ const customStyles = {
   },
 };
 
-const RoleModal = ({ role, isOpen, onRequestClose, isFormOpen, onOpenForm, onCloseForm }) => {
+const RoleModal = ({
+  role,
+  isOpen,
+  onRequestClose,
+  isFormOpen,
+  onOpenForm,
+  onCloseForm,
+  projectName
+}) => {
   const { title, description } = role;
   return (
     <Wrapper>
@@ -50,7 +57,7 @@ const RoleModal = ({ role, isOpen, onRequestClose, isFormOpen, onOpenForm, onClo
           </ModalHeader>
           {isFormOpen ? (
             // <ApplyForm onCloseForm={onCloseForm}/>
-            <SignUpForm />
+            <SignUpForm roleName={role.title} projectName={projectName}/>
           ) : (
             <Description>{description}</Description>
           )}
@@ -63,7 +70,9 @@ const RoleModal = ({ role, isOpen, onRequestClose, isFormOpen, onOpenForm, onClo
               justifyContent: "space-around",
             }}
           >
-            {isFormOpen ? '' : (
+            {isFormOpen ? (
+              ""
+            ) : (
               <>
                 <p>Is this role right for you?</p>
                 <CardButton onClick={onOpenForm} style={{ fontFamily: "Abel" }}>

@@ -16,7 +16,7 @@ const truncateText = (text, truncateAt, replaceWith) => {
   if (text.length <= truncateAt) return text;
   return text.slice(0, truncateAt) + replaceWith;
 };
-const RoleCards = ({ data }) => {
+const RoleCards = ({ data, projectName }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedRole, setSelectedRole] = useState({});
   const [formIsOpen, setFormIsOpen] = useState(false);
@@ -74,6 +74,7 @@ const RoleCards = ({ data }) => {
               onRequestClose={closeModal}
               isOpen={modalIsOpen}
               role={selectedRole}
+              projectName={projectName}
               isFormOpen={formIsOpen}
               onOpenForm={openForm}
               onCloseForm={closeForm}
