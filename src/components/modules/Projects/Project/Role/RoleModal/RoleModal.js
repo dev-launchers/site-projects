@@ -11,6 +11,7 @@ import {
 import { Title, FlexBox } from "../RoleCards/StyledRoleCards";
 import { CardButton } from "../Button/StyledButton";
 import ApplyForm from "../../ApplyForm/ApplyForm";
+
 const customStyles = {
   content: {
     top: "50%",
@@ -34,7 +35,7 @@ const customStyles = {
   },
 };
 
-const RoleModal = ({ role, isOpen, onRequestClose, isFormOpen, onOpenForm, onCloseForm }) => {
+const RoleModal = ({ role, isOpen, onRequestClose, isFormOpen, onOpenForm }) => {
   const { title, description } = role;
   return (
     <Wrapper>
@@ -51,7 +52,7 @@ const RoleModal = ({ role, isOpen, onRequestClose, isFormOpen, onOpenForm, onClo
             </Title>
           </ModalHeader>
           {isFormOpen ? (
-            <ApplyForm onCloseForm={onCloseForm}/>
+            <ApplyForm />
           ) : (
             <Description>{description}</Description>
           )}

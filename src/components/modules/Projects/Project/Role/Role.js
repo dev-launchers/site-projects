@@ -2,13 +2,13 @@ import { forwardRef } from "react";
 import RoleCards from "./RoleCards/RoleCards";
 import Section from "../Section";
 
-const Role = ({ data }, ref) =>
+const Role = ({ data, projectName }, ref) =>
   (
     <Section
       ref={ref}
       bgColor="#3A7CA5"
       Title="Open Roles"
-      Content={data?.filter((openRole) => !openRole.isHidden)?.length ? <RoleCards data={data} /> : "There are no open positions currently, Please check again later!"}
+      Content={data?.filter((openRole) => !openRole.isHidden)?.length ? <RoleCards data={data} projectName={projectName} /> : "There are no open positions currently, Please check again later!"}
     />
   );
 
