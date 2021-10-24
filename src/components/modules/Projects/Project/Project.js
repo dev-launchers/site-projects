@@ -37,8 +37,9 @@ const Project = ({ project, theme }) => {
     <Wrapper>
       <div id="background" />
       <HeroSection />
-      <Tags />
+      <Tags tags={project?.keywords}/>
       <Vision
+        vision ={project?.vision || ""}
         scrollMethods={{
           scrollToRoles: () => excuteScroll(roleRef),
           scrollToDonate: () => excuteScroll(donateRef),

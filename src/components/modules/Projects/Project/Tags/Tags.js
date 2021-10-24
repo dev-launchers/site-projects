@@ -1,16 +1,16 @@
 import React from "react";
 import { Wrapper, Tag } from "./StyledTags";
 
-const Tags = () => (
-  <Wrapper>
-    <Tag>Beginner Friendly</Tag>
-    <Tag>Javascript</Tag>
-    <Tag>React</Tag>
-    <Tag>Node.js</Tag>
-    <Tag>something</Tag>
-    <Tag>something</Tag>
-    <Tag>something</Tag>
-  </Wrapper>
+const Tags = ({tags}) =>{
+  if (!Array.isArray(tags) || tags.length <= 0) {
+    return null;
+  }
+return(
+   <Wrapper>
+     {tags?.map(tag => (
+        <Tag key={tag.id}> {tag.keyword} </Tag>
+      ))}
+     </Wrapper>
 );
-
+};
 export default Tags;
