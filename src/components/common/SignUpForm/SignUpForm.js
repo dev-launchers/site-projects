@@ -58,6 +58,7 @@ export default function SignUpForm(props) {
 
     setSubmittingForm(true);
     console.log(values);
+    console.log(parseInt(values.age, 10));
     // const axiosInstance = axios.create({
     //   baseURL:
     //     "https://script.google.com/macros/s/AKfycby9cNYNtLoRg68F8KhibzBam0sonk0Q-h_qQke9qeep5vOw2zICKbBtxOcCCQSyNznHhA",
@@ -75,12 +76,11 @@ export default function SignUpForm(props) {
     //     // handle error
     //     // console.log(response);
     //   });
-    console.log(level.toLowerCase().split(" (")[0]);
-    const req = axios
+    window.req = axios
       .post(`https://api.devlaunchers.org/applicants`, {
         email,
         name,
-        age: values.age.toString(),
+        age: parseInt(age, 10),
         role,
         experience,
         commitment: 5, //TODO commitment is not part of the values object we're getting from onSubmit, add a field to let users type in their commitment hours on the form and capture it using onSubmit,
@@ -88,12 +88,7 @@ export default function SignUpForm(props) {
         reason,
         project: "site-projects",
         level: level.toLowerCase().split(" (")[0],
-        skills: [
-          //TODO skills is not part of the values object we're getting from onSubmit, add a field to let users list their skills on the form and capture it using onSubmit
-          {
-            skill: "string",
-          },
-        ],
+        skills: skills.map((skill) => ({ skill })),
       })
       .then((res) => {
         console.log(values);
@@ -105,7 +100,7 @@ export default function SignUpForm(props) {
         console.log(values);
         console.error(err);
       });
-    console.log(req);
+    console.log(window.req);
   };
 
   const defaultValues = React.useMemo(
@@ -118,6 +113,7 @@ export default function SignUpForm(props) {
       skills: [],
       level: "",
       experience: "",
+      commitment: 1,
       reason: "",
       accepted: "",
     }),

@@ -19,7 +19,7 @@ const InputAdder = React.forwardRef((props, ref) => {
   };
 
   return (
-    <div style={{display: "flex", justifyContent: "center"}}>
+    <div style={{ display: "flex", justifyContent: "center" }}>
       <input
         type="text"
         className="todo-list-input-field"
@@ -32,8 +32,8 @@ const InputAdder = React.forwardRef((props, ref) => {
         className="todo-list-input-field-action"
         onClick={(e) => {
           e.preventDefault();
-            props.onAdd("skills", item);
-        //   handleAddItemAction();
+          props.onAdd("skills", item);
+          //   handleAddItemAction();
         }}
       >
         <i className="fa fa-plus" />

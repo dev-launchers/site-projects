@@ -29,7 +29,7 @@ const Project = ({ project, theme }) => {
   return (
     <Wrapper>
       <div id="background" />
-      <HeroSection />
+      <HeroSection data={project?.heroImage}/>
       <Tags />
       <Vision />
       <Description
