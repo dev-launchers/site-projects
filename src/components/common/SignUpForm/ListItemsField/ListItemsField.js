@@ -23,7 +23,7 @@ const ListItemsField = forwardRef((props, ref) => {
     <div key={props.skill}>
       <label>
         Skill: <InputField field={`skills.${props.i}`} />{" "}
-        <button type="button" onClick={() => removeFieldValue("friends", i)}>
+        <button type="button" onClick={() => removeFieldValue("skills", i)}>
           X
         </button>
       </label>
