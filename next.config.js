@@ -21,7 +21,7 @@ const nextConfig = {
     // Warning: Dangerously allow production builds to successfully complete even if
     // your project has ESLint errors.
     // we have too many errors if you run npm run lint ,but after bug fixes we could enforce this.
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
 };
 module.exports = withPlugins([[imagesPlugin], nextConfig]);

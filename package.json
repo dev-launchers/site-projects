@@ -2,12 +2,6 @@
   "name": "site-projects",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "prepare": "husky install"
-  },
   "dependencies": {
     "axios": "^0.21.4",
     "constate": "^3.3.0",
@@ -40,6 +34,13 @@
     "lint-staged": "^11.2.4",
     "prettier": "^2.4.1",
     "semantic-release": "^18.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install"
   },
   "browserslist": [
     ">0.2%",
