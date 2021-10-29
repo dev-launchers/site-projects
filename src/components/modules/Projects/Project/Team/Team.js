@@ -5,6 +5,7 @@ import {
   MembersContainer , MemberImage ,
 } from "./StyledTeam";
 import Section from "../Section";
+
 const Team = ({ data }) => (
   <Section
     bgColor="#494949"

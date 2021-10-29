@@ -1,4 +1,5 @@
 import Modal from "react-modal";
+import ReactMarkdown from "react-markdown";
 import {
   Wrapper,
   ModalStrip,
@@ -7,7 +8,6 @@ import {
   Container,
   CloseModal,
 } from "./StyledRoleModal";
-import ReactMarkdown from "react-markdown";
 import { Title, FlexBox } from "../RoleCards/StyledRoleCards";
 import { CardButton } from "../Button/StyledButton";
 

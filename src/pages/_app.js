@@ -1,6 +1,6 @@
 import React from "react";
 import { Router, useRouter } from "next/router";
-import Head from "next/head";
+import Script from "next/script";
 import { ToastContainer } from "react-toastify";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../styles/globals";
@@ -46,12 +46,10 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <div>
-          <Head>
-            <script
-              async
-              src="https://www.googletagmanager.com/gtag/js?id=AW-599284852"
-            ></script>
-          </Head>
+          <Script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=AW-599284852"
+          />
           <UserDataProvider>
             <div className="App">
               <ToastContainer

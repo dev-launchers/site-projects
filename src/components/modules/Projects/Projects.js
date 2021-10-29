@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import Fuse from "fuse.js";
 import Card from "../../common/Card";
 import { Layout, ProjectContainer } from "./StyledProjects";
 import SearchBar from "./Project/SearchBar";
-import Fuse from "fuse.js";
 
 const Projects = ({ projects }) => {
   const [searchValue, setSearchValue] = useState('')

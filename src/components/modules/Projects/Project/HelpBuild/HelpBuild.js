@@ -1,9 +1,9 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { withTheme } from "styled-components";
 import Section from "../Section";
 import { Wrapper, ButtonsContainer, Button } from "./StyledHelpBuild";
 
-const HelpBuild = ({ Color }) => (
+const HelpBuild = () => (
   <Section
     bgColor="#494949"
     contentStyle={{ paddingBottom: 0 }}

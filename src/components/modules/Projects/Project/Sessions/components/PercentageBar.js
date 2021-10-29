@@ -6,17 +6,17 @@ import { withTheme } from "styled-components";
 // import SignUpButton from "../SignUpButton";
 import {
   Wrapper,
-  PercentageProgress,
+  // PercentageProgress,
   Title,
   SubHeading,
   Button,
   Img,
   ButtonText,
-  TitleFlex,
+  // TitleFlex,
 } from "./StyledSessions";
 
 // import { env } from "../../../../../utils/EnvironmentVariables";
-const PercentageBar = ({ percentage, apointmentTime, link, title, date }) => (
+const PercentageBar = ({ /* percentage , */ apointmentTime, link, title, date }) => (
   <Wrapper>
     <Title>{apointmentTime}</Title>
     <Title>{date}</Title>
