@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import {
   Paragrapgh,
   FlexSection,
@@ -6,14 +7,13 @@ import {
   Strip,
 } from "./StyledDescriptionContent";
 
-import ReactMarkdown from "react-markdown";
-
 const DescriptionContent = ({ data }) => {
   const { description, images } = data;
   return (
     <>
       <Paragrapgh style={{ paddingBottom: "1.5625rem" }}>
         {" "}
+        {/* eslint-disable-next-line react/no-children-prop */}
         <ReactMarkdown children={description} />
       </Paragrapgh>
       {!!images.length && (

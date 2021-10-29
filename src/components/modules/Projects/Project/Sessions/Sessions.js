@@ -1,10 +1,9 @@
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import { withTheme } from "styled-components";
+import { DateTime } from "luxon";
 import Section from "../Section";
 import PercentageBar from "./components/PercentageBar";
-import { DateTime } from "luxon";
-import { useState } from "react";
 
 import { FlexBoxVerticalWrapper, Descript } from "./StyledSessions";
 
@@ -15,17 +14,17 @@ https://github.com/dev-launchers/platform__website/blob/master/src/components/mo
 // import { env } from "../../../../../utils/EnvironmentVariables";
 const Sessions = ({ calendarId }) => {
   const [events, setEvents] = useState([]);
-  let key = "AIzaSyCgXZRjXOwT6DilHJyjj5B3svz6cETj_MI";
+  const key = "AIzaSyCgXZRjXOwT6DilHJyjj5B3svz6cETj_MI";
   React.useEffect(() => {
     axios
       .get(
         `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?orderBy=updated&showDeleted=false&key=${key}`
       )
       .then((res) => {
-        let items = [...res.data.items];
-        let notCancelled = items.filter((item) => item.end !== undefined);
-        let now = DateTime.now().minus({ days: 6 });
-        let currentEvents = notCancelled.filter(
+        const items = [...res.data.items];
+        const notCancelled = items.filter((item) => item.end !== undefined);
+        const now = DateTime.now().minus({ days: 6 });
+        const currentEvents = notCancelled.filter(
           (item) => DateTime.fromISO(item.start.dateTime) > now
         );
         setEvents([...currentEvents]);

@@ -1,6 +1,6 @@
+import { forwardRef } from "react";
 import RoleCards from "./RoleCards/RoleCards";
 import Section from "../Section";
-import { forwardRef } from "react";
 
 const Role = ({ data }, ref) => (
   <Section

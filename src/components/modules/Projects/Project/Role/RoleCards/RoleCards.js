@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ReactMarkdown from "react-markdown";
 import {
   Cards,
   Wrapper,
@@ -7,7 +8,6 @@ import {
   Container,
   FlexBox,
 } from "./StyledRoleCards";
-import ReactMarkdown from "react-markdown";
 import { CardButton } from "../Button/StyledButton";
 import RoleModal from "../RoleModal";
 

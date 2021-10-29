@@ -4,7 +4,7 @@ import { withTheme } from "styled-components";
 import Section from "../Section";
 import { Wrapper, ButtonsContainer, Button } from "./StyledJoinSupport";
 
-const JoinSupport = ({ Color, theme, scrollMethods }, ref) => (
+const JoinSupport = ({ theme, scrollMethods }, ref) => (
   <Section
     bgColor="#3A7CA5"
     Title=""
@@ -16,7 +16,7 @@ const JoinSupport = ({ Color, theme, scrollMethods }, ref) => (
         <p>
           Our platform is being developed by a core group of our members: a team
           of people from a wide range of backgrounds and skill levels who are
-          all learning while building. It's the perfect Dev Launchers case
+          all learning while building. It&apos;s the perfect Dev Launchers case
           study!
         </p>
         <ButtonsContainer>

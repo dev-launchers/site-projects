@@ -1,5 +1,6 @@
 import React from "react";
 import { withTheme } from "styled-components";
+import Slider from "react-slick";
 import {
   TaskContent,
   TaskContentWrapper,
@@ -7,7 +8,6 @@ import {
 } from "./StyledMilestoneSlider";
 import { TaskGroup, Title, Description } from "./StyledMilestones";
 
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -16,7 +16,7 @@ function MileStoneSlider({ milestones, slidesToShow, isCyclic, isAutoplay }) {
     dots: true,
     infinite: isCyclic,
     speed: 500,
-    slidesToShow: slidesToShow,
+    slidesToShow,
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: isAutoplay,
