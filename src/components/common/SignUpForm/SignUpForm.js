@@ -37,6 +37,7 @@ export default function SignUpForm(props) {
 
   const onSubmit = async (values) => {
     if (!isFormValidated) {
+      // eslint-disable-next-line no-use-before-define
       if (formPage < formEntries.length - 1) incrementFormPage();
       return;
     }
@@ -119,7 +120,7 @@ export default function SignUpForm(props) {
     meta: { canSubmit },
   } = useForm({
     defaultValues,
-    validate: (values) => {
+    validate: () => {
       // Check if all fields have been filled
       let isValidated = true;
       Object.keys(values).forEach((key) => {

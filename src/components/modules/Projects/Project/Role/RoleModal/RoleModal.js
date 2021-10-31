@@ -40,7 +40,6 @@ const RoleModal = ({
   onRequestClose,
   isFormOpen,
   onOpenForm,
-  onCloseForm,
   projectSlug
 }) => {
   const { title, description } = role;
