@@ -10,7 +10,7 @@ import {
 } from "./StyledRoleModal";
 import { Title, FlexBox } from "../RoleCards/StyledRoleCards";
 import { CardButton } from "../Button/StyledButton";
-import ApplyForm from "../../ApplyForm/ApplyForm";
+import SignUpForm from "../../../../../common/SignUpForm/SignUpForm";
 
 const customStyles = {
   content: {
@@ -27,7 +27,6 @@ const customStyles = {
     padding: "0",
     display: "flex",
     flexDirection: "column",
-
   },
   overlay: {
     zIndex: "5",
@@ -35,7 +34,15 @@ const customStyles = {
   },
 };
 
-const RoleModal = ({ role, isOpen, onRequestClose, isFormOpen, onOpenForm }) => {
+const RoleModal = ({
+  role,
+  isOpen,
+  onRequestClose,
+  isFormOpen,
+  onOpenForm,
+  onCloseForm,
+  projectSlug
+}) => {
   const { title, description } = role;
   return (
     <Wrapper>
@@ -43,6 +50,7 @@ const RoleModal = ({ role, isOpen, onRequestClose, isFormOpen, onOpenForm }) => 
         style={customStyles}
         isOpen={isOpen}
         onRequestClose={onRequestClose}
+        ariaHideApp={false}
       >
         <Container>
           <ModalHeader>
@@ -52,7 +60,8 @@ const RoleModal = ({ role, isOpen, onRequestClose, isFormOpen, onOpenForm }) => 
             </Title>
           </ModalHeader>
           {isFormOpen ? (
-            <ApplyForm />
+            // <ApplyForm onCloseForm={onCloseForm}/>
+            <SignUpForm roleName={role.title} projectSlug={projectSlug}/>
           ) : (
             <Description>{description}</Description>
           )}
@@ -65,7 +74,9 @@ const RoleModal = ({ role, isOpen, onRequestClose, isFormOpen, onOpenForm }) => 
               justifyContent: "space-around",
             }}
           >
-            {isFormOpen ? '' : (
+            {isFormOpen ? (
+              ""
+            ) : (
               <>
                 <p>Is this role right for you?</p>
                 <CardButton onClick={onOpenForm} style={{ fontFamily: "Abel" }}>

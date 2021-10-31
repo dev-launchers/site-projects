@@ -13,10 +13,8 @@ import FormEntry from "./FormEntry";
 import InputField from "./InputField";
 import SelectField from "./SelectField";
 import TextAreaField from "./TextAreaField";
-
 import { env } from "../../../utils/EnvironmentVariables";
-import ListItemsField from "./ListItemsField";
-import InputAdder from "./ListItemsField/InputAdder";
+import InputAdder from "./InputAdder";
 
 function validateEmail(email) {
   const re =
@@ -51,60 +49,54 @@ export default function SignUpForm(props) {
       skills,
       level,
       experience,
+      commitment,
       reason,
       accepted,
     } = values;
 
     setSubmittingForm(true);
-    console.log(values);
-    console.log(parseInt(values.age, 10));
-    // const axiosInstance = axios.create({
-    //   baseURL:
-    //     "https://script.google.com/macros/s/AKfycby9cNYNtLoRg68F8KhibzBam0sonk0Q-h_qQke9qeep5vOw2zICKbBtxOcCCQSyNznHhA",
-    //   timeout: 10000,
-    //   headers: { "Content-Type": "multipart/form-data" },
-    // });
-    // axiosInstance
-    //   .get("/exec", { params: values })
-    //   .then(() => {
-    //     // handle success
-    //     setSubmittingForm(false);
-    //     setFormSubmitted(true);
-    //   })
-    //   .catch(() => {
-    //     // handle error
-    //     // console.log(response);
-    //   });
-    window.req = axios
-      .post(`https://api.devlaunchers.org/applicants`, {
-        email,
-        name,
-        age: parseInt(age, 10),
-        role,
-        experience,
-        commitment: 5, //TODO commitment is not part of the values object we're getting from onSubmit, add a field to let users type in their commitment hours on the form and capture it using onSubmit,
-        accepted: accepted ? true : false,
-        reason,
-        project: "site-projects",
-        level: level.toLowerCase().split(" (")[0],
-        skills: skills.map((skill) => ({ skill })),
-      })
-      .then((res) => {
-        console.log(values);
+    const axiosInstance = axios.create({
+      baseURL:
+        "https://script.google.com/macros/s/AKfycby9cNYNtLoRg68F8KhibzBam0sonk0Q-h_qQke9qeep5vOw2zICKbBtxOcCCQSyNznHhA",
+      timeout: 10000,
+      headers: { "Content-Type": "multipart/form-data" },
+    });
+    axiosInstance
+      .get("/exec", { params: values })
+      .then(() => {
+        // handle success
         setSubmittingForm(false);
         setFormSubmitted(true);
-        console.log(res.data);
       })
-      .catch((err) => {
-        console.log(values);
-        console.error(err);
+      .catch(() => {
+        // handle error
+        // console.log(response);
       });
-    console.log(window.req);
+    axios
+      .post(`${env().STRAPI_URL}/applicants`, {
+        email,
+        name,
+        age,
+        role,
+        zip: 23,
+        experience,
+        commitment,
+        accepted: !!accepted,
+        reason,
+        project,
+        level: level.toLowerCase(),
+        skills: skills.map((skill) => ({ skill })),
+      })
+      .then(() => {
+        setSubmittingForm(false);
+        setFormSubmitted(true);
+      })
+      .catch(() => {});
   };
 
   const defaultValues = React.useMemo(
     () => ({
-      project: props.projectName,
+      project: props.projectSlug,
       name: "",
       role: props.roleName,
       email: "",
@@ -144,17 +136,6 @@ export default function SignUpForm(props) {
 
   const formEntries = [
     <FormEntry
-      key={0}
-      label="Project"
-      description="You are applying to the project:"
-    >
-      <InputField
-        field="project"
-        validate={(value) => (!value ? "Required" : false)}
-      />
-    </FormEntry>,
-
-    <FormEntry
       key={1}
       label="Name"
       description="What should we call you? Please enter your full name!"
@@ -164,18 +145,6 @@ export default function SignUpForm(props) {
         validate={(value) => (!value ? "Required" : false)}
       />
     </FormEntry>,
-
-    <FormEntry
-      key={2}
-      label="Role"
-      description="Which role are you applying for?"
-    >
-      <InputField
-        field="role"
-        validate={(value) => (!value ? "Required" : false)}
-      />
-    </FormEntry>,
-
     <FormEntry key={3} label="Email" description="How should we contact you?">
       <InputField
         field="email"
@@ -234,12 +203,22 @@ export default function SignUpForm(props) {
     >
       <SelectField
         field="level"
-        options={[
-          "Beginner (No  development experience)",
-          "Intermediate (Some development experience, but no large projects)",
-          "Advanced (Have completed large projects, worked in a team, etc.)",
-        ]}
+        options={["Beginner", "Intermediate", "Advanced"]}
         validate={(value) => (!value ? "This is required!" : false)}
+      />
+    </FormEntry>,
+    <FormEntry
+      key={5}
+      label="Commitment"
+      description="How many hours would you commit per week?"
+    >
+      <InputField
+        field="commitment"
+        type="number"
+        validate={(value) =>
+          value < 1 ? "You must at least commit an hour per week" : false
+        }
+        min="1"
       />
     </FormEntry>,
     <FormEntry
@@ -249,7 +228,6 @@ export default function SignUpForm(props) {
     >
       <TextAreaField field="experience" type="textarea" />
     </FormEntry>,
-
     <FormEntry
       key={10}
       label="Reason"
@@ -278,7 +256,7 @@ export default function SignUpForm(props) {
   return (
     <FormOuter style={{ width: "100%", textAlign: "center" }}>
       {formSubmitted ? (
-        <div style={{ fontSize: "3rem", color: "black", margin: "10%" }}>
+        <div style={{ fontSize: "3rem", margin: "10%" }}>
           Thanks for submitting your application!
           <br />
         </div>
@@ -299,7 +277,7 @@ export default function SignUpForm(props) {
             ) : (
               ""
             )}
-            <div>Join project!</div>
+            {/* <div>Join project!</div> */}
           </div>
           <StyledForm as={Form}>
             {formEntries[formPage]}
