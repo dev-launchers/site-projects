@@ -40,7 +40,7 @@ const RoleModal = ({
   onRequestClose,
   isFormOpen,
   onOpenForm,
-  projectSlug
+  projectSlug,
 }) => {
   const { title, description } = role;
   return (
@@ -60,9 +60,11 @@ const RoleModal = ({
           </ModalHeader>
           {isFormOpen ? (
             // <ApplyForm onCloseForm={onCloseForm}/>
-            <SignUpForm roleName={role.title} projectSlug={projectSlug}/>
+            <SignUpForm roleName={role.title} projectSlug={projectSlug} />
           ) : (
-            <Description>{description}</Description>
+            <Description>
+              <ReactMarkdown>{description}</ReactMarkdown>
+            </Description>
           )}
         </Container>
         <ModalStrip>
