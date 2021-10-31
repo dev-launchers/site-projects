@@ -6,4 +6,4 @@ bases:
 images:
 - name: devlaunchers/site-projects
   newName: devlaunchers/site-projects
-  newTag: ba5d22d-202110311306 # {"$imagepolicy": "site-projects:site-projects:tag"}
+  newTag: ce3f112-202110311611 # {"$imagepolicy": "site-projects:site-projects:tag"}
