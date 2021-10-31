@@ -1,9 +1,9 @@
-import axios from "axios";
+// import axios from "axios";
 import Head from "next/head";
 import Header from "../components/common/Header";
 import Projects from "../components/modules/Projects";
 import Footer from "../components/common/Footer";
-import { env } from "../utils/EnvironmentVariables";
+// import { env } from "../utils/EnvironmentVariables";
 
 const projects = require("../components/modules/Projects/data.json");
 
