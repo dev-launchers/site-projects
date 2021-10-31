@@ -36,10 +36,14 @@ const Project = ({ project, theme }) => {
   return (
     <Wrapper>
       <div id="background" />
-      <HeroSection />
-      <Tags tags={project?.keywords}/>
+      <HeroSection
+        projectName={project.title}
+        projectCatchPhrase={project.catchPhrase}
+        heroImage={project.heroImage}
+      />
+      <Tags tags={project?.keywords} />
       <Vision
-        vision ={project?.vision || ""}
+        vision={project?.vision || ""}
         scrollMethods={{
           scrollToRoles: () => excuteScroll(roleRef),
           scrollToDonate: () => excuteScroll(donateRef),
