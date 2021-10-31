@@ -53,7 +53,7 @@ const Project = ({ project, theme }) => {
         description={project?.description}
         images={project?.Images}
       />
-      <Role ref={roleRef} data={project?.openPositions} />
+      <Role ref={roleRef} data={project?.openPositions} projectSlug={project.slug} />
       <Milestones data={project?.board?.ProjectMilestone} />
       <Sessions calendarId={project.calendarId} />
       <Team data={project.team} />

@@ -10,6 +10,7 @@ import {
 } from "./StyledRoleModal";
 import { Title, FlexBox } from "../RoleCards/StyledRoleCards";
 import { CardButton } from "../Button/StyledButton";
+import SignUpForm from "../../../../../common/SignUpForm/SignUpForm";
 
 const customStyles = {
   content: {
@@ -19,14 +20,13 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    maxWidth: "32.5rem",
+    maxWidth: "36.5rem",
     width: "80%",
     color: "#FCFCFC",
     backgroundColor: "#3C3B3C",
     padding: "0",
     display: "flex",
     flexDirection: "column",
-    // justifyContent: "space-between",
   },
   overlay: {
     zIndex: "5",
@@ -34,7 +34,14 @@ const customStyles = {
   },
 };
 
-const RoleModal = ({ role, isOpen, onRequestClose }) => {
+const RoleModal = ({
+  role,
+  isOpen,
+  onRequestClose,
+  isFormOpen,
+  onOpenForm,
+  projectSlug,
+}) => {
   const { title, description } = role;
   return (
     <Wrapper>
@@ -42,6 +49,7 @@ const RoleModal = ({ role, isOpen, onRequestClose }) => {
         style={customStyles}
         isOpen={isOpen}
         onRequestClose={onRequestClose}
+        ariaHideApp={false}
       >
         <Container>
           <ModalHeader>
@@ -50,10 +58,14 @@ const RoleModal = ({ role, isOpen, onRequestClose }) => {
               <ReactMarkdown>{title}</ReactMarkdown>
             </Title>
           </ModalHeader>
-
-          <Description>
-            <ReactMarkdown>{description}</ReactMarkdown>
-          </Description>
+          {isFormOpen ? (
+            // <ApplyForm onCloseForm={onCloseForm}/>
+            <SignUpForm roleName={role.title} projectSlug={projectSlug} />
+          ) : (
+            <Description>
+              <ReactMarkdown>{description}</ReactMarkdown>
+            </Description>
+          )}
         </Container>
         <ModalStrip>
           <FlexBox
@@ -63,8 +75,16 @@ const RoleModal = ({ role, isOpen, onRequestClose }) => {
               justifyContent: "space-around",
             }}
           >
-            <p>Is this role right for you?</p>
-            <CardButton style={{ fontFamily: "Abel" }}>Apply Now</CardButton>
+            {isFormOpen ? (
+              ""
+            ) : (
+              <>
+                <p>Is this role right for you?</p>
+                <CardButton onClick={onOpenForm} style={{ fontFamily: "Abel" }}>
+                  Apply Now
+                </CardButton>
+              </>
+            )}
           </FlexBox>
         </ModalStrip>
       </Modal>
