@@ -1,0 +1,2060 @@
+[
+  {
+    "id": 1,
+    "slug": "dev-launchers-platform",
+    "catchPhrase": "The Dev Launchers mission at scale!",
+    "title": "[Dev Launchers] Platform Governance",
+    "vision": "An online platform democratizing access to learning tech-ready skills by acting as a one-stop-shop for bootstrapping or joining software projects, and helping members to contribute meaningfully while gaining industry ready experience.",
+    "Description": "Play a role in building the site you're currently on!\n\nBy joining this project you'll become part of a large, technically advanced team working toward huge impact. Our team works with modern web technologies and uses widely accepted standard practices in agile software development. \n\nThis project is currently split into two sub-teams: the front end and the back end. We do weekly sync-ups  where the entire group gets together to be briefed on the overall status of the project and give input on product direction, then sub-team focus sessions are held to give hand on support to individual team members and small groups. The leaders of this project, along with all of our members, are open to guiding people of all skill levels as they work toward building cool new features into the platform!\n\n",
+    "commitmentLevel": "3 hours per week",
+    "signupFormUrl": "https://devlaunchers.com/members",
+    "published_at": "2021-06-20T23:01:16.316Z",
+    "created_at": "2021-06-11T18:55:19.213Z",
+    "updated_at": "2021-09-17T18:20:34.624Z",
+    "description": "Play a role in building the site you're currently on!\n\nBy joining this project you'll become part of a large, technically advanced team working toward a huge impact. We're seeking experts and leaders in various fields to help advise our organization and work with our project leaders to maximize the good we can accomplish together!\n\n",
+    "user": null,
+    "calendarId": "c_phhrrsnmld4qijahnaphjl9ee0@group.calendar.google.com",
+    "isListed": true,
+    "parentProject": null,
+    "google_meet": null,
+    "meetingLinkURLs": [
+      {
+        "id": 1,
+        "roomName": "Common Area",
+        "url": "https://devlaunchers.com/hangout"
+      }
+    ],
+    "meetingTimes": [],
+    "keywords": [
+      {
+        "id": 68,
+        "keyword": "Leadership"
+      },
+      {
+        "id": 69,
+        "keyword": "Strategy"
+      },
+      {
+        "id": 70,
+        "keyword": "Tech"
+      }
+    ],
+    "projectReferenceURLs": [
+      {
+        "id": 1,
+        "title": "Project Board",
+        "url": "https://github.com/orgs/dev-launchers/projects/17"
+      }
+    ],
+    "openPositions": [],
+    "team": {
+      "id": 7,
+      "leaders": [],
+      "members": []
+    },
+    "Images": [],
+    "board": null,
+    "heroImage": {
+      "id": 13,
+      "name": "photo-1487014679447-9f8336841d58.jpg",
+      "alternativeText": "",
+      "caption": "",
+      "width": 1166,
+      "height": 674,
+      "formats": {
+        "large": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/large_photo_1487014679447_9f8336841d58_c912a4c559.jpg",
+          "hash": "large_photo_1487014679447_9f8336841d58_c912a4c559",
+          "mime": "image/jpeg",
+          "name": "large_photo-1487014679447-9f8336841d58.jpg",
+          "path": null,
+          "size": 70.88,
+          "width": 1000,
+          "height": 578
+        },
+        "small": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/small_photo_1487014679447_9f8336841d58_c912a4c559.jpg",
+          "hash": "small_photo_1487014679447_9f8336841d58_c912a4c559",
+          "mime": "image/jpeg",
+          "name": "small_photo-1487014679447-9f8336841d58.jpg",
+          "path": null,
+          "size": 23.81,
+          "width": 500,
+          "height": 289
+        },
+        "medium": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/medium_photo_1487014679447_9f8336841d58_c912a4c559.jpg",
+          "hash": "medium_photo_1487014679447_9f8336841d58_c912a4c559",
+          "mime": "image/jpeg",
+          "name": "medium_photo-1487014679447-9f8336841d58.jpg",
+          "path": null,
+          "size": 45.18,
+          "width": 750,
+          "height": 434
+        },
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/thumbnail_photo_1487014679447_9f8336841d58_c912a4c559.jpg",
+          "hash": "thumbnail_photo_1487014679447_9f8336841d58_c912a4c559",
+          "mime": "image/jpeg",
+          "name": "thumbnail_photo-1487014679447-9f8336841d58.jpg",
+          "path": null,
+          "size": 7.91,
+          "width": 245,
+          "height": 142
+        }
+      },
+      "hash": "photo_1487014679447_9f8336841d58_c912a4c559",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 88.27,
+      "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/photo_1487014679447_9f8336841d58_c912a4c559.jpg",
+      "previewUrl": null,
+      "provider": "azure-storage",
+      "provider_metadata": null,
+      "created_at": "2021-06-26T17:24:23.181Z",
+      "updated_at": "2021-06-26T17:24:23.357Z"
+    }
+  },
+  {
+    "id": 7,
+    "slug": "dev-launchers-edu",
+    "catchPhrase": "You CAN have your cake, and eat it too.",
+    "title": "[DevLaunchers] BaseCamp",
+    "vision": "All the tools necessary for creative freedom when designing technology based educational content, unified under a single platform.",
+    "Description": null,
+    "commitmentLevel": "5-10+ hours/week",
+    "signupFormUrl": "https://devlaunchers.com/members",
+    "published_at": "2021-07-09T00:10:53.598Z",
+    "created_at": "2021-07-08T23:49:47.018Z",
+    "updated_at": "2021-10-12T00:02:11.610Z",
+    "description": "Our goal is to design a platform that brings together all the different tools necessary to deliver an engaging, memorable, unique, educational experience. These tools will be geared towards technology and programming content.\n\nIn addition, this project aims to provide a place for junior developers to explore, implement, and share their knowledge with the platform community.\n\nFurther, in order to achieve our primary goals, we believe that the platform should include various gamification aspects, achievements, and a sense of progression and accomplishment.",
+    "user": null,
+    "calendarId": "c_fkj0kqmfiqv210jlbpklvfabi8@group.calendar.google.com",
+    "isListed": true,
+    "parentProject": null,
+    "google_meet": null,
+    "meetingLinkURLs": [
+      {
+        "id": 3,
+        "roomName": "DevLaunchers Hangouts Room 3",
+        "url": "https://devlaunchers.com/hangout"
+      }
+    ],
+    "meetingTimes": [
+      {
+        "id": 5,
+        "title": "Weekly Team Meeting",
+        "date": null,
+        "dateTime": "Fridays at 4pm PDT "
+      }
+    ],
+    "keywords": [
+      {
+        "id": 18,
+        "keyword": "All Experience Levels"
+      },
+      {
+        "id": 13,
+        "keyword": "All Skill Sets"
+      },
+      {
+        "id": 14,
+        "keyword": "Project Experience"
+      },
+      {
+        "id": 16,
+        "keyword": "Education"
+      },
+      {
+        "id": 17,
+        "keyword": "Cake"
+      }
+    ],
+    "projectReferenceURLs": [],
+    "openPositions": [
+      {
+        "id": 18,
+        "title": "[Platform] UI/UX Lead",
+        "description": "- Must be able to understand the vision of the project at a high level, and be able to design unique and engaging user experience.\n- Must be willing to work closely with the Product Owner, Frontend Lead, and Backend Lead to bring UI/UX designs to life.\n- Be willing to assist Jr. UI/UX developers in understanding their role and deliverables.\n- Be able to use Figma to present your designs and wireframes.\n- Lead roles will probably require at least 10 hour per week to be effective, however this could be more or less based on experience, organization, and communication ability.",
+        "isHidden": null
+      },
+      {
+        "id": 19,
+        "title": "[Platform] Frontend Lead (React)",
+        "description": "- Must be able to understand the vision of the project at a high level, and be able to develop and implement a maintainable, flexible, and extendable platform/product.\n- Must be willing to work closely with the Product Owner, UI/UX Lead, and Backend Lead to bring platform functionality to life.\n- Must be proficient with React framework, or willing to quickly fill the shoes as the go to person for frontend related needs.\n- Be willing to assist Jr. Frontend Developers in understanding their role and deliverables.\n- Be willing to assist with code reviews and Pull Requests related to frontend work.\n- Lead roles will probably require at least 10 hour per week to be effective, however this could be more or less based on experience, organization, and communication ability.",
+        "isHidden": null
+      },
+      {
+        "id": 20,
+        "title": "[Platform] Backend Lead",
+        "description": "- Must be able to understand the vision of the project at a high level, and be able to develop and implement a maintainable, flexible, and extendable backend of the platform/product.\n- Must be willing to work closely with the Product Owner, UI/UX Lead, and Frontend Lead to bring platform functionality to life.\n- Must be proficient with Strapi or a backend technology of your choice, or willing to quickly fill the shoes as the go to person for backend related needs.\n- Be willing to assist Jr. Backend Developers in understanding their role and deliverables.\n- Be willing to assist with code reviews and Pull Requests related to backend work.\n- Lead roles will probably require at least 10 hour per week to be effective, however this could be more or less based on experience, organization, and communication ability.",
+        "isHidden": null
+      },
+      {
+        "id": 21,
+        "title": "[Content] Developers/Creators",
+        "description": "Use the tools provided by the platform to design various educational modules. You are free to use any technology that our platform tools support, and any content topic you are interested in exploring. Good for beginner and junior developers to advance their skills and knowledge, while gaining project experience, and providing educational content to platform users.",
+        "isHidden": null
+      }
+    ],
+    "team": {
+      "id": 9,
+      "leaders": [
+        {
+          "id": 128,
+          "username": "Christian",
+          "profile": {
+            "id": 123,
+            "displayName": "Christian Segota",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJzcDm6gb7CEAxVlOrAbLTzqJsHNGDC1q8Uwhq3s=s96-c",
+            "level": null,
+            "user": 128,
+            "published_at": "2021-10-04T23:03:26.595Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-10-04T23:03:26.655Z",
+            "updated_at": "2021-10-04T23:03:27.689Z"
+          },
+          "email": "christiansegota@devlaunchers.com",
+          "role": "Team Lead"
+        },
+        {
+          "id": 132,
+          "username": "Rashika Shaw",
+          "profile": {
+            "id": 127,
+            "displayName": "Rashika Shaw",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJz0tWp5kOUPN4cduqu7cO2HUjx9PR4IWyKgpsab=s96-c",
+            "level": null,
+            "user": 132,
+            "published_at": "2021-10-06T01:03:56.368Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-10-06T01:03:56.468Z",
+            "updated_at": "2021-10-06T01:03:57.862Z"
+          },
+          "email": "rashikashaw97@gmail.com",
+          "role": "Senior Product Owner"
+        }
+      ],
+      "members": [
+        {
+          "id": 131,
+          "username": "JackDaus",
+          "profile": {
+            "id": 126,
+            "displayName": "Jack Daus",
+            "email": null,
+            "bio": "What's up?!",
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GhzyCL8uXUwPlWb4kFxUoSfBXsxzp7fPS80B8GO=s96-c",
+            "level": null,
+            "user": 131,
+            "published_at": "2021-10-05T22:51:26.731Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-10-05T22:51:26.776Z",
+            "updated_at": "2021-10-05T22:52:38.230Z"
+          },
+          "role": "Senior Frontend Developer"
+        },
+        {
+          "id": 108,
+          "username": "Iza",
+          "profile": {
+            "id": 103,
+            "displayName": "Izabela Król",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJyi8qZqZz3hRJDiZOmeIz7FF21kfM33fuNTo3Zj=s96-c",
+            "level": null,
+            "user": 108,
+            "published_at": "2021-09-25T15:18:23.168Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-25T15:18:23.213Z",
+            "updated_at": "2021-09-25T15:18:24.164Z"
+          },
+          "role": "Senior UI/UX Designer"
+        },
+        {
+          "id": 95,
+          "username": "Oscar11800",
+          "profile": {
+            "id": 90,
+            "displayName": "Oscar Chen",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GhXns7p1Al3fGkJDkHlBoZUUzUoFNjfmiZd7ygIVA=s96-c",
+            "level": null,
+            "user": 95,
+            "published_at": "2021-09-17T23:04:52.231Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-17T23:04:52.263Z",
+            "updated_at": "2021-09-17T23:04:52.999Z"
+          },
+          "role": "Junior Developer"
+        },
+        {
+          "id": 133,
+          "username": "jasonkx9",
+          "profile": {
+            "id": 128,
+            "displayName": "Jason Xu",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GhFPCtn9tY25MYblxeg_GqKnn4NMYMnkAlrB0kwlg=s96-c",
+            "level": null,
+            "user": 133,
+            "published_at": "2021-10-06T01:24:07.867Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-10-06T01:24:07.898Z",
+            "updated_at": "2021-10-06T01:24:08.572Z"
+          },
+          "role": "Junior Developer"
+        },
+        {
+          "id": 130,
+          "username": "kishubhatnagar",
+          "profile": {
+            "id": 125,
+            "displayName": "Kishu Bhatnagar",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GjjxCZjfYmByCHmDMvn7M5wHD25ZW-dvzyb_F6S0JA=s96-c",
+            "level": null,
+            "user": 130,
+            "published_at": "2021-10-05T17:30:19.927Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-10-05T17:30:20.071Z",
+            "updated_at": "2021-10-05T17:30:22.564Z"
+          },
+          "role": "Junior Product Owner"
+        }
+      ]
+    },
+    "Images": [],
+    "board": null,
+    "heroImage": {
+      "id": 24,
+      "name": "Cake Icons.jpg",
+      "alternativeText": "",
+      "caption": "",
+      "width": 632,
+      "height": 443,
+      "formats": {
+        "small": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/small_Cake_Icons_499fe316c3.jpg",
+          "hash": "small_Cake_Icons_499fe316c3",
+          "mime": "image/jpeg",
+          "name": "small_Cake Icons.jpg",
+          "path": null,
+          "size": 20.69,
+          "width": 500,
+          "height": 350
+        },
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/thumbnail_Cake_Icons_499fe316c3.jpg",
+          "hash": "thumbnail_Cake_Icons_499fe316c3",
+          "mime": "image/jpeg",
+          "name": "thumbnail_Cake Icons.jpg",
+          "path": null,
+          "size": 7.56,
+          "width": 223,
+          "height": 156
+        }
+      },
+      "hash": "Cake_Icons_499fe316c3",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 27.96,
+      "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/Cake_Icons_499fe316c3.jpg",
+      "previewUrl": null,
+      "provider": "azure-storage",
+      "provider_metadata": null,
+      "created_at": "2021-08-18T21:37:31.128Z",
+      "updated_at": "2021-08-18T21:37:31.317Z"
+    }
+  },
+  {
+    "id": 3,
+    "slug": "site-backend",
+    "catchPhrase": "Design backend systems that allow us to scale to the moon!",
+    "title": "[Dev Launchers] Site Backend",
+    "vision": "Design and develop backend systems that allows us to support the frontend and the overall goal of devlaunchers!",
+    "Description": null,
+    "commitmentLevel": "5-10 hours per week",
+    "signupFormUrl": "https://devlaunchers.com/members",
+    "published_at": "2021-07-12T19:31:56.133Z",
+    "created_at": "2021-06-11T18:59:10.027Z",
+    "updated_at": "2021-10-03T19:51:58.574Z",
+    "description": "Help us create the backend infrastructure for the website you're currently on!\n\nIn this project, you'll be helping develop the backend systems to allow our platform to make a huge impact! We'll be using Strapi which is a headless cms that will help us develop at rapid speeds! We'll also be using other modern web technologies such as node js, PostgreSQL, Docker and using REST API principles to develop the backend.\n\nWe'll have weekly meetings where we meet with the front-end team to discuss the platform's direction and status and have a special backend-focused meeting where you can get one-on-one help.\n\nWe accept people of all skill levels to come join and make our goals possible!",
+    "user": null,
+    "calendarId": "c_p1n0u758v8cl70e0uarr2qfrho@group.calendar.google.com",
+    "isListed": true,
+    "parentProject": null,
+    "google_meet": 2,
+    "meetingLinkURLs": [
+      {
+        "id": 4,
+        "roomName": "Room 8",
+        "url": "https://devlaunchers.com/hangout"
+      }
+    ],
+    "meetingTimes": [
+      {
+        "id": 6,
+        "title": "Platform Sync-Up",
+        "date": null,
+        "dateTime": "Every Tuesday 3:45pm CDT"
+      },
+      {
+        "id": 7,
+        "title": "Backend Focus",
+        "date": null,
+        "dateTime": "Every Tuesday 4:15 pm CDT"
+      }
+    ],
+    "keywords": [
+      {
+        "id": 23,
+        "keyword": "Web Dev"
+      },
+      {
+        "id": 24,
+        "keyword": "Backend Development"
+      },
+      {
+        "id": 26,
+        "keyword": "Javascript"
+      },
+      {
+        "id": 27,
+        "keyword": "Node js"
+      },
+      {
+        "id": 28,
+        "keyword": "strapi"
+      }
+    ],
+    "projectReferenceURLs": [
+      {
+        "id": 8,
+        "title": "Project Board",
+        "url": "https://github.com/orgs/dev-launchers/projects/21"
+      },
+      {
+        "id": 9,
+        "title": "API Design Doc",
+        "url": "https://docs.google.com/document/d/1_5aqFnkwqMGioApwpFH_UUvMH3_1km5okHuvw43B894/edit?usp=sharing"
+      }
+    ],
+    "openPositions": [
+      {
+        "id": 35,
+        "title": "Scrum Master",
+        "description": "Ensure that the team follows Agile principles and sticks to the practices agreed upon. Help facilitate productivity and a positive team environment. In charge of backlog management and helping the development team resolve any obstacles. ",
+        "isHidden": null
+      }
+    ],
+    "team": {
+      "id": 10,
+      "leaders": [
+        {
+          "id": 10,
+          "username": "alejandro",
+          "profile": {
+            "id": 5,
+            "displayName": "Alejandro Armas",
+            "email": null,
+            "bio": "This is my bio!",
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GhDGEaci-WNTfBPga0lF6fLKV_Z0X5MVSneovDUhg=s96-c",
+            "level": null,
+            "user": 10,
+            "published_at": "2021-08-07T19:41:04.045Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-08-07T19:41:04.073Z",
+            "updated_at": "2021-08-08T19:56:53.803Z"
+          },
+          "email": "alearm246@gmail.com",
+          "role": "Project Leader"
+        },
+        {
+          "id": 37,
+          "username": "chungting",
+          "profile": {
+            "id": 32,
+            "displayName": "Chung-Ting Huang",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJxa794OSPu05M8ooGRk6hWH_T64MtMjSlCUV5Ux=s96-c",
+            "level": null,
+            "user": 37,
+            "published_at": "2021-08-22T20:00:07.715Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-08-22T20:00:07.747Z",
+            "updated_at": "2021-08-22T20:00:08.386Z"
+          },
+          "email": "chungtinghuang@devlaunchers.com",
+          "role": "DevOps Engineer"
+        }
+      ],
+      "members": [
+        {
+          "id": 28,
+          "username": "mu113r",
+          "profile": {
+            "id": 23,
+            "displayName": "Johann",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJyUOhVF-hyQyPIYnW4zBG-q2G5yRhcJmRXGsZKM=s96-c",
+            "level": null,
+            "user": 28,
+            "published_at": "2021-08-14T17:37:44.217Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-08-14T17:37:44.258Z",
+            "updated_at": "2021-08-14T17:37:45.065Z"
+          },
+          "role": "Backend Developer"
+        },
+        {
+          "id": 74,
+          "username": "Jiawen",
+          "profile": {
+            "id": 69,
+            "displayName": "jia wen wu",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJwxqRXAspu_ZjxTOey9NAAad2a0HQrx9n5dKp73=s96-c",
+            "level": null,
+            "user": 74,
+            "published_at": "2021-09-04T00:58:10.210Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-04T00:58:10.255Z",
+            "updated_at": "2021-09-04T00:58:11.174Z"
+          },
+          "role": "Backend Developer"
+        },
+        {
+          "id": 67,
+          "username": "kuikuigao",
+          "profile": {
+            "id": 62,
+            "displayName": "Kuikui Gao",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJwNhxhjrVuPrcbI8UzhJJv04AgGveuuCzO4sMnL=s96-c",
+            "level": null,
+            "user": 67,
+            "published_at": "2021-09-01T20:22:12.406Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-01T20:22:12.438Z",
+            "updated_at": "2021-09-01T20:22:13.075Z"
+          },
+          "role": "Backend Developer"
+        },
+        {
+          "id": 77,
+          "username": "aparajita",
+          "profile": {
+            "id": 72,
+            "displayName": "Aparajita Ray",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJz8YJnmVJil1UyL1kyuXoBofqaKQnP2NHGAEivK=s96-c",
+            "level": null,
+            "user": 77,
+            "published_at": "2021-09-04T17:12:31.471Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-04T17:12:31.510Z",
+            "updated_at": "2021-09-04T17:12:32.338Z"
+          },
+          "role": "Backend Developer"
+        }
+      ]
+    },
+    "Images": [],
+    "board": null,
+    "heroImage": {
+      "id": 17,
+      "name": "cool-backend.jpg",
+      "alternativeText": "",
+      "caption": "",
+      "width": 1250,
+      "height": 735,
+      "formats": {
+        "large": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/large_cool_backend_15d8ed9c9b.jpg",
+          "hash": "large_cool_backend_15d8ed9c9b",
+          "mime": "image/jpeg",
+          "name": "large_cool-backend.jpg",
+          "path": null,
+          "size": 57.29,
+          "width": 1000,
+          "height": 588
+        },
+        "small": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/small_cool_backend_15d8ed9c9b.jpg",
+          "hash": "small_cool_backend_15d8ed9c9b",
+          "mime": "image/jpeg",
+          "name": "small_cool-backend.jpg",
+          "path": null,
+          "size": 17.92,
+          "width": 500,
+          "height": 294
+        },
+        "medium": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/medium_cool_backend_15d8ed9c9b.jpg",
+          "hash": "medium_cool_backend_15d8ed9c9b",
+          "mime": "image/jpeg",
+          "name": "medium_cool-backend.jpg",
+          "path": null,
+          "size": 35.15,
+          "width": 750,
+          "height": 441
+        },
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/thumbnail_cool_backend_15d8ed9c9b.jpg",
+          "hash": "thumbnail_cool_backend_15d8ed9c9b",
+          "mime": "image/jpeg",
+          "name": "thumbnail_cool-backend.jpg",
+          "path": null,
+          "size": 5.5,
+          "width": 245,
+          "height": 144
+        }
+      },
+      "hash": "cool_backend_15d8ed9c9b",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 86.73,
+      "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/cool_backend_15d8ed9c9b.jpg",
+      "previewUrl": null,
+      "provider": "azure-storage",
+      "provider_metadata": null,
+      "created_at": "2021-07-12T19:35:51.946Z",
+      "updated_at": "2021-07-12T19:35:52.075Z"
+    }
+  },
+  {
+    "id": 9,
+    "slug": "discord-bot",
+    "catchPhrase": "Create unique features for our community bot!",
+    "title": "Discord Bot",
+    "vision": "Build an empowering Discord Bot that creates unique experiences for our community of creatives.",
+    "Description": null,
+    "commitmentLevel": "3 hours per week",
+    "signupFormUrl": "https://devlaunchers.com/members",
+    "published_at": "2021-07-19T15:17:20.722Z",
+    "created_at": "2021-07-19T14:26:26.180Z",
+    "updated_at": "2021-09-18T02:35:59.148Z",
+    "description": "Build a Discord Bot that will improve and empower our community!\n\nIn this project, you will be using the Discord API to create a unique and custom bot to be used by all the members in our publicly open Discord Server. To create such product, we are using Discord's JavaScript library as well as some technologies like PostgreSQL and Docker for our backend needs. Together, we will build a very versatile project that involves many great tools.\n\nWe will meet weekly to decide the future of the bot and to catch up on all the cool things we have been working on!\n\n",
+    "user": null,
+    "calendarId": "c_ig02lmorfgt4ggm3hnjop88k18@group.calendar.google.com",
+    "isListed": true,
+    "parentProject": null,
+    "google_meet": null,
+    "meetingLinkURLs": [
+      {
+        "id": 5,
+        "roomName": "Room 5",
+        "url": "https://devlaunchers.com/hangout"
+      }
+    ],
+    "meetingTimes": [
+      {
+        "id": 9,
+        "title": "Catch Up & Planning",
+        "date": null,
+        "dateTime": "Every Wednesday 3:30 PM CDT"
+      }
+    ],
+    "keywords": [
+      {
+        "id": 46,
+        "keyword": "Bot"
+      },
+      {
+        "id": 43,
+        "keyword": "DiscordJs"
+      },
+      {
+        "id": 65,
+        "keyword": "JavaScript"
+      },
+      {
+        "id": 47,
+        "keyword": "Backend Development"
+      }
+    ],
+    "projectReferenceURLs": [
+      {
+        "id": 10,
+        "title": "Repository",
+        "url": "https://github.com/dev-launchers-sandbox/project__discord-bot/tree/release"
+      },
+      {
+        "id": 11,
+        "title": "Project Board",
+        "url": "https://github.com/dev-launchers-sandbox/project__discord-bot/projects/1"
+      },
+      {
+        "id": 12,
+        "title": "DiscordJs Docs",
+        "url": "https://discord.js.org/#/"
+      }
+    ],
+    "openPositions": [
+      {
+        "id": 27,
+        "title": "JavaScript Developer",
+        "description": "Work alongside other members to create bot-plugins for our community to enjoy! You will be using JavaScript, HTTP requests, and the DiscordJS Library to create unique plugins and features.\nNo experience required!\n",
+        "isHidden": null
+      },
+      {
+        "id": 28,
+        "title": "UX Researcher/Designer",
+        "description": "Our goal is to create unique experiences for our community of creatives, which is why their feedback is greatly needed. We want to make features that members will enjoy, and to deliver them in the best way to engage their use. That is where YOU come in! Your role is to research WHAT the community wants, and HOW they want it. Help us build the best features for the best community!\n",
+        "isHidden": null
+      }
+    ],
+    "team": {
+      "id": 12,
+      "leaders": [],
+      "members": []
+    },
+    "Images": [],
+    "board": null,
+    "heroImage": {
+      "id": 18,
+      "name": "discord-bot.jpg",
+      "alternativeText": "",
+      "caption": "",
+      "width": 334,
+      "height": 501,
+      "formats": {
+        "small": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/small_discord_bot_929544a17b.jpg",
+          "hash": "small_discord_bot_929544a17b",
+          "mime": "image/jpeg",
+          "name": "small_discord-bot.jpg",
+          "path": null,
+          "size": 11.76,
+          "width": 333,
+          "height": 500
+        },
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/thumbnail_discord_bot_929544a17b.jpg",
+          "hash": "thumbnail_discord_bot_929544a17b",
+          "mime": "image/jpeg",
+          "name": "thumbnail_discord-bot.jpg",
+          "path": null,
+          "size": 2.92,
+          "width": 104,
+          "height": 156
+        }
+      },
+      "hash": "discord_bot_929544a17b",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 11.54,
+      "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/discord_bot_929544a17b.jpg",
+      "previewUrl": null,
+      "provider": "azure-storage",
+      "provider_metadata": null,
+      "created_at": "2021-07-19T15:03:43.051Z",
+      "updated_at": "2021-08-10T23:55:12.300Z"
+    }
+  },
+  {
+    "id": 8,
+    "slug": "DL-Idea",
+    "catchPhrase": "Let's brainstorm together!",
+    "title": "Ideas Platform",
+    "vision": "A hub where we can make ideas into reality. Our platform allows Dev Launchers users to vocalize their ideas then build them into a project. ",
+    "Description": null,
+    "commitmentLevel": "2-3 hours / week",
+    "signupFormUrl": "https://devlaunchers.com/members",
+    "published_at": "2021-08-02T18:15:49.848Z",
+    "created_at": "2021-07-12T21:47:32.479Z",
+    "updated_at": "2021-10-16T23:05:36.337Z",
+    "description": "We're building a platform that inspires people to build cool software project ideas that will follow the Dev Launchers ethos website. This platform will be able to take in ideas from members of Dev Launchers, display these ideas for other users to interact with, and finally allow members to adopt others' ideas. \n\nOften people have ideas that they do not have the bandwidth to address. These ideas will be further fleshed out by engaging members of the community. With our idea hub, we can brainstorm better, interact with other members' dream software projects, and build more together!\n",
+    "user": null,
+    "calendarId": "c_grbrq0795sd65ptj6g88kigld8@group.calendar.google.com",
+    "isListed": true,
+    "parentProject": null,
+    "google_meet": null,
+    "meetingLinkURLs": [],
+    "meetingTimes": [
+      {
+        "id": 11,
+        "title": "Weekly Standup",
+        "date": null,
+        "dateTime": "Mondays @ 6:00 p.m. CST"
+      }
+    ],
+    "keywords": [
+      {
+        "id": 49,
+        "keyword": "All Experience Levels"
+      },
+      {
+        "id": 50,
+        "keyword": "UX Design"
+      },
+      {
+        "id": 51,
+        "keyword": "JavaScript"
+      },
+      {
+        "id": 52,
+        "keyword": "React"
+      },
+      {
+        "id": 53,
+        "keyword": "Web Development"
+      },
+      {
+        "id": 71,
+        "keyword": "HTML"
+      },
+      {
+        "id": 72,
+        "keyword": "CSS"
+      }
+    ],
+    "projectReferenceURLs": [
+      {
+        "id": 14,
+        "title": "Our Subdomain",
+        "url": "https://idea.devlaunchers.com/"
+      },
+      {
+        "id": 15,
+        "title": "Our GitHub Repo",
+        "url": "https://github.com/dev-launchers/platform__dl-ideas"
+      },
+      {
+        "id": 16,
+        "title": "Our Roadmap",
+        "url": "https://trello.com/b/SGEBH8W6/dl-idea"
+      }
+    ],
+    "openPositions": [
+      {
+        "id": 31,
+        "title": "Scrum Master",
+        "description": "Ensure that the team follows Agile principles and sticks to the practices agreed upon. Help facilitate productivity and a positive team environment. Assists the Product Owner or Project Lead with backlog management and helping the development team resolve any obstacles.",
+        "isHidden": false
+      }
+    ],
+    "team": {
+      "id": 11,
+      "leaders": [
+        {
+          "id": 15,
+          "username": "mando",
+          "profile": {
+            "id": 10,
+            "displayName": "h",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJwoMZGUb566XxULdhdE2inQznpl3-lsm_9WqEFQ3A=s96-c",
+            "level": null,
+            "user": 15,
+            "published_at": "2021-08-10T21:49:10.103Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-08-10T21:49:10.148Z",
+            "updated_at": "2021-08-10T21:49:10.983Z"
+          },
+          "email": "emailhaniya@gmail.com",
+          "role": "Team Lead"
+        }
+      ],
+      "members": [
+        {
+          "id": 32,
+          "username": "cpok",
+          "profile": {
+            "id": 27,
+            "displayName": "Christine Park",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GhDIge9770hzefGXpbqM8agCledZnCFUU0O3vt1zA=s96-c",
+            "level": null,
+            "user": 32,
+            "published_at": "2021-08-16T20:03:49.611Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-08-16T20:03:49.643Z",
+            "updated_at": "2021-08-16T20:03:50.280Z"
+          },
+          "role": "Developer"
+        },
+        {
+          "id": 68,
+          "username": "Rania",
+          "profile": {
+            "id": 63,
+            "displayName": "Rania Baltagi",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GhbvXnG4dBuQ23HXMTNuHqQ8VyYUvy2T0dwhA9lTA=s96-c",
+            "level": null,
+            "user": 68,
+            "published_at": "2021-09-02T15:01:24.649Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-02T15:01:24.680Z",
+            "updated_at": "2021-09-02T15:01:25.293Z"
+          },
+          "role": "UI Designer"
+        },
+        {
+          "id": 70,
+          "username": "Riley",
+          "profile": {
+            "id": 65,
+            "displayName": "Riley Johnston",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14Ggv5RH_tU1mpjbBy5tyzA0HXhgwE7GAzC0H2YAH=s96-c",
+            "level": null,
+            "user": 70,
+            "published_at": "2021-09-02T23:12:45.693Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-02T23:12:45.739Z",
+            "updated_at": "2021-09-02T23:12:46.630Z"
+          },
+          "role": "Developer"
+        },
+        {
+          "id": 80,
+          "username": "isaacksmoon",
+          "profile": {
+            "id": 75,
+            "displayName": "Anna Grant",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJz4YkzAXPrt_6pvvAI-FfUVV4VdQyo8IWQy-uaI=s96-c",
+            "level": null,
+            "user": 80,
+            "published_at": "2021-09-09T17:35:15.565Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-09T17:35:15.611Z",
+            "updated_at": "2021-09-09T17:35:16.496Z"
+          },
+          "role": "UX Researcher"
+        },
+        {
+          "id": 89,
+          "username": "Nishamohan ",
+          "profile": {
+            "id": 84,
+            "displayName": "Nisha Mohan",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJxxvGZMF9JsagMYX7U08H7e67fL2aLJjyjggsZZ=s96-c",
+            "level": null,
+            "user": 89,
+            "published_at": "2021-09-13T20:39:59.874Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-13T20:39:59.901Z",
+            "updated_at": "2021-09-13T20:40:00.480Z"
+          },
+          "role": "UX Researcher"
+        }
+      ]
+    },
+    "Images": [],
+    "board": {
+      "id": 1,
+      "ProjectMilestone": []
+    },
+    "heroImage": {
+      "id": 19,
+      "name": "absolutvision-82TpEld0_e4-unsplash.jpg",
+      "alternativeText": "",
+      "caption": "",
+      "width": 3800,
+      "height": 2533,
+      "formats": {
+        "large": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/large_absolutvision_82_Tp_Eld0_e4_unsplash_276b79271f.jpg",
+          "hash": "large_absolutvision_82_Tp_Eld0_e4_unsplash_276b79271f",
+          "mime": "image/jpeg",
+          "name": "large_absolutvision-82TpEld0_e4-unsplash.jpg",
+          "path": null,
+          "size": 217.09,
+          "width": 1000,
+          "height": 667
+        },
+        "small": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/small_absolutvision_82_Tp_Eld0_e4_unsplash_276b79271f.jpg",
+          "hash": "small_absolutvision_82_Tp_Eld0_e4_unsplash_276b79271f",
+          "mime": "image/jpeg",
+          "name": "small_absolutvision-82TpEld0_e4-unsplash.jpg",
+          "path": null,
+          "size": 55.32,
+          "width": 500,
+          "height": 333
+        },
+        "medium": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/medium_absolutvision_82_Tp_Eld0_e4_unsplash_276b79271f.jpg",
+          "hash": "medium_absolutvision_82_Tp_Eld0_e4_unsplash_276b79271f",
+          "mime": "image/jpeg",
+          "name": "medium_absolutvision-82TpEld0_e4-unsplash.jpg",
+          "path": null,
+          "size": 120.58,
+          "width": 750,
+          "height": 500
+        },
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/thumbnail_absolutvision_82_Tp_Eld0_e4_unsplash_276b79271f.jpg",
+          "hash": "thumbnail_absolutvision_82_Tp_Eld0_e4_unsplash_276b79271f",
+          "mime": "image/jpeg",
+          "name": "thumbnail_absolutvision-82TpEld0_e4-unsplash.jpg",
+          "path": null,
+          "size": 11.78,
+          "width": 234,
+          "height": 156
+        }
+      },
+      "hash": "absolutvision_82_Tp_Eld0_e4_unsplash_276b79271f",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 2120.69,
+      "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/absolutvision_82_Tp_Eld0_e4_unsplash_276b79271f.jpg",
+      "previewUrl": null,
+      "provider": "azure-storage",
+      "provider_metadata": null,
+      "created_at": "2021-08-02T18:13:29.556Z",
+      "updated_at": "2021-08-02T18:14:05.428Z"
+    }
+  },
+  {
+    "id": 10,
+    "slug": "site-projects",
+    "catchPhrase": "Build the best environment for the projects you see here!",
+    "title": "Site Projects",
+    "vision": "Our ultimate goal is to provide the best environment for our projects in terms of discoverability, engagement and funding.",
+    "Description": null,
+    "commitmentLevel": "2-3 hours a week",
+    "signupFormUrl": "https://forms.gle/DaLYFXfjoy97gGtz8",
+    "published_at": "2021-08-05T09:41:36.298Z",
+    "created_at": "2021-08-05T08:38:13.931Z",
+    "updated_at": "2021-10-16T01:00:56.941Z",
+    "description": "Play a role in building the page **you're currently on!**\n\nBy joining this project you'll become part of a team pursuing the best user experience for team leaders, team members and even donors!\n\nThis project relies on innovation, We're seeking people with interest to spread ideas for a better version of the current page you're reading from.\n\nIf you think you're up for the challenge then don't be hesitant and join us on this journey where you'll learn all different kind of skills from agile software development to communicating with various project leaders.",
+    "user": 36,
+    "calendarId": "c_hc51tp6uv5g0fnvnphh4t01pqs@group.calendar.google.com",
+    "isListed": true,
+    "parentProject": null,
+    "google_meet": null,
+    "meetingLinkURLs": [
+      {
+        "id": 6,
+        "roomName": "Team stand ups (Common Area room)",
+        "url": "https://devlaunchers.com/hangout"
+      }
+    ],
+    "meetingTimes": [
+      {
+        "id": 12,
+        "title": "General Meeting",
+        "date": null,
+        "dateTime": "Every Tuesday 2:00 PM CDT"
+      }
+    ],
+    "keywords": [
+      {
+        "id": 54,
+        "keyword": "Agile Development"
+      },
+      {
+        "id": 55,
+        "keyword": "Front End Development"
+      },
+      {
+        "id": 56,
+        "keyword": "Git"
+      },
+      {
+        "id": 57,
+        "keyword": "JavaScript"
+      },
+      {
+        "id": 58,
+        "keyword": "Strapi"
+      },
+      {
+        "id": 59,
+        "keyword": "Node"
+      },
+      {
+        "id": 60,
+        "keyword": "React"
+      },
+      {
+        "id": 61,
+        "keyword": "UI/UX"
+      },
+      {
+        "id": 62,
+        "keyword": "Web Design"
+      },
+      {
+        "id": 63,
+        "keyword": "Web Dev"
+      }
+    ],
+    "projectReferenceURLs": [
+      {
+        "id": 17,
+        "title": "Project Board",
+        "url": "https://trello.com/b/ZdVDIUeD/platform-roadmap"
+      },
+      {
+        "id": 18,
+        "title": "Github Repository",
+        "url": "https://github.com/dev-launchers/site-projects"
+      }
+    ],
+    "openPositions": [
+      {
+        "id": 22,
+        "title": "UX Specialist",
+        "description": "We are seeking a specialist user experience designer to join our team and be a part of building solutions and capabilities aimed at accelerating the platform innovations. The ideal candidate would do the following:\n\n-Leading UI/UX initiatives and user workshops\n-Analysing user behaviour using appropriate tools\n-Providing recommendations on tools and methodologies to understand user behaviour and inform front-end developers\n-Providing recommendations to improve user satisfaction and efficiency\n-Communicating with project leaders periodically to provide the outcome of the researchers",
+        "isHidden": true
+      }
+    ],
+    "team": {
+      "id": 13,
+      "leaders": [
+        {
+          "id": 36,
+          "username": "Enjoy2Live",
+          "profile": {
+            "id": 31,
+            "displayName": "Mohammed Maqbol",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJwBF_WA7pAkr_T4UumbZz-ez16M7-MAVGNP97V4=s96-c",
+            "level": null,
+            "user": 36,
+            "published_at": "2021-08-22T01:14:25.924Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-08-22T01:14:25.955Z",
+            "updated_at": "2021-08-22T01:14:26.610Z"
+          },
+          "email": "mohammedmaqbol@devlaunchers.com",
+          "role": "Full Stack Developer"
+        },
+        {
+          "id": 9,
+          "username": "Mohammed Maqbol",
+          "profile": {
+            "id": 4,
+            "displayName": "Mohammed Maqbol",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJy6g_D0Qp8199cgJupiVUBVGXrz7mtg3Btmcr2V=s96-c",
+            "level": null,
+            "user": 9,
+            "published_at": "2021-08-02T17:35:07.895Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-08-02T17:35:07.940Z",
+            "updated_at": "2021-08-22T01:15:01.887Z"
+          },
+          "email": "imohammedmaqbol@gmail.com",
+          "role": "Full Stack Developer"
+        }
+      ],
+      "members": [
+        {
+          "id": 53,
+          "username": "MarkBritDev",
+          "profile": {
+            "id": 48,
+            "displayName": "Marco",
+            "email": null,
+            "bio": "Self-taught React Front-End Developer. I transitioned from the oil and gas industry. I like to talk about technology, mindset and career change. I love books.",
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GgaLQlzWxCxYp8lSnYazgRYeSzhOfEou5q1BcGitKs=s96-c",
+            "level": null,
+            "user": 53,
+            "published_at": "2021-08-27T17:13:00.277Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-08-27T17:13:00.319Z",
+            "updated_at": "2021-08-27T17:18:35.920Z"
+          },
+          "role": "Junior React Developer"
+        },
+        {
+          "id": 52,
+          "username": "hredhyadev",
+          "profile": {
+            "id": 47,
+            "displayName": "Hredhya Mohan",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJw_k9qg-gYfOKCpL7wEQtEpDKELIppoiHSo8t2p=s96-c",
+            "level": null,
+            "user": 52,
+            "published_at": "2021-08-27T15:38:10.483Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-08-27T15:38:10.514Z",
+            "updated_at": "2021-08-27T15:38:11.122Z"
+          },
+          "role": "Beginner React Developer"
+        },
+        {
+          "id": 55,
+          "username": "Jappreet",
+          "profile": {
+            "id": 50,
+            "displayName": "Jappreet",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJwK6eoYZWv4_pSc56gOsSj5-fFhyRW8jT8_aKnt=s96-c",
+            "level": null,
+            "user": 55,
+            "published_at": "2021-08-28T17:10:40.382Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-08-28T17:10:40.428Z",
+            "updated_at": "2021-08-28T17:10:41.332Z"
+          },
+          "role": "Junior React Developer"
+        },
+        {
+          "id": 56,
+          "username": "gsokol4",
+          "profile": {
+            "id": 51,
+            "displayName": "Gabriel Sokol",
+            "email": null,
+            "bio": "Hello everyone, I'm Gabriel Sokol. I have experience with React, JavaScript and front end in general and I am now learning node.js. I got into programming in 2019. feel free to use English or Spanish with and I am looking forward to getting to know everyone",
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJw5RjiuAVJBR5s8OEVOzFW9baq5AXOz-zJkiHYv=s96-c",
+            "level": null,
+            "user": 56,
+            "published_at": "2021-08-28T17:40:31.248Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-08-28T17:40:31.279Z",
+            "updated_at": "2021-08-28T17:45:16.493Z"
+          },
+          "role": "Junior React Developer"
+        },
+        {
+          "id": 121,
+          "username": "Josie ",
+          "profile": {
+            "id": 116,
+            "displayName": "Josie Hu",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJxRJqy0kXC2I7SZ_4iBCGO3Knila8RnrORddCY9=s96-c",
+            "level": null,
+            "user": 121,
+            "published_at": "2021-10-01T14:40:53.935Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-10-01T14:40:53.968Z",
+            "updated_at": "2021-10-01T14:40:54.629Z"
+          },
+          "role": "UX Designer "
+        },
+        {
+          "id": 140,
+          "username": "shadab.forouzan",
+          "profile": {
+            "id": 135,
+            "displayName": "shadab forouzan",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14Git0dLwRr-KHCe-LB-jkaQ7mwL8HyBLfun6eqY7LQ=s96-c",
+            "level": null,
+            "user": 140,
+            "published_at": "2021-10-11T17:43:48.181Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-10-11T17:43:48.243Z",
+            "updated_at": "2021-10-11T17:43:49.495Z"
+          },
+          "role": "UX Researcher"
+        }
+      ]
+    },
+    "Images": [
+      {
+        "id": 1,
+        "image": [
+          {
+            "id": 25,
+            "name": "https://raw.githubusercontent.com/dev-launchers/platform__website/master/public/images/logo-monogram.png",
+            "alternativeText": "",
+            "caption": "",
+            "width": 1170,
+            "height": 780,
+            "formats": {
+              "large": {
+                "ext": ".png",
+                "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/large_logo_monogram_c0c251d06a.png",
+                "hash": "large_logo_monogram_c0c251d06a",
+                "mime": "image/jpeg",
+                "name": "large_https://raw.githubusercontent.com/dev-launchers/platform__website/master/public/images/logo-monogram.png",
+                "path": null,
+                "size": 67.12,
+                "width": 1000,
+                "height": 667
+              },
+              "small": {
+                "ext": ".png",
+                "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/small_logo_monogram_c0c251d06a.png",
+                "hash": "small_logo_monogram_c0c251d06a",
+                "mime": "image/jpeg",
+                "name": "small_https://raw.githubusercontent.com/dev-launchers/platform__website/master/public/images/logo-monogram.png",
+                "path": null,
+                "size": 22.33,
+                "width": 500,
+                "height": 333
+              },
+              "medium": {
+                "ext": ".png",
+                "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/medium_logo_monogram_c0c251d06a.png",
+                "hash": "medium_logo_monogram_c0c251d06a",
+                "mime": "image/jpeg",
+                "name": "medium_https://raw.githubusercontent.com/dev-launchers/platform__website/master/public/images/logo-monogram.png",
+                "path": null,
+                "size": 42.7,
+                "width": 750,
+                "height": 500
+              },
+              "thumbnail": {
+                "ext": ".png",
+                "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/thumbnail_logo_monogram_c0c251d06a.png",
+                "hash": "thumbnail_logo_monogram_c0c251d06a",
+                "mime": "image/jpeg",
+                "name": "thumbnail_https://raw.githubusercontent.com/dev-launchers/platform__website/master/public/images/logo-monogram.png",
+                "path": null,
+                "size": 7.47,
+                "width": 234,
+                "height": 156
+              }
+            },
+            "hash": "logo_monogram_c0c251d06a",
+            "ext": ".png",
+            "mime": "image/jpeg",
+            "size": 84.41,
+            "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/logo_monogram_c0c251d06a.png",
+            "previewUrl": null,
+            "provider": "azure-storage",
+            "provider_metadata": null,
+            "created_at": "2021-08-22T20:19:56.715Z",
+            "updated_at": "2021-09-29T23:29:07.985Z"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "image": [
+          {
+            "id": 24,
+            "name": "Cake Icons.jpg",
+            "alternativeText": "",
+            "caption": "",
+            "width": 632,
+            "height": 443,
+            "formats": {
+              "small": {
+                "ext": ".jpg",
+                "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/small_Cake_Icons_499fe316c3.jpg",
+                "hash": "small_Cake_Icons_499fe316c3",
+                "mime": "image/jpeg",
+                "name": "small_Cake Icons.jpg",
+                "path": null,
+                "size": 20.69,
+                "width": 500,
+                "height": 350
+              },
+              "thumbnail": {
+                "ext": ".jpg",
+                "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/thumbnail_Cake_Icons_499fe316c3.jpg",
+                "hash": "thumbnail_Cake_Icons_499fe316c3",
+                "mime": "image/jpeg",
+                "name": "thumbnail_Cake Icons.jpg",
+                "path": null,
+                "size": 7.56,
+                "width": 223,
+                "height": 156
+              }
+            },
+            "hash": "Cake_Icons_499fe316c3",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "size": 27.96,
+            "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/Cake_Icons_499fe316c3.jpg",
+            "previewUrl": null,
+            "provider": "azure-storage",
+            "provider_metadata": null,
+            "created_at": "2021-08-18T21:37:31.128Z",
+            "updated_at": "2021-08-18T21:37:31.317Z"
+          }
+        ]
+      }
+    ],
+    "board": {
+      "id": 2,
+      "ProjectMilestone": [
+        {
+          "id": 1,
+          "title": "Redesign the page",
+          "description": "Working towards finishing the new project page design",
+          "task": [
+            {
+              "id": 1,
+              "title": "Sessions component",
+              "isReached": false,
+              "completionDate": "2021-09-14"
+            },
+            {
+              "id": 2,
+              "title": "Open roles component",
+              "isReached": true,
+              "completionDate": "2021-09-12"
+            },
+            {
+              "id": 3,
+              "title": "Members component",
+              "isReached": true,
+              "completionDate": "2021-09-12"
+            },
+            {
+              "id": 4,
+              "title": "Vision component",
+              "isReached": true,
+              "completionDate": "2021-09-09"
+            }
+          ]
+        }
+      ]
+    },
+    "heroImage": {
+      "id": 20,
+      "name": "sigmund-4UGmm3WRUoQ-unsplash.jpg",
+      "alternativeText": "",
+      "caption": "",
+      "width": 2400,
+      "height": 1800,
+      "formats": {
+        "large": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/large_sigmund_4_U_Gmm3_WR_Uo_Q_unsplash_31af2a1998.jpg",
+          "hash": "large_sigmund_4_U_Gmm3_WR_Uo_Q_unsplash_31af2a1998",
+          "mime": "image/jpeg",
+          "name": "large_sigmund-4UGmm3WRUoQ-unsplash.jpg",
+          "path": null,
+          "size": 106.87,
+          "width": 1000,
+          "height": 750
+        },
+        "small": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/small_sigmund_4_U_Gmm3_WR_Uo_Q_unsplash_31af2a1998.jpg",
+          "hash": "small_sigmund_4_U_Gmm3_WR_Uo_Q_unsplash_31af2a1998",
+          "mime": "image/jpeg",
+          "name": "small_sigmund-4UGmm3WRUoQ-unsplash.jpg",
+          "path": null,
+          "size": 33.73,
+          "width": 500,
+          "height": 375
+        },
+        "medium": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/medium_sigmund_4_U_Gmm3_WR_Uo_Q_unsplash_31af2a1998.jpg",
+          "hash": "medium_sigmund_4_U_Gmm3_WR_Uo_Q_unsplash_31af2a1998",
+          "mime": "image/jpeg",
+          "name": "medium_sigmund-4UGmm3WRUoQ-unsplash.jpg",
+          "path": null,
+          "size": 68.44,
+          "width": 750,
+          "height": 563
+        },
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/thumbnail_sigmund_4_U_Gmm3_WR_Uo_Q_unsplash_31af2a1998.jpg",
+          "hash": "thumbnail_sigmund_4_U_Gmm3_WR_Uo_Q_unsplash_31af2a1998",
+          "mime": "image/jpeg",
+          "name": "thumbnail_sigmund-4UGmm3WRUoQ-unsplash.jpg",
+          "path": null,
+          "size": 7.29,
+          "width": 208,
+          "height": 156
+        }
+      },
+      "hash": "sigmund_4_U_Gmm3_WR_Uo_Q_unsplash_31af2a1998",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 386.27,
+      "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/sigmund_4_U_Gmm3_WR_Uo_Q_unsplash_31af2a1998.jpg",
+      "previewUrl": null,
+      "provider": "azure-storage",
+      "provider_metadata": null,
+      "created_at": "2021-08-05T09:08:45.407Z",
+      "updated_at": "2021-08-05T09:08:45.588Z"
+    }
+  },
+  {
+    "id": 6,
+    "slug": "DevBots",
+    "catchPhrase": "Creating fun and engaging first experiences with blockchain technology for wide audiences.",
+    "title": "DevBots",
+    "vision": "DevBots is a groundbreaking experiment combining the openness and freedom of crypto, action-packed strategic gameplay, and an inviting cartoonish brand. We're creating positive first experiences with blockchain technology for wide audiences.",
+    "Description": "Bring blockchain and logic to a wide audience! Understand the basics of blockchain and coding while playing a game and earning real cryptocurrency!",
+    "commitmentLevel": "5-10+ hours per week",
+    "signupFormUrl": "https://forms.gle/GDVJSagZNwzZ5Z3T9",
+    "published_at": "2021-08-18T21:53:29.056Z",
+    "created_at": "2021-06-11T21:59:18.797Z",
+    "updated_at": "2021-10-22T01:23:14.625Z",
+    "description": "Come join us in creating a game using cutting-edge technology! Develop with an interdisciplinary team, discuss the game's direction at weekly meetings, and help build something amazing! This project will leverage blockchain to create an engaging collectible and play-to-earn experience, while also teaching users code and logic through bot instructions! We hope to be the first of many projects in the bustling blockchain ecosystem at Dev Launchers, so get in early! \n\nAbout DevBots: Show your genius by pitting your custom-built bot against other players around the world! Your unique combination of parts and logical instructions will define your winning strategy. Defeat opponents and earn DevCoin ($DEVS), a real cryptocurrency exchangeable on the blockchain! Purchase powerful and stylish NFT collectibles, or even trade your DevCoin for real currency! Can your bot rise to the top of the battle arena?",
+    "user": null,
+    "calendarId": "c_28ls1rq1k0pginl79ogdr1a684@group.calendar.google.com",
+    "isListed": true,
+    "parentProject": 10,
+    "google_meet": null,
+    "meetingLinkURLs": [
+      {
+        "id": 2,
+        "roomName": "Room 3",
+        "url": "https://devlaunchers.com/hangout"
+      }
+    ],
+    "meetingTimes": [
+      {
+        "id": 1,
+        "title": "Weekly Team Jam -",
+        "date": "2021-06-18T16:00:00.000Z",
+        "dateTime": "Wednesday 5pm CST"
+      },
+      {
+        "id": 17,
+        "title": "Weekly Developer Co-Working -",
+        "date": null,
+        "dateTime": "Saturday 10am CST"
+      },
+      {
+        "id": 18,
+        "title": "Weekly Art/Outreach Jam -",
+        "date": null,
+        "dateTime": "Thursday 6pm CST"
+      }
+    ],
+    "keywords": [
+      {
+        "id": 5,
+        "keyword": "Blockchain"
+      },
+      {
+        "id": 6,
+        "keyword": "Game Development"
+      },
+      {
+        "id": 7,
+        "keyword": "Game Design"
+      },
+      {
+        "id": 9,
+        "keyword": "UI/UX"
+      },
+      {
+        "id": 10,
+        "keyword": "Visual Art"
+      },
+      {
+        "id": 8,
+        "keyword": "Marketing"
+      },
+      {
+        "id": 11,
+        "keyword": "Web Dev"
+      },
+      {
+        "id": 12,
+        "keyword": "Sound + Music"
+      }
+    ],
+    "projectReferenceURLs": [
+      {
+        "id": 7,
+        "title": "Our Website!",
+        "url": "https://devlaunchers.com/c/devbots/"
+      },
+      {
+        "id": 5,
+        "title": "Roadmap",
+        "url": "https://trello.com/b/UKhTe9cP/devbots-roadmap"
+      },
+      {
+        "id": 6,
+        "title": "Project Board",
+        "url": "https://github.com/dev-launchers/devbots__general/projects/2"
+      },
+      {
+        "id": 4,
+        "title": "Design Document",
+        "url": "https://docs.google.com/document/d/1tsXx9D7I1wqGmEUUq0oJGUZ--iy6KbLGce7hpL9jQK8/edit?usp=sharing"
+      }
+    ],
+    "openPositions": [
+      {
+        "id": 1,
+        "title": "Unity 2D Game Developer",
+        "description": "Help refine the functionality of the game, and add incredible new features! Whether that means programming dynamic combat systems, collectibles and customization, menus, networking, or a variety of other tasks, we can find something for you! Project is being developed in Unity, so experience or willingness to learn required. Some skill and experience programming is necessary, but we'll try to meet you where you are!",
+        "isHidden": false
+      },
+      {
+        "id": 3,
+        "title": "Community Content Writer Lead",
+        "description": "More detail to come!",
+        "isHidden": false
+      },
+      {
+        "id": 10,
+        "title": "Social Media Manager",
+        "description": "More details to come!",
+        "isHidden": false
+      },
+      {
+        "id": 4,
+        "title": "Music/SFX Artist",
+        "description": "Help define the sound profile of our game! Create sound effects, music, or do audio processing for gameplay, menus, trailers, and more! Familiarity with tools for implementing sound into games such as fmod or wwise appreciated, but not required! Some skill and experience required, but we'll try to meet you where you are!",
+        "isHidden": false
+      },
+      {
+        "id": 11,
+        "title": "Game Designer",
+        "description": "Help design fun and engaging gameplay systems to expand our unique gaming experience! Use our cutting-edge blockchain backend to make players’ wildest dreams come true with free trade of their NFT bot parts and other unique real-world economic systems. Plan immersive and highly strategic functionality to allow players to express their mastery in new, dynamic ways! Familiarity with video games and a knack for thinking through tough problems is required!",
+        "isHidden": false
+      },
+      {
+        "id": 12,
+        "title": "Backend Systems Developer",
+        "description": "More details to come!",
+        "isHidden": false
+      },
+      {
+        "id": 23,
+        "title": "Blockchain Developer",
+        "description": "More details to come!",
+        "isHidden": false
+      },
+      {
+        "id": 24,
+        "title": "UI Producer/Designer",
+        "description": "More details to come!",
+        "isHidden": false
+      }
+    ],
+    "team": {
+      "id": 8,
+      "leaders": [
+        {
+          "id": 93,
+          "username": "James Daus",
+          "profile": {
+            "id": 88,
+            "displayName": "James Daus",
+            "email": null,
+            "bio": "Founder of DevBots!",
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJxGSdQHGcDK-krd7IOMfPs6CVRdOTaYzNFy83uf=s96-c",
+            "level": null,
+            "user": 93,
+            "published_at": "2021-09-16T00:02:56.427Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-16T00:02:56.471Z",
+            "updated_at": "2021-09-16T00:03:29.482Z"
+          },
+          "email": "jamesdaus@devlaunchers.com",
+          "role": "Project Lead"
+        },
+        {
+          "id": 72,
+          "username": "Kevin",
+          "profile": {
+            "id": 67,
+            "displayName": "Kevin Cooney",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJwmbvcFEXlB1I6nGuLEDrEdLyN3ErcPr-NeANts=s96-c",
+            "level": null,
+            "user": 72,
+            "published_at": "2021-09-03T16:09:34.566Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-03T16:09:34.609Z",
+            "updated_at": "2021-09-03T16:09:35.422Z"
+          },
+          "email": "kevincooneyart@gmail.com",
+          "role": "Art Director"
+        },
+        {
+          "id": 124,
+          "username": "Zorro909",
+          "profile": {
+            "id": 119,
+            "displayName": "Maximilian Kling",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJxj_Iqh33hgNQtWEVqUCKLl2p1Axi8vUb1qXr4ia6U=s96-c",
+            "level": null,
+            "user": 124,
+            "published_at": "2021-10-02T15:57:15.063Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-10-02T15:57:15.112Z",
+            "updated_at": "2021-10-02T15:57:16.104Z"
+          },
+          "email": "minecraftlifelp@gmail.com",
+          "role": "Blockchain Lead"
+        },
+        {
+          "id": 114,
+          "username": "jmajor12",
+          "profile": {
+            "id": 109,
+            "displayName": "Joshua Major",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJw6Nh_0Xs3kBizMruFO0S_QU9NhTN1Wao5Ci0Jk=s96-c",
+            "level": null,
+            "user": 114,
+            "published_at": "2021-09-30T01:06:20.188Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-30T01:06:20.238Z",
+            "updated_at": "2021-09-30T01:06:21.261Z"
+          },
+          "email": "jmajortwelve@gmail.com",
+          "role": "Marketing Lead"
+        }
+      ],
+      "members": [
+        {
+          "id": 68,
+          "username": "Rania",
+          "profile": {
+            "id": 63,
+            "displayName": "Rania Baltagi",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GhbvXnG4dBuQ23HXMTNuHqQ8VyYUvy2T0dwhA9lTA=s96-c",
+            "level": null,
+            "user": 68,
+            "published_at": "2021-09-02T15:01:24.649Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-02T15:01:24.680Z",
+            "updated_at": "2021-09-02T15:01:25.293Z"
+          },
+          "role": "UI/UX Designer"
+        },
+        {
+          "id": 115,
+          "username": "Jokimo",
+          "profile": {
+            "id": 110,
+            "displayName": "John Kim",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GgMOAaUtsHi-5xdEMNlGH3CWxBOkwBQog7a0hv8SQ=s96-c",
+            "level": null,
+            "user": 115,
+            "published_at": "2021-09-30T01:49:23.781Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-30T01:49:23.824Z",
+            "updated_at": "2021-09-30T01:49:24.789Z"
+          },
+          "role": "Game Developer"
+        },
+        {
+          "id": 62,
+          "username": "kaijlv",
+          "profile": {
+            "id": 57,
+            "displayName": "Kaiju Lyu",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJx4SzY9Z5_psN9Qfwgg_tWjGIZk_fhkDy_be2MF=s96-c",
+            "level": null,
+            "user": 62,
+            "published_at": "2021-08-31T17:06:19.481Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-08-31T17:06:19.523Z",
+            "updated_at": "2021-08-31T17:06:20.801Z"
+          },
+          "role": "Game Developer"
+        },
+        {
+          "id": 116,
+          "username": "mtrimner",
+          "profile": {
+            "id": 111,
+            "displayName": "Matt trimner",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GjXEUv1WgpaOCyO4n0YsrP14UVJ2ywJxH2z3_tE=s96-c",
+            "level": null,
+            "user": 116,
+            "published_at": "2021-09-30T02:05:39.219Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-30T02:05:39.259Z",
+            "updated_at": "2021-09-30T02:05:40.168Z"
+          },
+          "role": "Game Developer"
+        },
+        {
+          "id": 117,
+          "username": "Sachin_Kishan",
+          "profile": {
+            "id": 112,
+            "displayName": "Sachin Kishan",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJwkopML-KT9DxRcQw79u2Dk2sYlQ35h7aWz4bI9=s96-c",
+            "level": null,
+            "user": 117,
+            "published_at": "2021-09-30T05:22:36.201Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-09-30T05:22:36.234Z",
+            "updated_at": "2021-09-30T05:22:36.899Z"
+          },
+          "role": "Game Developer"
+        },
+        {
+          "id": 119,
+          "username": "Xinyu",
+          "profile": {
+            "id": 114,
+            "displayName": "Xinyu Dong",
+            "email": null,
+            "bio": null,
+            "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GiSujNQRld3h8A8egT7DVC_SN4QkJuqWwfzmA8PcQ=s96-c",
+            "level": null,
+            "user": 119,
+            "published_at": "2021-10-01T02:39:06.007Z",
+            "created_by": null,
+            "updated_by": null,
+            "created_at": "2021-10-01T02:39:06.050Z",
+            "updated_at": "2021-10-01T02:39:06.941Z"
+          },
+          "role": "Game Developer"
+        }
+      ]
+    },
+    "Images": [],
+    "board": {
+      "id": 3,
+      "ProjectMilestone": []
+    },
+    "heroImage": {
+      "id": 23,
+      "name": "LOGO-DevBots_color-lightblue.png",
+      "alternativeText": "",
+      "caption": "",
+      "width": 8000,
+      "height": 5334,
+      "formats": {
+        "large": {
+          "ext": ".png",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/large_LOGO_Dev_Bots_color_lightblue_83d857ea6d.png",
+          "hash": "large_LOGO_Dev_Bots_color_lightblue_83d857ea6d",
+          "mime": "image/png",
+          "name": "large_LOGO-DevBots_color-lightblue.png",
+          "path": null,
+          "size": 50.1,
+          "width": 1000,
+          "height": 667
+        },
+        "small": {
+          "ext": ".png",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/small_LOGO_Dev_Bots_color_lightblue_83d857ea6d.png",
+          "hash": "small_LOGO_Dev_Bots_color_lightblue_83d857ea6d",
+          "mime": "image/png",
+          "name": "small_LOGO-DevBots_color-lightblue.png",
+          "path": null,
+          "size": 22.65,
+          "width": 500,
+          "height": 333
+        },
+        "medium": {
+          "ext": ".png",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/medium_LOGO_Dev_Bots_color_lightblue_83d857ea6d.png",
+          "hash": "medium_LOGO_Dev_Bots_color_lightblue_83d857ea6d",
+          "mime": "image/png",
+          "name": "medium_LOGO-DevBots_color-lightblue.png",
+          "path": null,
+          "size": 36.19,
+          "width": 750,
+          "height": 500
+        },
+        "thumbnail": {
+          "ext": ".png",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/thumbnail_LOGO_Dev_Bots_color_lightblue_83d857ea6d.png",
+          "hash": "thumbnail_LOGO_Dev_Bots_color_lightblue_83d857ea6d",
+          "mime": "image/png",
+          "name": "thumbnail_LOGO-DevBots_color-lightblue.png",
+          "path": null,
+          "size": 9.7,
+          "width": 234,
+          "height": 156
+        }
+      },
+      "hash": "LOGO_Dev_Bots_color_lightblue_83d857ea6d",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 291.07,
+      "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/LOGO_Dev_Bots_color_lightblue_83d857ea6d.png",
+      "previewUrl": null,
+      "provider": "azure-storage",
+      "provider_metadata": null,
+      "created_at": "2021-08-12T16:14:58.993Z",
+      "updated_at": "2021-08-12T16:14:59.185Z"
+    }
+  },
+  {
+    "id": 13,
+    "slug": "dev-mentors-platform",
+    "catchPhrase": "Prepare to thrive!",
+    "title": "Dev Mentors Platform",
+    "vision": "Dev Mentors is a mentoring platform that helps members of Dev Launchers find and connect with mentors and track the Lifecyle of their relationships.",
+    "Description": null,
+    "commitmentLevel": "5 hrs per week",
+    "signupFormUrl": "http://devlaunchers.com/devmentors",
+    "published_at": "2021-09-11T22:37:11.560Z",
+    "created_at": "2021-09-08T01:20:48.367Z",
+    "updated_at": "2021-10-01T03:18:51.388Z",
+    "description": "Our goal is to develop a platform that will help aspiring technologists seek out experienced mentors, who can help them carve a path to a technology career of their choice. \n\nThe platform will implement functionality to store and display mentor and mentee profiles and will provide the ability for mentees to search for and pair up with mentors of their choice. The platform will provide features for the users to manage the lifecycle of their relationship and shared content through time. \n\nMission: Develop a mentoring platform that helps members of Dev Launchers find and connect with mentors and track the Lifecycle of their relationships.",
+    "user": null,
+    "calendarId": "c_9pbrufr8aesd4nih9495epjcm0@group.calendar.google.com",
+    "isListed": true,
+    "parentProject": null,
+    "google_meet": null,
+    "meetingLinkURLs": [],
+    "meetingTimes": [],
+    "keywords": [],
+    "projectReferenceURLs": [],
+    "openPositions": [],
+    "team": {
+      "id": 17,
+      "leaders": [],
+      "members": []
+    },
+    "Images": [],
+    "board": null,
+    "heroImage": {
+      "id": 25,
+      "name": "https://raw.githubusercontent.com/dev-launchers/platform__website/master/public/images/logo-monogram.png",
+      "alternativeText": "",
+      "caption": "",
+      "width": 1170,
+      "height": 780,
+      "formats": {
+        "large": {
+          "ext": ".png",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/large_logo_monogram_c0c251d06a.png",
+          "hash": "large_logo_monogram_c0c251d06a",
+          "mime": "image/jpeg",
+          "name": "large_https://raw.githubusercontent.com/dev-launchers/platform__website/master/public/images/logo-monogram.png",
+          "path": null,
+          "size": 67.12,
+          "width": 1000,
+          "height": 667
+        },
+        "small": {
+          "ext": ".png",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/small_logo_monogram_c0c251d06a.png",
+          "hash": "small_logo_monogram_c0c251d06a",
+          "mime": "image/jpeg",
+          "name": "small_https://raw.githubusercontent.com/dev-launchers/platform__website/master/public/images/logo-monogram.png",
+          "path": null,
+          "size": 22.33,
+          "width": 500,
+          "height": 333
+        },
+        "medium": {
+          "ext": ".png",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/medium_logo_monogram_c0c251d06a.png",
+          "hash": "medium_logo_monogram_c0c251d06a",
+          "mime": "image/jpeg",
+          "name": "medium_https://raw.githubusercontent.com/dev-launchers/platform__website/master/public/images/logo-monogram.png",
+          "path": null,
+          "size": 42.7,
+          "width": 750,
+          "height": 500
+        },
+        "thumbnail": {
+          "ext": ".png",
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/thumbnail_logo_monogram_c0c251d06a.png",
+          "hash": "thumbnail_logo_monogram_c0c251d06a",
+          "mime": "image/jpeg",
+          "name": "thumbnail_https://raw.githubusercontent.com/dev-launchers/platform__website/master/public/images/logo-monogram.png",
+          "path": null,
+          "size": 7.47,
+          "width": 234,
+          "height": 156
+        }
+      },
+      "hash": "logo_monogram_c0c251d06a",
+      "ext": ".png",
+      "mime": "image/jpeg",
+      "size": 84.41,
+      "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/logo_monogram_c0c251d06a.png",
+      "previewUrl": null,
+      "provider": "azure-storage",
+      "provider_metadata": null,
+      "created_at": "2021-08-22T20:19:56.715Z",
+      "updated_at": "2021-09-29T23:29:07.985Z"
+    }
+  }
+]

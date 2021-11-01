@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useRef } from "react";
 // import Link from "next/link";
 // import Image from "next/image";
 import { withTheme } from "styled-components";
@@ -23,25 +23,47 @@ import Sessions from "./Sessions";
 
 const Project = ({ project, theme }) => {
   const router = useRouter();
+  const roleRef = useRef();
+  const donateRef = useRef();
+
+  const excuteScroll = (ref) =>
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
+
   return (
     <Wrapper>
       <div id="background" />
-      <HeroSection />
-      <Tags />
-      <Vision />
-      <Description
-        descriptionData={project.description}
-        images={project.Images}
+      <HeroSection
+        projectName={project.title}
+        projectCatchPhrase={project.catchPhrase}
+        heroImage={project.heroImage}
       />
-      <Role data={project.openPositions} />
+      <Tags tags={project?.keywords} />
+      <Vision
+        vision={project?.vision || ""}
+        scrollMethods={{
+          scrollToRoles: () => excuteScroll(roleRef),
+          scrollToDonate: () => excuteScroll(donateRef),
+        }}
+      />
+      <Description
+        description={project?.description}
+        images={project?.Images}
+      />
+      <Role ref={roleRef} data={project?.openPositions} projectSlug={project.slug} />
       <Milestones data={project?.board?.ProjectMilestone} />
-      <JoinSupport/>
-      <HelpBuild/>
       <Sessions calendarId={project.calendarId} />
       <Team data={project.team} />
+      <JoinSupport
+        ref={donateRef}
+        scrollMethods={{
+          scrollToRoles: () => excuteScroll(roleRef),
+        }}
+      />
+      <HelpBuild />
     </Wrapper>
   );
 };

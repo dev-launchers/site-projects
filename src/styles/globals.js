@@ -104,6 +104,10 @@ h4 {
   font-family: "Abel", sans-serif;
 }
 
+strong {
+  font-weight: bold;
+}
+
 /*
 * {
   box-sizing: border-box;

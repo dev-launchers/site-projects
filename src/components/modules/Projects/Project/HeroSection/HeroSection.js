@@ -10,10 +10,10 @@ import { Wrapper } from "./StyledHeroSection";
 
 // import { env } from "../../../../../utils/EnvironmentVariables";
 
-const HeroSection = () => (
+const HeroSection = ({ projectName, projectCatchPhrase, heroImage }) => (
   <Wrapper>
-    <h2>Dev Launchers Platform</h2>
-    <span>The Dev Launchers mission at scale!</span>
+    <h2>{projectName}</h2>
+    <span>{projectCatchPhrase}</span>
     <div
       style={{
         position: "relative",
@@ -23,7 +23,7 @@ const HeroSection = () => (
       }}
     >
       <Image
-        src="https://devlaunchersproduction.blob.core.windows.net/strapi/assets/photo_1487014679447_9f8336841d58_c912a4c559.jpg"
+        src={heroImage.url}
         layout="fill"
         alt="project's image"
         objectFit="cover"

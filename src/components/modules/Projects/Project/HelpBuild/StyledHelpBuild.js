@@ -52,7 +52,7 @@ export const Button = styled.a`
   gap: 0.5rem;
   width: 12em;
   padding: 0.5rem;
-  background-color: ${({ theme, bgColor }) =>
+  background-color: ${({ bgColor }) =>
   bgColor || "4A9D48"};
   color: #F0EDEE;
   white-space: nowrap;
