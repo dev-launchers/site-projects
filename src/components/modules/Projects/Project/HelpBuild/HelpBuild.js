@@ -12,9 +12,8 @@ const HelpBuild = () => (
       <Wrapper>
         <h3>Help build this project!</h3>
         <p>
-          We need your financial support, technical experience, and input into
-          the types of skills you want to see in the next generation of
-          developers and your future employees!
+          We are looking for sponsors to fund the financial costs of different
+          operations, with your help we can build a better product!
         </p>
 
         <ButtonsContainer>

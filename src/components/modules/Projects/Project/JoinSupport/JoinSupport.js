@@ -16,8 +16,7 @@ const JoinSupport = ({ theme, scrollMethods }, ref) => (
         <p>
           Our platform is being developed by a core group of our members: a team
           of people from a wide range of backgrounds and skill levels who are
-          all learning while building. It&apos;s the perfect Dev Launchers case
-          study!
+          all learning while building.
         </p>
         <ButtonsContainer>
           <Button
