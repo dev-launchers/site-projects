@@ -61,7 +61,7 @@ export default function Card(props) {
             </TagsContainer>
           )}
           {props.isLinkingInside ? (
-            <Link href={`${router.pathname}projects/${props.cardData.href}`} passHref>
+            <Link href={`${props.cardData.href}`} passHref>
               <a rel="noopener noreferrer">
                 <Image alt="" imageSrc={props.cardData.imageSrc} />
               </a>
