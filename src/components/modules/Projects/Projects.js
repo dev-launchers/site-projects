@@ -74,7 +74,7 @@ const Projects = ({ projects }) => {
                 imageSrc: project.heroImage.url,
                 actions: (
                   <>
-                    <Link href={`projects/${project.slug}` || ""} passHref>
+                    <Link href={`${router.asPath}${project.slug}`} passHref>
                       <a>LEARN MORE</a>
                     </Link>
                     <Link href="support-us" passHref>

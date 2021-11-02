@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const InputAdder = React.forwardRef((props) => {
+const InputAdder = (props) => {
   const [item, setItem] = useState("");
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
@@ -24,7 +24,7 @@ const InputAdder = React.forwardRef((props) => {
       </button>
     </div>
   );
-});
+};
 
 InputAdder.displayName = "InputAdder";
 

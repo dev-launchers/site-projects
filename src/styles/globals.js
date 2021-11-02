@@ -253,7 +253,7 @@ li {
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
   }
 
   .collection--small-cards > .entry {

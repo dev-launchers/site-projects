@@ -1,11 +1,11 @@
 import axios from "axios";
 import Head from "next/head";
-import Footer from "../../components/common/Footer";
-import Header from "../../components/common/Header";
-import Project from "../../components/modules/Projects/Project";
-import { env } from "../../utils/EnvironmentVariables";
+import Footer from "../components/common/Footer";
+import Header from "../components/common/Header";
+import Project from "../components/modules/Projects/Project";
+import { env } from "../utils/EnvironmentVariables";
 
-const data = require("../../components/modules/Projects/data.json");
+const data = require("../components/modules/Projects/data.json");
 
 
 export const getStaticPaths = async () => {
