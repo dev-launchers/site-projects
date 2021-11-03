@@ -18,7 +18,7 @@ import HamburgerMenu from "../HamburgerMenu";
 
 export default function Header() {
   const { userData } = useUserDataContext();
-
+ 
   return (
     <HeaderBlock>
       <Logo>
