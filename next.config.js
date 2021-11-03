@@ -11,8 +11,13 @@ const nextConfig = {
         destination: `/:path*`,
       },
       {
+        source: "/",
+        destination: "https://devlaunchers.org/",
+        basePath: false
+      },
+      {
         source: "/create",
-        destination: "https://devlaunchers.com/create",
+        destination: "https://devlaunchers.org/create",
         basePath: false
       },
       {
