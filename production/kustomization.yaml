@@ -6,4 +6,4 @@ bases:
 images:
 - name: devlaunchers/site-projects
   newName: devlaunchers/site-projects
-  newTag: 1.1.2 # {"$imagepolicy": "site-projects:site-projects:tag"}
+  newTag: 1.1.3 # {"$imagepolicy": "site-projects:site-projects:tag"}
