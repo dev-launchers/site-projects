@@ -2,7 +2,29 @@ const withPlugins = require("next-compose-plugins");
 const imagesPlugin = require("next-optimized-images");
 
 const nextConfig = {
-  basePath: '/projects',
+  basePath: "/projects",
+
+  async rewrites() {
+    return [
+      {
+        source: "/:path*",
+        destination: `/:path*`,
+      },
+      {
+        source: "/projects/create",
+        destination: "https://devlaunchers.com/create",
+      },
+      {
+        source: "/projects/learn",
+        destination: `https://devlaunchers.org/learn`,
+      },
+      {
+        source: "/projects/support-us",
+        destination: `https://devlaunchers.org/support-us`,
+      },
+    ];
+  },
+
   images: {
     /*
       next-images plugin is conflicting with Next.js 11 static import feature.
