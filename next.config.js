@@ -11,15 +11,15 @@ const nextConfig = {
         destination: `/:path*`,
       },
       {
-        source: "/projects/create",
+        source: "/create",
         destination: "https://devlaunchers.com/create",
       },
       {
-        source: "/projects/learn",
+        source: "/learn",
         destination: `https://devlaunchers.org/learn`,
       },
       {
-        source: "/projects/support-us",
+        source: "/support-us",
         destination: `https://devlaunchers.org/support-us`,
       },
     ];
