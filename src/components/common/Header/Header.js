@@ -23,7 +23,7 @@ export default function Header() {
     <HeaderBlock>
       <Logo>
         <LogoWrapper>
-          <Link href="/">
+          <Link href="../" replace>
             <a>
               <LogoImageHolder>
                 <LogoImage />
@@ -54,7 +54,7 @@ export default function Header() {
             <NavEntry>SUPPORT US</NavEntry>
           </a>
         </Link>
-        <Link href="/projects">
+        <Link href="/">
           <a>
             <NavEntry>JOIN</NavEntry>
           </a>
