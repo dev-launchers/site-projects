@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ReactMarkdown from "react-markdown";
 import {
   Cards,
   Wrapper,
@@ -7,46 +8,63 @@ import {
   Container,
   FlexBox,
 } from "./StyledRoleCards";
-import ReactMarkdown from "react-markdown";
 import { CardButton } from "../Button/StyledButton";
 import RoleModal from "../RoleModal";
 
 const truncateText = (text, truncateAt, replaceWith) => {
-  if (text.length <= truncateAt) return <ReactMarkdown>{text}</ReactMarkdown>
-  return <ReactMarkdown>{text.slice(0, truncateAt) + replaceWith}</ReactMarkdown>
+  if (text.length <= truncateAt) return <ReactMarkdown>{text}</ReactMarkdown>;
+  return (
+    <ReactMarkdown>{text.slice(0, truncateAt) + replaceWith}</ReactMarkdown>
+  );
 };
-const RoleCards = ({ data }) => {
-  const [modalIsOpen, setIsOpen] = useState(false);
+const RoleCards = ({ data, projectSlug }) => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedRole, setSelectedRole] = useState({});
-  
+  const [formIsOpen, setFormIsOpen] = useState(false);
 
   function openModal() {
-    setIsOpen(true);
+    setModalIsOpen(true);
   }
 
   function closeModal() {
-    setIsOpen(false);
+    setModalIsOpen(false);
+  }
+
+  function openForm() {
+    setFormIsOpen(true);
+  }
+  function closeForm() {
+    setFormIsOpen(false);
   }
   return (
     <Wrapper>
       {data
         .filter(({ isHidden }) => !isHidden)
-        .map((role) => (
-          <Cards key={role.id}>
+        .map((role, roleIndex) => (
+          <Cards key={roleIndex}>
             <Container>
-              <Title>
-                <ReactMarkdown>{role.title}</ReactMarkdown>
-              </Title>
-
+              <Title>{role.title}</Title>
               <Subtitle style={{ padding: ".5rem 0" }}>
                 {truncateText(role.description, 255, "...")}
               </Subtitle>
+              {/* <RoleContent roleContent={role.expectations} />
+            <Subtitle>Prerequisite skills</Subtitle>
+            <RoleContent roleContent={role.skills} /> */}
               <FlexBox>
-                <CardButton>Apply Now</CardButton>
+                <CardButton
+                  onClick={() => {
+                    openModal();
+                    openForm();
+                    setSelectedRole(role);
+                  }}
+                >
+                  Apply Now
+                </CardButton>
                 <CardButton
                   onClick={() => {
                     openModal();
                     setSelectedRole(role);
+                    setFormIsOpen(false);
                   }}
                   fontColor
                   bgColor
@@ -59,6 +77,10 @@ const RoleCards = ({ data }) => {
                 onRequestClose={closeModal}
                 isOpen={modalIsOpen}
                 role={selectedRole}
+                projectSlug={projectSlug}
+                isFormOpen={formIsOpen}
+                onOpenForm={openForm}
+                onCloseForm={closeForm}
               />
             </Container>
           </Cards>

@@ -1,5 +1,6 @@
 import React from "react";
 import { withTheme } from "styled-components";
+import Slider from "react-slick";
 import {
   TaskContent,
   TaskContentWrapper,
@@ -7,7 +8,6 @@ import {
 } from "./StyledMilestoneSlider";
 import { TaskGroup, Title, Description } from "./StyledMilestones";
 
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -16,7 +16,7 @@ function MileStoneSlider({ milestones, slidesToShow, isCyclic, isAutoplay }) {
     dots: true,
     infinite: isCyclic,
     speed: 500,
-    slidesToShow: slidesToShow,
+    slidesToShow,
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: isAutoplay,
@@ -27,27 +27,12 @@ function MileStoneSlider({ milestones, slidesToShow, isCyclic, isAutoplay }) {
     // breakpoints to make react slider responsive
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          infinite: true,
+          dots: true,
         },
       },
     ],

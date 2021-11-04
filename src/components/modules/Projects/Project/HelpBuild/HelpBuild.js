@@ -1,9 +1,9 @@
-import React, { forwardRef } from "react";
+import React from "react";
 import { withTheme } from "styled-components";
 import Section from "../Section";
 import { Wrapper, ButtonsContainer, Button } from "./StyledHelpBuild";
 
-const HelpBuild = ({ Color }) => (
+const HelpBuild = () => (
   <Section
     bgColor="#494949"
     contentStyle={{ paddingBottom: 0 }}
@@ -12,9 +12,8 @@ const HelpBuild = ({ Color }) => (
       <Wrapper>
         <h3>Help build this project!</h3>
         <p>
-          We need your financial support, technical experience, and input into
-          the types of skills you want to see in the next generation of
-          developers and your future employees!
+          We are looking for sponsors to fund the financial costs of different
+          operations, with your help we can build a better product!
         </p>
 
         <ButtonsContainer>

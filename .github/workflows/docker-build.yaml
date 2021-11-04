@@ -9,6 +9,7 @@ on:
       - '.github/workflows/docker-build.yaml'
       - 'package*.json'
       - 'npm-shrinkwrap.json'
+      - 'yarn.lock'
 jobs:
   build:
     runs-on: ubuntu-latest

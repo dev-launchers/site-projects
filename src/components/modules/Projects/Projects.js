@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useState,useEffect,useRef } from "react";
 import { useRouter } from "next/router";
+import Fuse from "fuse.js";
 import Card from "../../common/Card";
 import { Layout, ProjectContainer } from "./StyledProjects";
 import SearchBar from "./Project/SearchBar";
-import Fuse from "fuse.js";
 
 const Projects = ({ projects }) => {
   const [searchValue, setSearchValue] = useState('')
@@ -118,7 +118,7 @@ const Projects = ({ projects }) => {
                   imageSrc: project.heroImage.url,
                   actions: (
                     <>
-                      <Link href={`projects/${project.slug}` || ""} passHref>
+                      <Link href={`${router.asPath}${project.slug}`} passHref>
                         <a>LEARN MORE</a>
                       </Link>
                       <Link href="support-us" passHref>
@@ -129,7 +129,7 @@ const Projects = ({ projects }) => {
                 }}
               />
             </ProjectContainer>)
-          } else {
+          } 
             return(
               <ProjectContainer key={i}>
               <Card
@@ -145,7 +145,7 @@ const Projects = ({ projects }) => {
                   imageSrc: project.heroImage.url,
                   actions: (
                     <>
-                      <Link href={`projects/${project.slug}` || ""} passHref>
+                       <Link href={`${router.asPath}${project.slug}`} passHref>
                         <a>LEARN MORE</a>
                       </Link>
                       <Link href="support-us" passHref>
@@ -157,9 +157,9 @@ const Projects = ({ projects }) => {
               />
             </ProjectContainer>
             )
-          }
-          }
+           }
           )}
+
       </Layout>
     </div>
   );

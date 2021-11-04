@@ -18,12 +18,12 @@ import HamburgerMenu from "../HamburgerMenu";
 
 export default function Header() {
   const { userData } = useUserDataContext();
-
+ 
   return (
     <HeaderBlock>
       <Logo>
         <LogoWrapper>
-          <Link href="/">
+          <Link href="../" replace>
             <a>
               <LogoImageHolder>
                 <LogoImage />
@@ -34,12 +34,12 @@ export default function Header() {
         </LogoWrapper>
       </Logo>
       <HeaderNav>
-        <Link href="/create">
+        <Link href="../create" replace>
           <a>
             <NavEntry>CREATE</NavEntry>
           </a>
         </Link>
-        <Link href="/learn">
+        <Link href="../learn" replace>
           <a>
             <NavEntry>LEARN</NavEntry>
           </a>
@@ -49,12 +49,12 @@ export default function Header() {
             <NavEntry>PLAY</NavEntry>
           </Link>
           { */}
-        <Link href="/support-us">
+        <Link href="../support-us" replace>
           <a>
             <NavEntry>SUPPORT US</NavEntry>
           </a>
         </Link>
-        <Link href="/projects">
+        <Link href="/">
           <a>
             <NavEntry>JOIN</NavEntry>
           </a>

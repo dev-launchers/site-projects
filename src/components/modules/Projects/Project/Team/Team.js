@@ -5,11 +5,12 @@ import {
   MembersContainer , MemberImage ,
 } from "./StyledTeam";
 import Section from "../Section";
+
 const Team = ({ data }) => (
   <Section
     bgColor="#494949"
     Title="Team"
-    Content={
+    Content={data.leaders.length && data.members.length ? 
       <TeamContentBlock>
         <div>
           <h4>Leaders</h4>
@@ -85,6 +86,7 @@ const Team = ({ data }) => (
           </MembersContainer>
         </div>
       </TeamContentBlock>
+      : "Currently no members!"
     }
   />
 );
