@@ -117,7 +117,8 @@
       "provider_metadata": null,
       "created_at": "2021-06-26T17:24:23.181Z",
       "updated_at": "2021-06-26T17:24:23.357Z"
-    }
+    },
+    "subProjects": []
   },
   {
     "id": 7,
@@ -386,7 +387,8 @@
       "provider_metadata": null,
       "created_at": "2021-08-18T21:37:31.128Z",
       "updated_at": "2021-08-18T21:37:31.317Z"
-    }
+    },
+    "subProjects": []
   },
   {
     "id": 3,
@@ -657,7 +659,8 @@
       "provider_metadata": null,
       "created_at": "2021-07-12T19:35:51.946Z",
       "updated_at": "2021-07-12T19:35:52.075Z"
-    }
+    },
+    "subProjects": []
   },
   {
     "id": 9,
@@ -789,7 +792,8 @@
       "provider_metadata": null,
       "created_at": "2021-07-19T15:03:43.051Z",
       "updated_at": "2021-08-10T23:55:12.300Z"
-    }
+    },
+    "subProjects": []
   },
   {
     "id": 8,
@@ -1063,7 +1067,8 @@
       "provider_metadata": null,
       "created_at": "2021-08-02T18:13:29.556Z",
       "updated_at": "2021-08-02T18:14:05.428Z"
-    }
+    },
+    "subProjects": []
   },
   {
     "id": 10,
@@ -1538,7 +1543,432 @@
       "provider_metadata": null,
       "created_at": "2021-08-05T09:08:45.407Z",
       "updated_at": "2021-08-05T09:08:45.588Z"
-    }
+    },
+    "subProjects": [
+      {
+        "id": 6,
+        "slug": "DevBots",
+        "catchPhrase": "Creating fun and engaging first experiences with blockchain technology for wide audiences.",
+        "title": "DevBots",
+        "vision": "DevBots is a groundbreaking experiment combining the openness and freedom of crypto, action-packed strategic gameplay, and an inviting cartoonish brand. We're creating positive first experiences with blockchain technology for wide audiences.",
+        "Description": "Bring blockchain and logic to a wide audience! Understand the basics of blockchain and coding while playing a game and earning real cryptocurrency!",
+        "commitmentLevel": "5-10+ hours per week",
+        "signupFormUrl": "https://forms.gle/GDVJSagZNwzZ5Z3T9",
+        "published_at": "2021-08-18T21:53:29.056Z",
+        "created_at": "2021-06-11T21:59:18.797Z",
+        "updated_at": "2021-10-22T01:23:14.625Z",
+        "description": "Come join us in creating a game using cutting-edge technology! Develop with an interdisciplinary team, discuss the game's direction at weekly meetings, and help build something amazing! This project will leverage blockchain to create an engaging collectible and play-to-earn experience, while also teaching users code and logic through bot instructions! We hope to be the first of many projects in the bustling blockchain ecosystem at Dev Launchers, so get in early! \n\nAbout DevBots: Show your genius by pitting your custom-built bot against other players around the world! Your unique combination of parts and logical instructions will define your winning strategy. Defeat opponents and earn DevCoin ($DEVS), a real cryptocurrency exchangeable on the blockchain! Purchase powerful and stylish NFT collectibles, or even trade your DevCoin for real currency! Can your bot rise to the top of the battle arena?",
+        "user": null,
+        "calendarId": "c_28ls1rq1k0pginl79ogdr1a684@group.calendar.google.com",
+        "isListed": true,
+        "parentProject": 10,
+        "google_meet": null,
+        "meetingLinkURLs": [
+          {
+            "id": 2,
+            "roomName": "Room 3",
+            "url": "https://devlaunchers.com/hangout"
+          }
+        ],
+        "meetingTimes": [
+          {
+            "id": 1,
+            "title": "Weekly Team Jam -",
+            "date": "2021-06-18T16:00:00.000Z",
+            "dateTime": "Wednesday 5pm CST"
+          },
+          {
+            "id": 17,
+            "title": "Weekly Developer Co-Working -",
+            "date": null,
+            "dateTime": "Saturday 10am CST"
+          },
+          {
+            "id": 18,
+            "title": "Weekly Art/Outreach Jam -",
+            "date": null,
+            "dateTime": "Thursday 6pm CST"
+          }
+        ],
+        "keywords": [
+          {
+            "id": 5,
+            "keyword": "Blockchain"
+          },
+          {
+            "id": 6,
+            "keyword": "Game Development"
+          },
+          {
+            "id": 7,
+            "keyword": "Game Design"
+          },
+          {
+            "id": 9,
+            "keyword": "UI/UX"
+          },
+          {
+            "id": 10,
+            "keyword": "Visual Art"
+          },
+          {
+            "id": 8,
+            "keyword": "Marketing"
+          },
+          {
+            "id": 11,
+            "keyword": "Web Dev"
+          },
+          {
+            "id": 12,
+            "keyword": "Sound + Music"
+          }
+        ],
+        "projectReferenceURLs": [
+          {
+            "id": 7,
+            "title": "Our Website!",
+            "url": "https://devlaunchers.com/c/devbots/"
+          },
+          {
+            "id": 5,
+            "title": "Roadmap",
+            "url": "https://trello.com/b/UKhTe9cP/devbots-roadmap"
+          },
+          {
+            "id": 6,
+            "title": "Project Board",
+            "url": "https://github.com/dev-launchers/devbots__general/projects/2"
+          },
+          {
+            "id": 4,
+            "title": "Design Document",
+            "url": "https://docs.google.com/document/d/1tsXx9D7I1wqGmEUUq0oJGUZ--iy6KbLGce7hpL9jQK8/edit?usp=sharing"
+          }
+        ],
+        "openPositions": [
+          {
+            "id": 1,
+            "title": "Unity 2D Game Developer",
+            "description": "Help refine the functionality of the game, and add incredible new features! Whether that means programming dynamic combat systems, collectibles and customization, menus, networking, or a variety of other tasks, we can find something for you! Project is being developed in Unity, so experience or willingness to learn required. Some skill and experience programming is necessary, but we'll try to meet you where you are!",
+            "isHidden": false
+          },
+          {
+            "id": 3,
+            "title": "Community Content Writer Lead",
+            "description": "More detail to come!",
+            "isHidden": false
+          },
+          {
+            "id": 10,
+            "title": "Social Media Manager",
+            "description": "More details to come!",
+            "isHidden": false
+          },
+          {
+            "id": 4,
+            "title": "Music/SFX Artist",
+            "description": "Help define the sound profile of our game! Create sound effects, music, or do audio processing for gameplay, menus, trailers, and more! Familiarity with tools for implementing sound into games such as fmod or wwise appreciated, but not required! Some skill and experience required, but we'll try to meet you where you are!",
+            "isHidden": false
+          },
+          {
+            "id": 11,
+            "title": "Game Designer",
+            "description": "Help design fun and engaging gameplay systems to expand our unique gaming experience! Use our cutting-edge blockchain backend to make players’ wildest dreams come true with free trade of their NFT bot parts and other unique real-world economic systems. Plan immersive and highly strategic functionality to allow players to express their mastery in new, dynamic ways! Familiarity with video games and a knack for thinking through tough problems is required!",
+            "isHidden": false
+          },
+          {
+            "id": 12,
+            "title": "Backend Systems Developer",
+            "description": "More details to come!",
+            "isHidden": false
+          },
+          {
+            "id": 23,
+            "title": "Blockchain Developer",
+            "description": "More details to come!",
+            "isHidden": false
+          },
+          {
+            "id": 24,
+            "title": "UI Producer/Designer",
+            "description": "More details to come!",
+            "isHidden": false
+          }
+        ],
+        "team": {
+          "id": 8,
+          "leaders": [
+            {
+              "id": 93,
+              "username": "James Daus",
+              "profile": {
+                "id": 88,
+                "displayName": "James Daus",
+                "email": null,
+                "bio": "Founder of DevBots!",
+                "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJxGSdQHGcDK-krd7IOMfPs6CVRdOTaYzNFy83uf=s96-c",
+                "level": null,
+                "user": 93,
+                "published_at": "2021-09-16T00:02:56.427Z",
+                "created_by": null,
+                "updated_by": null,
+                "created_at": "2021-09-16T00:02:56.471Z",
+                "updated_at": "2021-09-16T00:03:29.482Z"
+              },
+              "email": "jamesdaus@devlaunchers.com",
+              "role": "Project Lead"
+            },
+            {
+              "id": 72,
+              "username": "Kevin",
+              "profile": {
+                "id": 67,
+                "displayName": "Kevin Cooney",
+                "email": null,
+                "bio": null,
+                "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJwmbvcFEXlB1I6nGuLEDrEdLyN3ErcPr-NeANts=s96-c",
+                "level": null,
+                "user": 72,
+                "published_at": "2021-09-03T16:09:34.566Z",
+                "created_by": null,
+                "updated_by": null,
+                "created_at": "2021-09-03T16:09:34.609Z",
+                "updated_at": "2021-09-03T16:09:35.422Z"
+              },
+              "email": "kevincooneyart@gmail.com",
+              "role": "Art Director"
+            },
+            {
+              "id": 124,
+              "username": "Zorro909",
+              "profile": {
+                "id": 119,
+                "displayName": "Maximilian Kling",
+                "email": null,
+                "bio": null,
+                "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJxj_Iqh33hgNQtWEVqUCKLl2p1Axi8vUb1qXr4ia6U=s96-c",
+                "level": null,
+                "user": 124,
+                "published_at": "2021-10-02T15:57:15.063Z",
+                "created_by": null,
+                "updated_by": null,
+                "created_at": "2021-10-02T15:57:15.112Z",
+                "updated_at": "2021-10-02T15:57:16.104Z"
+              },
+              "email": "minecraftlifelp@gmail.com",
+              "role": "Blockchain Lead"
+            },
+            {
+              "id": 114,
+              "username": "jmajor12",
+              "profile": {
+                "id": 109,
+                "displayName": "Joshua Major",
+                "email": null,
+                "bio": null,
+                "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJw6Nh_0Xs3kBizMruFO0S_QU9NhTN1Wao5Ci0Jk=s96-c",
+                "level": null,
+                "user": 114,
+                "published_at": "2021-09-30T01:06:20.188Z",
+                "created_by": null,
+                "updated_by": null,
+                "created_at": "2021-09-30T01:06:20.238Z",
+                "updated_at": "2021-09-30T01:06:21.261Z"
+              },
+              "email": "jmajortwelve@gmail.com",
+              "role": "Marketing Lead"
+            }
+          ],
+          "members": [
+            {
+              "id": 68,
+              "username": "Rania",
+              "profile": {
+                "id": 63,
+                "displayName": "Rania Baltagi",
+                "email": null,
+                "bio": null,
+                "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GhbvXnG4dBuQ23HXMTNuHqQ8VyYUvy2T0dwhA9lTA=s96-c",
+                "level": null,
+                "user": 68,
+                "published_at": "2021-09-02T15:01:24.649Z",
+                "created_by": null,
+                "updated_by": null,
+                "created_at": "2021-09-02T15:01:24.680Z",
+                "updated_at": "2021-09-02T15:01:25.293Z"
+              },
+              "role": "UI/UX Designer"
+            },
+            {
+              "id": 115,
+              "username": "Jokimo",
+              "profile": {
+                "id": 110,
+                "displayName": "John Kim",
+                "email": null,
+                "bio": null,
+                "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GgMOAaUtsHi-5xdEMNlGH3CWxBOkwBQog7a0hv8SQ=s96-c",
+                "level": null,
+                "user": 115,
+                "published_at": "2021-09-30T01:49:23.781Z",
+                "created_by": null,
+                "updated_by": null,
+                "created_at": "2021-09-30T01:49:23.824Z",
+                "updated_at": "2021-09-30T01:49:24.789Z"
+              },
+              "role": "Game Developer"
+            },
+            {
+              "id": 62,
+              "username": "kaijlv",
+              "profile": {
+                "id": 57,
+                "displayName": "Kaiju Lyu",
+                "email": null,
+                "bio": null,
+                "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJx4SzY9Z5_psN9Qfwgg_tWjGIZk_fhkDy_be2MF=s96-c",
+                "level": null,
+                "user": 62,
+                "published_at": "2021-08-31T17:06:19.481Z",
+                "created_by": null,
+                "updated_by": null,
+                "created_at": "2021-08-31T17:06:19.523Z",
+                "updated_at": "2021-08-31T17:06:20.801Z"
+              },
+              "role": "Game Developer"
+            },
+            {
+              "id": 116,
+              "username": "mtrimner",
+              "profile": {
+                "id": 111,
+                "displayName": "Matt trimner",
+                "email": null,
+                "bio": null,
+                "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GjXEUv1WgpaOCyO4n0YsrP14UVJ2ywJxH2z3_tE=s96-c",
+                "level": null,
+                "user": 116,
+                "published_at": "2021-09-30T02:05:39.219Z",
+                "created_by": null,
+                "updated_by": null,
+                "created_at": "2021-09-30T02:05:39.259Z",
+                "updated_at": "2021-09-30T02:05:40.168Z"
+              },
+              "role": "Game Developer"
+            },
+            {
+              "id": 117,
+              "username": "Sachin_Kishan",
+              "profile": {
+                "id": 112,
+                "displayName": "Sachin Kishan",
+                "email": null,
+                "bio": null,
+                "profilePictureUrl": "https://lh3.googleusercontent.com/a/AATXAJwkopML-KT9DxRcQw79u2Dk2sYlQ35h7aWz4bI9=s96-c",
+                "level": null,
+                "user": 117,
+                "published_at": "2021-09-30T05:22:36.201Z",
+                "created_by": null,
+                "updated_by": null,
+                "created_at": "2021-09-30T05:22:36.234Z",
+                "updated_at": "2021-09-30T05:22:36.899Z"
+              },
+              "role": "Game Developer"
+            },
+            {
+              "id": 119,
+              "username": "Xinyu",
+              "profile": {
+                "id": 114,
+                "displayName": "Xinyu Dong",
+                "email": null,
+                "bio": null,
+                "profilePictureUrl": "https://lh3.googleusercontent.com/a-/AOh14GiSujNQRld3h8A8egT7DVC_SN4QkJuqWwfzmA8PcQ=s96-c",
+                "level": null,
+                "user": 119,
+                "published_at": "2021-10-01T02:39:06.007Z",
+                "created_by": null,
+                "updated_by": null,
+                "created_at": "2021-10-01T02:39:06.050Z",
+                "updated_at": "2021-10-01T02:39:06.941Z"
+              },
+              "role": "Game Developer"
+            }
+          ]
+        },
+        "Images": [],
+        "board": {
+          "id": 3,
+          "ProjectMilestone": []
+        },
+        "heroImage": {
+          "id": 23,
+          "name": "LOGO-DevBots_color-lightblue.png",
+          "alternativeText": "",
+          "caption": "",
+          "width": 8000,
+          "height": 5334,
+          "formats": {
+            "large": {
+              "ext": ".png",
+              "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/large_LOGO_Dev_Bots_color_lightblue_83d857ea6d.png",
+              "hash": "large_LOGO_Dev_Bots_color_lightblue_83d857ea6d",
+              "mime": "image/png",
+              "name": "large_LOGO-DevBots_color-lightblue.png",
+              "path": null,
+              "size": 50.1,
+              "width": 1000,
+              "height": 667
+            },
+            "small": {
+              "ext": ".png",
+              "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/small_LOGO_Dev_Bots_color_lightblue_83d857ea6d.png",
+              "hash": "small_LOGO_Dev_Bots_color_lightblue_83d857ea6d",
+              "mime": "image/png",
+              "name": "small_LOGO-DevBots_color-lightblue.png",
+              "path": null,
+              "size": 22.65,
+              "width": 500,
+              "height": 333
+            },
+            "medium": {
+              "ext": ".png",
+              "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/medium_LOGO_Dev_Bots_color_lightblue_83d857ea6d.png",
+              "hash": "medium_LOGO_Dev_Bots_color_lightblue_83d857ea6d",
+              "mime": "image/png",
+              "name": "medium_LOGO-DevBots_color-lightblue.png",
+              "path": null,
+              "size": 36.19,
+              "width": 750,
+              "height": 500
+            },
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/thumbnail_LOGO_Dev_Bots_color_lightblue_83d857ea6d.png",
+              "hash": "thumbnail_LOGO_Dev_Bots_color_lightblue_83d857ea6d",
+              "mime": "image/png",
+              "name": "thumbnail_LOGO-DevBots_color-lightblue.png",
+              "path": null,
+              "size": 9.7,
+              "width": 234,
+              "height": 156
+            }
+          },
+          "hash": "LOGO_Dev_Bots_color_lightblue_83d857ea6d",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 291.07,
+          "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/LOGO_Dev_Bots_color_lightblue_83d857ea6d.png",
+          "previewUrl": null,
+          "provider": "azure-storage",
+          "provider_metadata": null,
+          "created_at": "2021-08-12T16:14:58.993Z",
+          "updated_at": "2021-08-12T16:14:59.185Z"
+        },
+        "subProjects": []
+      }
+    ]
   },
   {
     "id": 6,
@@ -1953,14 +2383,15 @@
       "hash": "LOGO_Dev_Bots_color_lightblue_83d857ea6d",
       "ext": ".png",
       "mime": "image/png",
-      "size": 291.07,
+      "size": 281.07,
       "url": "https://devlaunchersproduction.blob.core.windows.net/strapi/assets/LOGO_Dev_Bots_color_lightblue_83d857ea6d.png",
       "previewUrl": null,
       "provider": "azure-storage",
       "provider_metadata": null,
       "created_at": "2021-08-12T16:14:58.993Z",
       "updated_at": "2021-08-12T16:14:59.185Z"
-    }
+    },
+    "subProjects": []
   },
   {
     "id": 13,
@@ -2055,6 +2486,7 @@
       "provider_metadata": null,
       "created_at": "2021-08-22T20:19:56.715Z",
       "updated_at": "2021-09-29T23:29:07.985Z"
-    }
+    },
+    "subProjects": []
   }
 ]

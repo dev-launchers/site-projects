@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 // import Link from "next/link";
 // import Image from "next/image";
 import { withTheme } from "styled-components";
@@ -20,8 +20,9 @@ import Milestones from "./Milestones";
 import JoinSupport from "./JoinSupport";
 import HelpBuild from "./HelpBuild";
 import Sessions from "./Sessions";
+import SubProjects from "./SubProjects/SubProjects";
 
-const Project = ({ project, theme }) => {
+const Project = ({ project, subProjects, theme }) => {
   const router = useRouter();
   const roleRef = useRef();
   const donateRef = useRef();
@@ -29,34 +30,98 @@ const Project = ({ project, theme }) => {
   const excuteScroll = (ref) =>
     ref.current?.scrollIntoView({ behavior: "smooth", block: "center" });
 
+  const [subProject, setSubProject] = useState([]);
+
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
+  const { slug = [] } = router.query;
+  let isParentProject = true;
+  // Getting all subprojects under the parent and filter it to match with the requested subproject
 
+  if (slug.length === 2) {
+    const subProjectList = subProjects?.filter(
+      (subproj) => slug[1] === subproj.slug
+    );
+    setSubProject(subProjectList[0]);
+    isParentProject = false;
+  }
+  // // check if its for subproject rendering
+  // if (subProject && slug.length === 2) {
+  //   isParentProject = false;
+  // }
+  // Rendering the components based on,parent project or subproject
+  if (isParentProject) {
+    return (
+      <Wrapper>
+        <div id="background" />
+        <HeroSection
+          projectName={project.title}
+          projectCatchPhrase={project.catchPhrase}
+          heroImage={project.heroImage}
+        />
+        <Tags tags={project?.keywords} />
+        <Vision
+          vision={project?.vision || ""}
+          scrollMethods={{
+            scrollToRoles: () => excuteScroll(roleRef),
+            scrollToDonate: () => excuteScroll(donateRef),
+          }}
+        />
+        <Description
+          description={project?.description}
+          images={project?.Images}
+        />
+        <SubProjects
+          subprojects={project.subProjects}
+          projSlug={project.slug}
+        />
+        {/* <Role
+          ref={roleRef}
+          data={project?.openPositions}
+          projectSlug={project.slug}
+        />
+        <Milestones data={project?.board?.ProjectMilestone} />
+        <Sessions calendarId={project.calendarId} /> */}
+        <Team data={project.team} />
+        <JoinSupport
+          ref={donateRef}
+          scrollMethods={{
+            scrollToRoles: () => excuteScroll(roleRef),
+          }}
+        />
+        <HelpBuild />
+      </Wrapper>
+    );
+  }
   return (
     <Wrapper>
       <div id="background" />
       <HeroSection
-        projectName={project.title}
-        projectCatchPhrase={project.catchPhrase}
-        heroImage={project.heroImage}
+        projectName={subProject.title}
+        projectCatchPhrase={subProject.catchPhrase}
+        heroImage={subProject.heroImage}
       />
-      <Tags tags={project?.keywords} />
+      <Tags tags={subProject?.keywords} />
       <Vision
-        vision={project?.vision || ""}
+        vision={subProject?.vision || ""}
         scrollMethods={{
           scrollToRoles: () => excuteScroll(roleRef),
           scrollToDonate: () => excuteScroll(donateRef),
         }}
       />
       <Description
-        description={project?.description}
-        images={project?.Images}
+        descriptionData={subProject?.description}
+        images={subProject?.Images}
       />
-      <Role ref={roleRef} data={project?.openPositions} projectSlug={project.slug} />
-      <Milestones data={project?.board?.ProjectMilestone} />
-      <Sessions calendarId={project.calendarId} />
-      <Team data={project.team} />
+      <Role
+        ref={roleRef}
+        data={subProject?.openPositions}
+        subProjectSlug={subProject.slug}
+      />
+      <Milestones data={subProject?.board?.ProjectMilestone} />
+      <Sessions calendarId={subProject.calendarId} />
+      <Team data={subProject.team} />
       <JoinSupport
         ref={donateRef}
         scrollMethods={{

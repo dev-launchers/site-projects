@@ -7,7 +7,6 @@ import { env } from "../utils/EnvironmentVariables";
 
 const data = require("../components/modules/Projects/data.json");
 
-
 export const getStaticPaths = async () => {
   // const { data } = await axios(`${env().STRAPI_URL}/projects`, {
   //   headers: {
@@ -17,9 +16,13 @@ export const getStaticPaths = async () => {
   //   },
   // });
 
-  const paths = data.map((project) => ({
-    params: { slug: project.slug },
-  }));
+  const paths = [];
+  data.forEach((project) => {
+    paths.push({ params: { slug: [project.slug] } });
+    project.subProjects.forEach((subproj) => {
+      paths.push({ params: { slug: [project.slug, subproj.slug] } });
+    });
+  });
 
   return {
     paths,
@@ -28,9 +31,10 @@ export const getStaticPaths = async () => {
 };
 
 export async function getStaticProps(context) {
-  const { slug } = context.params;
+  const { slug = [] } = context.params;
+  console.log(context.params);
   const { data: project } = await axios.get(
-    `${env().STRAPI_URL}/projects/${slug}`,
+    `${env().STRAPI_URL}/projects/${slug[0]}`,
     {
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -45,19 +49,25 @@ export async function getStaticProps(context) {
       notFound: true,
     };
   }
-
+  // Getting all subprojects under the parent
+  console.log(project);
+  // const subProjects = [];
+  const subProjects = project?.subProjects;
   return {
     props: {
       project,
+      subProjects,
     },
     revalidate: 20,
   };
 }
 
-const ProjectRoute = ({ project }) => {
+const ProjectRoute = ({ project, subProjects }) => {
   const heroImageFormats = project?.heroImage?.formats;
   const heroImage =
-    heroImageFormats?.large || heroImageFormats?.medium || heroImageFormats?.small;
+    heroImageFormats?.large ||
+    heroImageFormats?.medium ||
+    heroImageFormats?.small;
   return (
     <>
       <Head>
@@ -68,7 +78,7 @@ const ProjectRoute = ({ project }) => {
         <meta property="og:type" content="website"></meta>
         <meta
           property="og:url"
-          content={`https://devlaunchers.com/projects/${project?.slug}`}
+          content={`https://devlaunchers.com/projects/${project?.slug[0]}`}
         ></meta>
         <meta property="og:image" content={heroImage?.url}></meta>
         <meta property="og:title" content={project?.title}></meta>
@@ -77,7 +87,7 @@ const ProjectRoute = ({ project }) => {
         <meta property="twitter:card" content="summary_large_image"></meta>
         <meta
           property="twitter:url"
-          content={`https://devlaunchers.com/projects/${project?.slug}`}
+          content={`https://devlaunchers.com/projects/${project?.slug[0]}`}
         ></meta>
         <meta property="twitter:title" content={project?.title}></meta>
         <meta
@@ -90,7 +100,7 @@ const ProjectRoute = ({ project }) => {
       </Head>
       <div>
         <Header />
-        <Project project={project || ""} />
+        <Project project={project || ""} subProjects={subProjects || ""} />
         <Footer />
       </div>
     </>
