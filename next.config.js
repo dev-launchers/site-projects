@@ -13,22 +13,18 @@ const nextConfig = {
       {
         source: "/",
         destination: "https://devlaunchers.org/",
-        basePath: false
       },
       {
         source: "/create",
         destination: "https://devlaunchers.org/create",
-        basePath: false
       },
       {
         source: "/learn",
         destination: `https://devlaunchers.org/learn`,
-        basePath: false
       },
       {
         source: "/support-us",
         destination: `https://devlaunchers.org/support-us`,
-        basePath: false
       },
     ];
   },
