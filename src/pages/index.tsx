@@ -1,4 +1,5 @@
 // import axios from "axios";
+import { GetStaticProps } from 'next'
 import Head from "next/head";
 import Header from "../components/common/Header";
 import Projects from "../components/modules/Projects";
@@ -7,7 +8,7 @@ import Footer from "../components/common/Footer";
 
 const projectsData = require("../components/modules/Projects/data.json");
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   // const { data: projects } = await axios(`${env().STRAPI_URL}/projects`, {
   //   headers: {
   //     Accept: "application/json, text/plain, */*",

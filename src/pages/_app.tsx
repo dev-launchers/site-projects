@@ -1,13 +1,12 @@
-import React from "react";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import Script from "next/script";
 import { ToastContainer } from "react-toastify";
 import { ThemeProvider } from "styled-components";
+import type { AppProps } from "next/app";
 import GlobalStyle from "../styles/globals";
 
 import "react-toastify/dist/ReactToastify.css";
 import theme from "../styles/theme";
-import { initGA, logPageView } from "../utils/GoogleAnalytics";
 
 import { UserDataProvider } from "../context/UserDataContext";
 
@@ -18,28 +17,9 @@ const hashRedirect = (router) => {
   }
 };
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   hashRedirect(router);
-
-  // Google analytics/Google adwords
-  React.useEffect(() => {
-    // Google Analytics
-    initGA();
-    logPageView();
-    Router.events.on("routeChangeComplete", () => {
-      logPageView();
-    });
-
-    // Google AdSense
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      // eslint-disable-next-line prefer-rest-params
-      window.dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "AW-599284852");
-  }, []);
 
   return (
     <>
@@ -50,6 +30,15 @@ function MyApp({ Component, pageProps }) {
             async
             src="https://www.googletagmanager.com/gtag/js?id=AW-599284852"
           />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){window.dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'AW-599284852');
+            `}
+          </Script>
           <UserDataProvider>
             <div className="App">
               <ToastContainer
