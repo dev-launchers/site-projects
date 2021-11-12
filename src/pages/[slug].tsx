@@ -90,11 +90,7 @@ const ProjectRoute = ({ project }) => {
         <meta property="twitter:image:src" content={heroImage?.url}></meta>
         <meta content="#ff7f0e" data-react-helmet="true" name="theme-color" />
       </Head>
-      <div>
-        <Header />
-        <Project project={project || ""} />
-        <Footer />
-      </div>
+      <Project project={project || ""} />
     </>
   );
 };

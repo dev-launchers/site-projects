@@ -1,9 +1,7 @@
 // import axios from "axios";
-import { GetStaticProps } from 'next'
+import { GetStaticProps } from "next";
 import Head from "next/head";
-import Header from "../components/common/Header";
 import Projects from "../components/modules/Projects";
-import Footer from "../components/common/Footer";
 // import { env } from "../utils/EnvironmentVariables";
 
 const projectsData = require("../components/modules/Projects/data.json");
@@ -70,11 +68,7 @@ const ProjectsList = ({ projects }) => (
       ></meta>
       <meta content="#ff7f0e" data-react-helmet="true" name="theme-color" />
     </Head>
-    <div>
-      <Header />
-      <Projects projects={projects || ""} />
-      <Footer />
-    </div>
+    <Projects projects={projects || ""} />
   </>
 );
 
