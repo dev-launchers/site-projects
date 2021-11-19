@@ -7,20 +7,20 @@ import { Layout, ProjectContainer } from "./StyledProjects";
 import SearchBar from "./Project/SearchBar";
 
 const Projects = ({ projects }) => {
-  const [searchValue, setSearchValue] = useState('')
+  const [searchValue, setSearchValue] = useState("");
 
   const options = {
     includeScore: true,
-    keys: ["keywords.keyword"],
+    keys: ["interests?.interest"],
     threshold: 0.3,
-    ignoreFieldNorm: true
+    ignoreFieldNorm: true,
   };
 
   const fuse = new Fuse(projects, options);
   const searchResult = fuse.search(searchValue).map(({ item }) => item);
 
   const searchProject = (searchQuery) => {
-    setSearchValue(searchQuery)
+    setSearchValue(searchQuery);
   };
 
   const router = useRouter();
@@ -29,7 +29,7 @@ const Projects = ({ projects }) => {
     return <div>Loading...</div>;
   }
 
-  const items = searchValue ? searchResult : projects
+  const items = searchValue ? searchResult : projects;
 
   return (
     <div
@@ -43,7 +43,7 @@ const Projects = ({ projects }) => {
       <div
         style={{
           display: "flex",
-          flexWrap:'wrap',
+          flexWrap: "wrap",
           justifyContent: "space-between",
           alignItems: "center",
         }}
@@ -68,10 +68,10 @@ const Projects = ({ projects }) => {
                 id: project.id,
                 title: project.title,
                 secondaryText: `Commitment level: ${project.commitmentLevel}`,
-                tags: project.keywords.map(({ keyword }) => keyword),
+                tags: project.interests?.map(({ interest }) => interest),
                 description: project.catchPhrase,
                 href: project.slug,
-                imageSrc: project.heroImage.url,
+                imageSrc: project?.heroImage?.url,
                 actions: (
                   <>
                     <Link href={`${router.asPath}${project.slug}`} passHref>
