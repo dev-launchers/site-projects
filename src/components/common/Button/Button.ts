@@ -1,13 +1,16 @@
 import styled, { css } from "styled-components";
 
-const shadeColor = (color, percent) => {
-  let R = parseInt(color.substring(1, 3), 16);
-  let G = parseInt(color.substring(3, 5), 16);
-  let B = parseInt(color.substring(5, 7), 16);
+type ColorFunctionType = (hexColor:string)=>string|null
 
-  R = parseInt((R * (100 + percent)) / 100, 10);
-  G = parseInt((G * (100 + percent)) / 100, 10);
-  B = parseInt((B * (100 + percent)) / 100, 10);
+
+const shadeColor = (color:string, percent:number):string => {
+  let R:number = parseInt(color.substring(1, 3), 16);
+  let G:number = parseInt(color.substring(3, 5), 16);
+  let B:number = parseInt(color.substring(5, 7), 16);
+
+  R = parseInt(((R * (100 + percent)) / 100).toString(), 10);
+  G = parseInt(((G * (100 + percent)) / 100).toString(), 10);
+  B = parseInt(((B * (100 + percent)) / 100).toString(), 10);
 
   R = R < 255 ? R : 255;
   G = G < 255 ? G : 255;
@@ -23,7 +26,7 @@ const shadeColor = (color, percent) => {
   return `#${RR}${GG}${BB}`;
 };
 
-const colorUnderButtons = (hexColor) => {
+const colorUnderButtons:ColorFunctionType = (hexColor) => {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hexColor);
   return result
     ? `rgba(${parseInt(result[1], 16) - 102},${parseInt(result[2], 16) - 55},${
@@ -32,7 +35,7 @@ const colorUnderButtons = (hexColor) => {
     : null;
 };
 
-const onHoverBackgroundColor = (hexColor) => {
+const onHoverBackgroundColor:ColorFunctionType = (hexColor) => {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hexColor);
   return result
     ? `rgb(${parseInt(result[1], 16) + 44},${parseInt(result[2], 16) + 44},${
