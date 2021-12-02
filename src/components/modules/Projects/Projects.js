@@ -25,7 +25,7 @@ const Projects = ({ projects }) => {
 
   const router = useRouter();
 
-  if (router.isFallback) {
+  if (router?.isFallback) {
     return <div>Loading...</div>;
   }
 
@@ -74,7 +74,7 @@ const Projects = ({ projects }) => {
                 imageSrc: project.heroImage.url,
                 actions: (
                   <>
-                    <Link href={`${router.asPath}${project.slug}`} passHref>
+                    <Link href={`${router?.asPath}${project.slug}`} passHref>
                       <a>LEARN MORE</a>
                     </Link>
                     <Link href="support-us" passHref>
