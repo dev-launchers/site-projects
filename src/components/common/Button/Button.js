@@ -5,9 +5,9 @@ const shadeColor = (color, percent) => {
   let G = parseInt(color.substring(3, 5), 16);
   let B = parseInt(color.substring(5, 7), 16);
 
-  R = parseInt((R * (100 + percent)) / 100, 10);
-  G = parseInt((G * (100 + percent)) / 100, 10);
-  B = parseInt((B * (100 + percent)) / 100, 10);
+  R = parseInt((R * (100 + percent)).toString() / 100, 10);
+  G = parseInt((G * (100 + percent)).toString() / 100, 10);
+  B = parseInt((B * (100 + percent)).toString() / 100, 10);
 
   R = R < 255 ? R : 255;
   G = G < 255 ? G : 255;
@@ -26,18 +26,16 @@ const shadeColor = (color, percent) => {
 const colorUnderButtons = (hexColor) => {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hexColor);
   return result
-    ? `rgba(${parseInt(result[1], 16) - 102},${parseInt(result[2], 16) - 55},${
-        parseInt(result[3], 16) - 14
-      },1)`
+    ? `rgba(${parseInt(result[1], 16) - 102},${parseInt(result[2], 16) - 55},${parseInt(result[3], 16) - 14
+    },1)`
     : null;
 };
 
 const onHoverBackgroundColor = (hexColor) => {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hexColor);
   return result
-    ? `rgb(${parseInt(result[1], 16) + 44},${parseInt(result[2], 16) + 44},${
-        parseInt(result[3], 16) + 44
-      })`
+    ? `rgb(${parseInt(result[1], 16) + 44},${parseInt(result[2], 16) + 44},${parseInt(result[3], 16) + 44
+    })`
     : null;
 };
 const Button = styled.a`
@@ -50,7 +48,7 @@ const Button = styled.a`
   border: 0px;
   border-bottom: 3px solid
     ${({ theme, bgColor }) =>
-      colorUnderButtons(bgColor || theme.colors.ACCENT_1)};
+    colorUnderButtons(bgColor || theme.colors.ACCENT_1)};
   cursor: pointer;
   font-size: ${({ fontSize }) => fontSize || "1.5rem"};
   margin-top: ${({ marginTop }) => marginTop || ""};
@@ -98,9 +96,9 @@ const Button = styled.a`
     `}
   &:hover {
     background-color: ${({ theme, bgColor }) =>
-      onHoverBackgroundColor(bgColor || theme.colors.ACCENT_2)};
+    onHoverBackgroundColor(bgColor || theme.colors.ACCENT_2)};
     color: ${({ theme, bgColor }) =>
-      (bgColor && shadeColor(bgColor, -40)) || theme.colors.ACCENT_3};
+    (bgColor && shadeColor(bgColor, -40)) || theme.colors.ACCENT_3};
   }
 `;
 export default Button;
