@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 
-type ColorFunctionType = (hexColor:string)=>string|null
 
 
 const shadeColor = (color:string, percent:number):string => {
@@ -26,7 +25,7 @@ const shadeColor = (color:string, percent:number):string => {
   return `#${RR}${GG}${BB}`;
 };
 
-const colorUnderButtons:ColorFunctionType = (hexColor) => {
+const colorUnderButtons = (hexColor) => {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hexColor);
   return result
     ? `rgba(${parseInt(result[1], 16) - 102},${parseInt(result[2], 16) - 55},${
@@ -35,7 +34,7 @@ const colorUnderButtons:ColorFunctionType = (hexColor) => {
     : null;
 };
 
-const onHoverBackgroundColor:ColorFunctionType = (hexColor) => {
+const onHoverBackgroundColor = (hexColor) => {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hexColor);
   return result
     ? `rgb(${parseInt(result[1], 16) + 44},${parseInt(result[2], 16) + 44},${
