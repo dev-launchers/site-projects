@@ -1,9 +1,13 @@
 const withPlugins = require("next-compose-plugins");
 const imagesPlugin = require("next-optimized-images");
 
+
+/**
+ * @type {import('next').NextConfig}
+* */
 const nextConfig = {
   basePath: "/projects",
-
+  
   async rewrites() {
     return [
       {
