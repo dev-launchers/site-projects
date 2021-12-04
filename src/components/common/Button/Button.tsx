@@ -1,13 +1,26 @@
 import styled, { css } from "styled-components";
 
-const shadeColor = (color, percent) => {
-  let R: number = parseInt(color.substring(1, 3), 16);
-  let G: number = parseInt(color.substring(3, 5), 16);
-  let B: number = parseInt(color.substring(5, 7), 16);
 
-  R = parseInt(((R * (100 + percent)) / 100).toString() , 10);
-  G = parseInt(((G * (100 + percent)) / 100).toString() , 10);
-  B = parseInt(((B * (100 + percent)) / 100).toString() , 10);
+interface ButtonProps {
+  bgColor?: string
+  textColor?: string
+  marginTop?: number
+  width?: number
+  fontSize?: number
+  hero?: boolean
+  modal?: boolean
+  intro?: boolean
+}
+
+
+const shadeColor = (color: string, percent: number): string => {
+  let R = parseInt(color.substring(1, 3), 16);
+  let G = parseInt(color.substring(3, 5), 16);
+  let B = parseInt(color.substring(5, 7), 16);
+
+  R = parseInt(((R * (100 + percent)) / 100).toString(), 10);
+  G = parseInt(((G * (100 + percent)) / 100).toString(), 10);
+  B = parseInt(((B * (100 + percent)) / 100).toString(), 10);
 
   R = R < 255 ? R : 255;
   G = G < 255 ? G : 255;
@@ -23,7 +36,7 @@ const shadeColor = (color, percent) => {
   return `#${RR}${GG}${BB}`;
 };
 
-const colorUnderButtons = (hexColor) => {
+const colorUnderButtons = (hexColor: string): string => {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hexColor);
   return result
     ? `rgba(${parseInt(result[1], 16) - 102},${parseInt(result[2], 16) - 55},${parseInt(result[3], 16) - 14
@@ -31,27 +44,27 @@ const colorUnderButtons = (hexColor) => {
     : null;
 };
 
-const onHoverBackgroundColor = (hexColor) => {
+const onHoverBackgroundColor = (hexColor: string): string => {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hexColor);
   return result
     ? `rgb(${parseInt(result[1], 16) + 44},${parseInt(result[2], 16) + 44},${parseInt(result[3], 16) + 44
     })`
     : null;
 };
-const Button = styled.a`
+const Button = styled.a<ButtonProps>`
   font-family: ${({ theme }) => theme.fonts.headline}, sans-serif;
   background-color: ${({ theme, bgColor }) => bgColor || theme.colors.ACCENT_1};
   color: ${({ theme, textColor }) => textColor || theme.colors.NEUTRAL_2};
   transition: background-color 0.5s, color 0.5s;
 
-  width: ${({ width }) => width || ""};
+  width: ${({ width }) => `${width}em` || ""};
   border: 0px;
   border-bottom: 3px solid
-    ${({ theme, bgColor }) =>
+    ${({ theme, bgColor }: { theme: any, bgColor: string }) =>
     colorUnderButtons(bgColor || theme.colors.ACCENT_1)};
   cursor: pointer;
-  font-size: ${({ fontSize }) => fontSize || "1.5rem"};
-  margin-top: ${({ marginTop }) => marginTop || ""};
+  font-size: ${({ fontSize }) => `${fontSize}rem` || "1.5rem"};
+  margin-top: ${({ marginTop }) => `${marginTop}rem` || ""};
   padding: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
