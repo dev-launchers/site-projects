@@ -3,7 +3,8 @@ import axios from "axios";
 import { DateTime } from "luxon";
 import { Wrapper, Event, Day, WeekdayTitle } from "./StyledCalendar";
 
-const Calendar = ({ URL }) => {
+
+const Calendar = ({ URL }: { URL: string }) => {
   const [eventList, setEventList] = useState([]);
 
   const current = DateTime.now();
@@ -29,7 +30,7 @@ const Calendar = ({ URL }) => {
 
         setEventList(tempEventList);
       })
-      .catch(() => {});
+      .catch(() => { });
   };
 
   React.useEffect(makeRequest, []);
@@ -79,7 +80,7 @@ const Calendar = ({ URL }) => {
               return null;
             })}
             {eventList.filter(({ weekday }) => weekday === i + 1).length ===
-            0 ? (
+              0 ? (
               <div style={{ fontSize: "1rem", textAlign: "center" }}>
                 No events
               </div>

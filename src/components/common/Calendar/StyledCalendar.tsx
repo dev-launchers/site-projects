@@ -2,6 +2,7 @@ import Styled from "styled-components";
 
 import theme from "../../../styles/theme";
 
+
 export const Wrapper = Styled.div`
   display: flex;
   grid-area: WeeksGlance;
