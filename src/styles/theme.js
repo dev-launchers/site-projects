@@ -10,7 +10,7 @@ const theme = {
     NEUTRAL_2: "#f0edee", // light
   },
   fonts: {
-    headline: "Abel",
+    headline: '"Abel", sans-serif',
     normal: "Nunito Sans",
   },
   fontSizes: {

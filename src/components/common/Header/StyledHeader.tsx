@@ -1,14 +1,13 @@
 import styled from "styled-components";
-import logoMonogramImage from "../../../images/logo-monogram.png?webp";
+// import logo_monogram from "../../../images/logo_monogram.png?webp";
 
 export const HeaderBlock = styled.div`
-  background-color: #1c1c1c;
+  background-color: ${({ theme }) => theme.colors.NEUTRAL_1};
   min-height: 7.5vh;
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 2;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,6 +43,7 @@ export const LogoWrapper = styled.div`
 export const LogoImageHolder = styled.div`
   width: 3rem;
   margin: 2%;
+  position: relative;
   margin-bottom: 0;
   @media (orientation: portrait) {
     height: auto;
@@ -51,19 +51,21 @@ export const LogoImageHolder = styled.div`
     margin-left: 1vw;
   }
 `;
-export const LogoImage = styled.img.attrs(() => ({
-  src: logoMonogramImage,
-  alt: "logo",
-}))`
+export const LogoImage = styled.div`
   display: inline-block;
   width: 100%;
 `;
 export const LogoWords = styled.div`
   width: 15rem;
-  font-family: "Abel", sans-serif;
+  font-family: ${({ theme }) => theme.fonts.headline};
+  display: inline-flex;
   font-size: 1.75rem;
-  margin-left: 0.25rem;
-  line-height: 140%;
+  margin-left: 1.25rem;
+  position: absolute;
+  left: 3rem;
+  bottom: 1.3rem;
+  line-height: 70%;
+  color: ${({ theme }) => theme.colors.NEUTRAL_2};
   @media (orientation: portrait) {
     display: none;
   }
