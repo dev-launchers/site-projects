@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-use-before-define
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,19 +9,19 @@ import Logout from "../../../utils/Logout";
 import { env } from "../../../utils/EnvironmentVariables";
 import { useUserDataContext } from "../../../context/UserDataContext";
 
-function HamburgerMenu() {
+const HamburgerMenu: React.FC = () => {
   const { userData } = useUserDataContext();
   const [menuOpen, setMenuOpen] = React.useState(false);
 
   // Called when the open/close state of the menu changes (onStateChange callback)
-  const isMenuOpen = (state) => {
+  const isMenuOpen = (state: { isOpen: boolean }) => {
     setMenuOpen(state.isOpen);
   };
 
   // Called whenever a navigation item in the menu is clicked (closes menu)
-  const handleNavClick = () => {
+  function handleNavClick(): void {
     setMenuOpen(false);
-  };
+  }
 
   return (
     <SlideHamburgerMenu
@@ -132,6 +133,6 @@ function HamburgerMenu() {
       </div>
     </SlideHamburgerMenu>
   );
-}
+};
 
 export default HamburgerMenu;
