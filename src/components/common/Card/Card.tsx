@@ -34,7 +34,32 @@ import Attachments from "./Attachments";
  *  - imageHolderBackgroundColor: changes bgColor if passed otherwise it defaults to black bgColor
  *  - cardFlexDirection: changes flex-direction if existed otherwise delete flex-direction
  */
-export default function Card(props) {
+
+
+interface Props {
+  size?: string,
+  style?: React.CSSProperties,
+  cardData?: {
+    onClick: React.MouseEventHandler<HTMLDivElement>,
+    textAlignment: string,
+    flexDirection: string,
+    imageSrc: string,
+    imageHolderBackgroundColor: string,
+    tags: [],
+    href: string | string[],
+    secondaryText: string,
+    description: string,
+    actions: boolean,
+    attachments: boolean,
+  },
+  bgColor?: string,
+  isLinkingInside?: boolean,
+}
+
+export default function Card(props: Props) {
+
+
+
   const router = useRouter();
 
   return (

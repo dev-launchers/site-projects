@@ -1,6 +1,16 @@
 import styled, { css } from "styled-components";
+import React from 'react';
 
-export const Container = styled.div`
+interface StyledProps {
+  size?: string,
+  flexDirection?: string,
+  textAlignment?: string,
+  style?: React.CSSProperties,
+  bgColor?: string,
+  imageSrc?: string,
+}
+
+export const Container = styled.div <StyledProps>`
   margin: 0.5%;
   width: ${({ size }) => (size === "large" ? "90%" : "24%")};
   background-color: white;
@@ -13,7 +23,9 @@ export const Container = styled.div`
   }
 `;
 
-export const Content = styled.div`
+
+
+export const Content = styled.div<StyledProps>`
   display: flex;
   flex: 1;
   flex-direction: ${({ flexDirection }) => flexDirection || "column"};
@@ -30,7 +42,7 @@ export const Content = styled.div`
   text-align: ${({ textAlignment }) => textAlignment || "left"};
 `;
 
-export const ImageHolder = styled.div`
+export const ImageHolder = styled.div <StyledProps>`
   position: relative;
   width: 100%;
   height: 25vh;
@@ -43,7 +55,7 @@ export const ImageHolder = styled.div`
     height: 26vh;
   }
 `;
-export const TagsContainer = styled.div`
+export const TagsContainer = styled.div <StyledProps>`
   text-align: center;
    top: 3%;
   right: 1%;
@@ -56,7 +68,7 @@ export const TagsContainer = styled.div`
   overflow: auto;
   
 `;
-export const Image = styled.div`
+export const Image = styled.div <StyledProps>`
   background-color: lightgray;
   width: 100%;
   height: 100%;
@@ -73,7 +85,7 @@ export const Image = styled.div`
   /* outline: 2px solid black; */
 `;
 
-export const DataHolder = styled.div`
+export const DataHolder = styled.div <StyledProps>`
   margin-top: 0.5em;
   padding: 0.5rem;
   width: 95%;
@@ -84,20 +96,20 @@ export const DataHolder = styled.div`
       padding: 6.75%;
     `}
 `;
-export const SecondaryText = styled.div`
+export const SecondaryText = styled.div <StyledProps>`
   margin: 1% 0 2% 0;
   font-size: 1rem;
 `;
-export const Description = styled.div`
+export const Description = styled.div <StyledProps>`
   width: 100%;
   font-size: 1.2rem;
   padding-top: 1%;
 `;
 
-export const AttachmentsContainer = styled.div`
+export const AttachmentsContainer = styled.div <StyledProps>`
   margin-top: auto;
 `;
-export const ActionsContainer = styled.div`
+export const ActionsContainer = styled.div <StyledProps>`
   display: grid;
   grid-auto-flow: column;
   place-content: start;

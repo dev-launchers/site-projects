@@ -7,20 +7,20 @@ import { Layout, ProjectContainer } from "./StyledProjects";
 import SearchBar from "./Project/SearchBar";
 
 const Projects = ({ projects }) => {
-  const [searchValue, setSearchValue] = useState('')
+  const [searchValue, setSearchValue] = useState("");
 
   const options = {
     includeScore: true,
     keys: ["keywords.keyword"],
     threshold: 0.3,
-    ignoreFieldNorm: true
+    ignoreFieldNorm: true,
   };
 
   const fuse = new Fuse(projects, options);
   const searchResult = fuse.search(searchValue).map(({ item }) => item);
 
   const searchProject = (searchQuery) => {
-    setSearchValue(searchQuery)
+    setSearchValue(searchQuery);
   };
 
   const router = useRouter();
@@ -29,7 +29,7 @@ const Projects = ({ projects }) => {
     return <div>Loading...</div>;
   }
 
-  const items = searchValue ? searchResult : projects
+  const items = searchValue ? searchResult : projects;
 
   return (
     <div
@@ -43,7 +43,7 @@ const Projects = ({ projects }) => {
       <div
         style={{
           display: "flex",
-          flexWrap:'wrap',
+          flexWrap: "wrap",
           justifyContent: "space-between",
           alignItems: "center",
         }}
