@@ -54,6 +54,7 @@ interface Props {
   },
   bgColor?: string,
   isLinkingInside?: boolean,
+
 }
 
 export default function Card(props: Props) {
