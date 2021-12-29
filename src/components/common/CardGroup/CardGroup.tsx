@@ -1,8 +1,18 @@
+// eslint-disable-next-line no-use-before-define
 import React from "react";
 import Card from "../Card/Card";
 import { Collection, CollectionTitle } from "./StyledCardGroup";
 
-export default function CardGroup(props) {
+interface PropTypes {
+  title?: String,
+  cards: string[],
+  size: number,
+  attachment: string
+  titleAlignment: string,
+  cardGroupFlexDirection: string,
+}
+
+export default function CardGroup(props: PropTypes) {
   return (
     <div>
       {props.title ? (

@@ -1,1 +1,1 @@
-export { default } from "./CardGroup";
+export { default } from "./CardGroup.tsx";
