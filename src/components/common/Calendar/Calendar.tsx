@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { DateTime } from "luxon";
+// eslint-disable-next-line import/extensions
 import { Wrapper, Event, Day, WeekdayTitle } from "./StyledCalendar";
 
 
@@ -33,7 +34,7 @@ const Calendar = ({ URL }: { URL: string }) => {
       .catch(() => { });
   };
 
-  React.useEffect(makeRequest, []);
+  useEffect(makeRequest, []);
 
   const weekdays = ["MON", "TUES", "WED", "THURS", "FRI", "SAT", "SUN"];
   const dates = [];
