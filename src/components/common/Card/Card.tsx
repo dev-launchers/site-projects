@@ -57,6 +57,7 @@ interface Props {
   bgColor?: string,
   isLinkingInside?: boolean,
   i?: number,
+  alt?: string
 
 }
 

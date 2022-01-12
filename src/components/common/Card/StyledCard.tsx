@@ -9,6 +9,7 @@ interface StyledProps {
   bgColor?: string,
   imageSrc?: string,
   i?: number,
+  alt?: string
 }
 
 export const Container = styled.div <StyledProps>`
