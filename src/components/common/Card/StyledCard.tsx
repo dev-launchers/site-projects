@@ -8,6 +8,7 @@ interface StyledProps {
   style?: React.CSSProperties,
   bgColor?: string,
   imageSrc?: string,
+  i?: number,
 }
 
 export const Container = styled.div <StyledProps>`

@@ -52,9 +52,11 @@ interface Props {
     description: string,
     actions: boolean,
     attachments?: boolean,
+
   },
   bgColor?: string,
   isLinkingInside?: boolean,
+  i?: number,
 
 }
 
