@@ -37,33 +37,32 @@ import { Cards } from "../../modules/Projects/Project/Role/RoleCards/StyledRoleC
  */
 
 
-export interface Props {
-  size?: string,
+export interface CardProps {
+  size?: number,
   style?: React.CSSProperties,
   cardData?: {
-    onClick: React.MouseEventHandler<HTMLDivElement>,
-    textAlignment: string,
-    flexDirection: string,
-    imageSrc: string,
-    imageHolderBackgroundColor: string,
-    tags: string[],
-    href: string,
-    secondaryText: string,
-    description: string,
-    actions: boolean,
+    onClick?: React.MouseEventHandler<HTMLDivElement>,
+    textAlignment?: string,
+    flexDirection?: string,
+    imageSrc?: string,
+    imageHolderBackgroundColor?: string,
+    tags?: string[],
+    href?: string,
+    secondaryText?: string,
+    description?: string,
+    actions?: boolean,
     attachments?: boolean,
-
+    items?: {}
   },
   bgColor?: string,
   isLinkingInside?: boolean,
   i?: number,
-  alt?: string
+  alt?: string,
+  attachment?: string
 
 }
 
-const Card: React.FC<Props> = (props) => {
-
-
+const Card: React.FC<CardProps> = (props) => {
 
   const router = useRouter();
 

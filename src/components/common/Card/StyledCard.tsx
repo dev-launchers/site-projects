@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import React from 'react';
 
 interface StyledProps {
-  size?: string,
+  size?: number | string,
   flexDirection?: string,
   textAlignment?: string,
   style?: React.CSSProperties,

@@ -26,7 +26,7 @@ export default function CardGroup(props: PropTypes) {
         {Object.keys(props.cards).length !== 0 &&
           props.cards.map((items, i) => (
             <Card
-              cardData={items}
+              cardData={{ items }}
               key={i}
               size={props.size}
               attachment={props.attachment}
