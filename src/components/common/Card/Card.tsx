@@ -56,10 +56,7 @@ export interface CardProps {
   },
   bgColor?: string,
   isLinkingInside?: boolean,
-  i?: number,
-  alt?: string,
   attachment?: string
-
 }
 
 const Card: React.FC<CardProps> = (props) => {
@@ -70,7 +67,6 @@ const Card: React.FC<CardProps> = (props) => {
     <Container
       style={props.style}
       size={props.size}
-      key={props.i}
       onClick={props.cardData.onClick}
     >
       <Content
