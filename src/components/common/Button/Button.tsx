@@ -69,7 +69,6 @@ const Button = styled.a<ButtonProps>`
   padding-left: 1rem;
   padding-right: 1rem;
   border-radius: 16px;
-  /* border-radius: ${({ borderRadius }) => borderRadius || "100px"}; */
   font-weight: bolder;
 
   ${({ hero }) =>

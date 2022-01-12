@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
-export const Heading = styled.div`
+interface StyledProps {
+  cardTitleAlignment?: string;
+  cardTitleSize?: string,
+  cardTitleUnderline?: { color: string, thickness: string, type: string }
+}
+
+export const Heading = styled.div<StyledProps>`
   display: flex;
   align-items: flex-start;
   width: 100%;
@@ -10,9 +16,8 @@ export const Heading = styled.div`
 
   ${({ cardTitleUnderline }) => {
     const { color, thickness, type } = cardTitleUnderline;
-    return `border-bottom: ${color || "#00000000"} ${thickness || "0.15rem"} ${
-      type || "solid"
-    };`;
+    return `border-bottom: ${color || "#00000000"} ${thickness || "0.15rem"} ${type || "solid"
+      };`;
   }}
 `;
 
