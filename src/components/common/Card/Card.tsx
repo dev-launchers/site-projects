@@ -20,6 +20,7 @@ import RainbowBar from "../RainbowBar";
 
 import CardTitle from "./CardTitle";
 import Attachments from "./Attachments";
+import { Cards } from "../../modules/Projects/Project/Role/RoleCards/StyledRoleCards";
 
 /**
  * Props:
@@ -45,19 +46,19 @@ interface Props {
     flexDirection: string,
     imageSrc: string,
     imageHolderBackgroundColor: string,
-    tags: [],
-    href: string | string[],
+    tags: string[],
+    href: string,
     secondaryText: string,
     description: string,
     actions: boolean,
-    attachments: boolean,
+    attachments?: boolean,
   },
   bgColor?: string,
   isLinkingInside?: boolean,
 
 }
 
-export default function Card(props: Props) {
+const Card: React.FC<Props> = (props) => {
 
 
 
@@ -126,3 +127,5 @@ export default function Card(props: Props) {
     </Container>
   );
 }
+
+export default Card; 
