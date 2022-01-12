@@ -37,7 +37,7 @@ import { Cards } from "../../modules/Projects/Project/Role/RoleCards/StyledRoleC
  */
 
 
-interface Props {
+export interface Props {
   size?: string,
   style?: React.CSSProperties,
   cardData?: {
