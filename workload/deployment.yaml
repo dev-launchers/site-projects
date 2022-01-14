@@ -18,6 +18,22 @@ spec:
       containers:
       - name: site-projects
         image: devlaunchers/site-projects:latest
+        env:
+        - name: V_MATCH_USER
+          valueFrom:
+            secretKeyRef:
+              name: v-match
+              key: user
+        - name: V_MATCH_ID
+          valueFrom:
+            secretKeyRef:
+              name: v-match
+              key: id
+        - name: V_MATCH_PREFERENCE
+          valueFrom:
+            secretKeyRef:
+              name: v-match
+              key: preference
         ports:
         - containerPort: 3000
         resources:
