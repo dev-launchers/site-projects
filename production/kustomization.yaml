@@ -23,11 +23,11 @@ patchesStrategicMerge:
         - name: site-projects
           resources:
             limits:
-              cpu: 0.01
-              memory: 200Mi
+              cpu: 0.05
+              memory: 500Mi
             requests:
-              cpu: 0.01
-              memory: 200Mi
+              cpu: 0.05
+              memory: 500Mi
         nodeSelector:
           type: virtual-kubelet
         tolerations:
