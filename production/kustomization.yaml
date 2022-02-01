@@ -24,12 +24,10 @@ patchesStrategicMerge:
           resources:
             limits:
               cpu: 0.05
-              memory: 500Mi
+              memory: 300Mi
             requests:
               cpu: 0.05
-              memory: 500Mi
-        nodeSelector:
-          type: virtual-kubelet
+              memory: 300Mi
         tolerations:
         - key: virtual-kubelet.io/provider
           operator: Exists
