@@ -59,7 +59,7 @@ const Projects = ({ projects }) => {
         while learning valuable skills and meeting awesome people!
       </div>
       <Layout>
-        {items.map((project, i) => (
+        {items.filter(project => project.published_at).map((project, i) => (
           <ProjectContainer key={i}>
             <Card
               isLinkingInside
@@ -68,10 +68,10 @@ const Projects = ({ projects }) => {
                 id: project.id,
                 title: project.title,
                 secondaryText: `Commitment level: ${project.commitmentLevel}`,
-                tags: project.keywords.map(({ keyword }) => keyword),
+                tags: project.interests.map(({ interest }) => interest),
                 description: project.catchPhrase,
                 href: project.slug,
-                imageSrc: project.heroImage.url,
+                imageSrc: project?.heroImage?.url,
                 actions: (
                   <>
                     <Link href={`${router?.asPath}${project.slug}`} passHref>

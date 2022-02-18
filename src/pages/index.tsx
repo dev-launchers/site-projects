@@ -1,20 +1,18 @@
-// import axios from "axios";
+import axios from "axios";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import Projects from "../components/modules/Projects";
-// import { env } from "../utils/EnvironmentVariables";
-
-const projectsData = require("../components/modules/Projects/data.json");
+import { env } from "../utils/EnvironmentVariables";
 
 export const getStaticProps: GetStaticProps = async () => {
-  // const { data: projects } = await axios(`${env().STRAPI_URL}/projects`, {
-  //   headers: {
-  //     Accept: "application/json, text/plain, */*",
-  //     "User-Agent":
-  //       "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36",
-  //   },
-  // });
-  const projects = projectsData;
+  const { data: projects } = await axios(`${env().STRAPI_URL}/projects`, {
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "User-Agent":
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36",
+    },
+  });
+
   if (!projects) {
     return {
       notFound: true,
@@ -40,7 +38,7 @@ const ProjectsList = ({ projects }) => (
       <meta property="og:type" content="website"></meta>
       <meta
         property="og:url"
-        content="https://devlaunchers.com/projects"
+        content="https://devlaunchers.org/projects"
       ></meta>
       <meta
         property="og:image"
@@ -55,7 +53,7 @@ const ProjectsList = ({ projects }) => (
       <meta property="twitter:card" content="summary_large_image"></meta>
       <meta
         property="twitter:url"
-        content="https://devlaunchers.com/projects"
+        content="https://devlaunchers.org/projects"
       ></meta>
       <meta property="twitter:title" content="Our Projects"></meta>
       <meta

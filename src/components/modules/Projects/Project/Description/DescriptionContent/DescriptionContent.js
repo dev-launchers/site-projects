@@ -21,7 +21,7 @@ const DescriptionContent = ({ data }) => {
           <Conatiner>
             <FlexSection>
               {images.map((image) => (
-                <ImageHolder key={image.image[0].id} src={image.image[0].url} />
+                <ImageHolder key={image.id} src={image.url} />
               ))}
             </FlexSection>
           </Conatiner>

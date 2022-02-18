@@ -8,8 +8,8 @@ const OriginalNextImage = NextImage.default;
 
 Object.defineProperty(NextImage, "default", {
   configurable: true,
-  value: (props) => <OriginalNextImage {...props} unoptimized />
-})
+  value: (props) => <OriginalNextImage {...props} unoptimized />,
+});
 
 // Global decorator to apply the styles to all stories
 export const decorators = [
@@ -25,6 +25,12 @@ export const decorators = [
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  a11y: {
+    // the target DOM element
+    element: "#root",
+    // sets the execution mode for the addon
+    manual: false,
+  },
   controls: {
     matchers: {
       color: /(background|color)$/i,
