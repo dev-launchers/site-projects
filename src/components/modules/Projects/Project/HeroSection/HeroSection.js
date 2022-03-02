@@ -29,7 +29,7 @@ const HeroSection = ({ projectName, projectCatchPhrase, heroImage }) => {
     typeof window === "undefined"
       ? Buffer.from(str).toString("base64")
       : window.btoa(str);
-  const heroImageConfig = heroImage.formats.large || heroImage;
+  const heroImageConfig = heroImage?.formats?.large || heroImage;
   return (
     <Wrapper>
       <h2>{projectName}</h2>
