@@ -5,7 +5,7 @@ import Projects from "../components/modules/Projects";
 import { env } from "../utils/EnvironmentVariables";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data: projects } = await axios(`${env().STRAPI_URL}/projects`, {
+  const { data: projects } = await axios(`${env().STRAPI_URL}/projects?_publicationState=live`, {
     headers: {
       Accept: "application/json, text/plain, */*",
       "User-Agent":
