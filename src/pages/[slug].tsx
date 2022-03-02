@@ -5,7 +5,7 @@ import Project from "../components/modules/Projects/Project";
 import { env } from "../utils/EnvironmentVariables";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await axios(`${env().STRAPI_URL}/projects?_publicationState=preview`, {
+  const { data } = await axios(`${env().STRAPI_URL}/projects?_publicationState=live`, {
     headers: {
       Accept: "application/json, text/plain, */*",
       "User-Agent":
