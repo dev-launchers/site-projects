@@ -1,22 +1,23 @@
-import React from "react";
+import { useState } from "react";
 import ReactModal from "react-modal";
+// eslint-disable-next-line import/extensions
+import { ModalContent, customModalStyles } from './StyledModal'
 
-import { ModalContent, customModalStyles } from "./StyledModal";
 
 ReactModal.setAppElement("#__next");
 
 export default function Modal(props) {
-  const [modalContent] = React.useState(props.modalContent);
+  const [modalContent] = useState(props.modalContent);
 
   // Modal functions
-  const [modalIsOpen, setModalIsOpen] = React.useState(props.modalIsOpen);
+  const [modalIsOpen, setModalIsOpen] = useState(props.modalIsOpen);
   const openModal = () => {
     setModalIsOpen(true);
   };
   const closeModal = () => {
     setModalIsOpen(false);
   };
-  const afterOpenModal = () => {};
+  const afterOpenModal = () => { };
 
   return (
     <ReactModal
