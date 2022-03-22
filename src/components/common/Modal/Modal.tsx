@@ -1,9 +1,10 @@
-import { ReactElement, useState } from "react";
+import React, { ReactElement } from "react";
 import ReactModal from "react-modal";
 // eslint-disable-next-line import/extensions
-import { ModalContent, customModalStyles } from './StyledModal'
+import { ModalContent, customModalStyles } from "./StyledModal";
 
 ReactModal.setAppElement("#__next");
+
 interface ModalProp {
   modalContent: ReactElement | string;
   modalIsOpen: boolean;
@@ -12,10 +13,10 @@ interface ModalProp {
 }
 
 export default function Modal(props: ModalProp) {
-  const [modalContent] = useState(props.modalContent);
+  const [modalContent] = React.useState(props.modalContent);
 
   // Modal functions
-  const [modalIsOpen, setModalIsOpen] = useState(props.modalIsOpen);
+  const [modalIsOpen, setModalIsOpen] = React.useState(props.modalIsOpen);
   const openModal = () => {
     setModalIsOpen(true);
   };
@@ -39,3 +40,5 @@ export default function Modal(props: ModalProp) {
     </ReactModal>
   );
 }
+
+
