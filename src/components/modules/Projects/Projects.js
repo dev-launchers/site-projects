@@ -1,26 +1,26 @@
-import Link from "next/link";
-import { useState } from "react";
-import { useRouter } from "next/router";
-import Fuse from "fuse.js";
-import Card from "../../common/Card";
-import { Layout, ProjectContainer } from "./StyledProjects";
-import SearchBar from "./Project/SearchBar";
+import Link from 'next/link';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import Fuse from 'fuse.js';
+import Card from '../../common/Card';
+import { Layout, ProjectContainer } from './StyledProjects';
+import SearchBar from './Project/SearchBar';
 
 const Projects = ({ projects }) => {
-  const [searchValue, setSearchValue] = useState('')
+  const [searchValue, setSearchValue] = useState('');
 
   const options = {
     includeScore: true,
-    keys: ["keywords.keyword"],
+    keys: ['keywords.keyword'],
     threshold: 0.3,
-    ignoreFieldNorm: true
+    ignoreFieldNorm: true,
   };
 
   const fuse = new Fuse(projects, options);
   const searchResult = fuse.search(searchValue).map(({ item }) => item);
 
   const searchProject = (searchQuery) => {
-    setSearchValue(searchQuery)
+    setSearchValue(searchQuery);
   };
 
   const router = useRouter();
@@ -29,23 +29,23 @@ const Projects = ({ projects }) => {
     return <div>Loading...</div>;
   }
 
-  const items = searchValue ? searchResult : projects
+  const items = searchValue ? searchResult : projects;
 
   return (
     <div
       style={{
-        width: "90%",
-        marginLeft: "auto",
-        marginRight: "auto",
-        marginTop: "3rem",
+        width: '90%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: '3rem',
       }}
     >
       <div
         style={{
-          display: "flex",
-          flexWrap:'wrap',
-          justifyContent: "space-between",
-          alignItems: "center",
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'space-between',
+          alignItems: 'center',
         }}
       >
         <h1>Projects you can join!</h1>
@@ -63,12 +63,12 @@ const Projects = ({ projects }) => {
           <ProjectContainer key={i}>
             <Card
               isLinkingInside
-              style={{ margin: 0, width: "100%", height: "100%" }}
+              style={{ margin: 0, width: '100%', height: '100%' }}
               cardData={{
                 id: project.id,
                 title: project.title,
                 secondaryText: `Commitment level: ${project.commitmentLevel}`,
-                tags: project.keywords.map(({ keyword }) => keyword),
+                tags: project.interests.map(({ keyword }) => keyword),
                 description: project.catchPhrase,
                 href: project.slug,
                 imageSrc: project.heroImage.url,
@@ -77,7 +77,7 @@ const Projects = ({ projects }) => {
                     <Link href={`${router.asPath}${project.slug}`} passHref>
                       <a>LEARN MORE</a>
                     </Link>
-                    <Link href="support-us" passHref>
+                    <Link href='support-us' passHref>
                       <a>DONATE</a>
                     </Link>
                   </>
