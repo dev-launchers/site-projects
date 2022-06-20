@@ -7,13 +7,16 @@ import { env } from "../utils/EnvironmentVariables";
 // const projectsData = require("../components/modules/Projects/data.json");
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data: projects } = await axios(`${env().STRAPI_URL}/projects`, {
-    headers: {
-      Accept: "application/json, text/plain, */*",
-      "User-Agent":
-        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36",
-    },
-  });
+  const { data: projects } = await axios(
+    `${env().STRAPI_URL}/projects?_publicationState=live`,
+    {
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "User-Agent":
+          "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36",
+      },
+    }
+  );
   // const projects = projectsData;
   if (!projects) {
     return {
@@ -23,7 +26,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
   // HACKY WORKAROUND by Kris to make projects work
   // Need to request each project's individual endpoint to get missing data
-  projects.map(async (project) => {
+  const filteredProjects = projects.filter((project) => project.isListed);
+  const returnProjects = filteredProjects.map(async (project) => {
     if (!project.isListed) {
       project.heroImage = { url: "" }; // Project isn't listed. Don't waste a request on it
     } else {
@@ -39,15 +43,15 @@ export const getStaticProps: GetStaticProps = async () => {
       );
 
       project.heroImage = projectData.heroImage;
-      console.log(project);
     }
 
     return project;
   });
+  const resolvedProjects = await Promise.all(returnProjects);
   // End hacky workaround
 
   return {
-    props: { projects },
+    props: { projects: resolvedProjects },
     revalidate: 600,
   };
 };
