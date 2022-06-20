@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Script from "next/script";
 import { ToastContainer } from "react-toastify";
 import { ThemeProvider } from "styled-components";
-import type { AppProps } from "next/app";
+// import type { AppProps } from "next/app";
 import GlobalStyle from "../styles/globals";
 
 import "react-toastify/dist/ReactToastify.css";
@@ -19,7 +19,7 @@ const hashRedirect = (router) => {
   }
 };
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }) {
   const router = useRouter();
   hashRedirect(router);
 
