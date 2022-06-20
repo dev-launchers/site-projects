@@ -22,7 +22,7 @@ const hashRedirect = (router) => {
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   hashRedirect(router);
-
+  
   return (
     <>
       <ThemeProvider theme={theme}>
