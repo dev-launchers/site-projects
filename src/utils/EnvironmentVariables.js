@@ -26,5 +26,6 @@ export const env = () => {
       return STAGING;
     }
   }
+  // Changed to always use production api
   return PROD;
 };

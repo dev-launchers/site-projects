@@ -20,6 +20,7 @@ import Milestones from "./Milestones";
 import JoinSupport from "./JoinSupport";
 import HelpBuild from "./HelpBuild";
 import Sessions from "./Sessions";
+import {useUserDataContext} from "../../../../context/UserDataContext"
 
 const Project = ({ project, theme }) => {
   const router = useRouter();
@@ -32,6 +33,8 @@ const Project = ({ project, theme }) => {
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
+
+  const userData = useUserDataContext();
 
   return (
     <Wrapper>
@@ -55,7 +58,7 @@ const Project = ({ project, theme }) => {
       />
       <Role ref={roleRef} data={project?.openPositions} projectSlug={project.slug} />
       <Milestones data={project?.board?.ProjectMilestone} />
-      <Sessions calendarId={project.calendarId} />
+      {userData.id && <Sessions calendarId={project.calendarId} />}
       <Team data={project.team} />
       <JoinSupport
         ref={donateRef}

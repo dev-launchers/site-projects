@@ -1,21 +1,22 @@
+import { GetStaticProps, GetStaticPaths } from "next";
 import axios from "axios";
 import Head from "next/head";
-import Footer from "../components/common/Footer";
-import Header from "../components/common/Header";
 import Project from "../components/modules/Projects/Project";
 import { env } from "../utils/EnvironmentVariables";
 
-const data = require("../components/modules/Projects/data.json");
+// const data = require("../components/modules/Projects/data.json");
 
-
-export const getStaticPaths = async () => {
-  // const { data } = await axios(`${env().STRAPI_URL}/projects`, {
-  //   headers: {
-  //     Accept: "application/json, text/plain, */*",
-  //     "User-Agent":
-  //       "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36",
-  //   },
-  // });
+export const getStaticPaths: GetStaticPaths = async () => {
+  const { data } = await axios(
+    `${env().STRAPI_URL}/projects?_publicationState=live`,
+    {
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "User-Agent":
+          "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36",
+      },
+    }
+  );
 
   const paths = data.map((project) => ({
     params: { slug: project.slug },
@@ -27,7 +28,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export async function getStaticProps(context) {
+export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params;
   const { data: project } = await axios.get(
     `${env().STRAPI_URL}/projects/${slug}`,
@@ -52,12 +53,15 @@ export async function getStaticProps(context) {
     },
     revalidate: 20,
   };
-}
+};
 
 const ProjectRoute = ({ project }) => {
   const heroImageFormats = project?.heroImage?.formats;
   const heroImage =
-    heroImageFormats?.large || heroImageFormats?.medium || heroImageFormats?.small;
+    heroImageFormats?.large ||
+    heroImageFormats?.medium ||
+    heroImageFormats?.small ||
+    project?.heroImage?.url;
   return (
     <>
       <Head>
@@ -88,11 +92,7 @@ const ProjectRoute = ({ project }) => {
         <meta property="twitter:image:src" content={heroImage?.url}></meta>
         <meta content="#ff7f0e" data-react-helmet="true" name="theme-color" />
       </Head>
-      <div>
-        <Header />
-        <Project project={project || ""} />
-        <Footer />
-      </div>
+      <Project project={project || ""} />
     </>
   );
 };

@@ -1,1 +1,1 @@
-export { default } from "./RainbowBar";
+export { default } from "./RainbowBar.tsx";

@@ -1,9 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: site-projects
+namespace: site-projects-staging
 bases:
-- ../workload
+- ./kservice.yaml
 images:
 - name: devlaunchers/site-projects
   newName: devlaunchers/site-projects
-  newTag: "cbb7888-202111030142" # {"$imagepolicy": "site-projects:site-projects:tag"}
+  newTag: "8eca340-202111030319" # {"$imagepolicy": "site-projects-staging:site-projects:tag"}
