@@ -71,7 +71,7 @@ const Projects = ({ projects }) => {
                 tags: project.keywords.map(({ keyword }) => keyword),
                 description: project.catchPhrase,
                 href: project.slug,
-                imageSrc: project.heroImage.url,
+                imageSrc: project.heroImage?.url,
                 actions: (
                   <>
                     <Link href={`${router?.asPath}${project.slug}`} passHref>

@@ -4,16 +4,19 @@ import Head from "next/head";
 import Project from "../components/modules/Projects/Project";
 import { env } from "../utils/EnvironmentVariables";
 
-const data = require("../components/modules/Projects/data.json");
+// const data = require("../components/modules/Projects/data.json");
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // const { data } = await axios(`${env().STRAPI_URL}/projects`, {
-  //   headers: {
-  //     Accept: "application/json, text/plain, */*",
-  //     "User-Agent":
-  //       "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36",
-  //   },
-  // });
+  const { data } = await axios(
+    `${env().STRAPI_URL}/projects?_publicationState=live`,
+    {
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "User-Agent":
+          "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36",
+      },
+    }
+  );
 
   const paths = data.map((project) => ({
     params: { slug: project.slug },
@@ -57,7 +60,8 @@ const ProjectRoute = ({ project }) => {
   const heroImage =
     heroImageFormats?.large ||
     heroImageFormats?.medium ||
-    heroImageFormats?.small;
+    heroImageFormats?.small ||
+    project?.heroImage?.url;
   return (
     <>
       <Head>
