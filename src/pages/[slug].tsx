@@ -60,7 +60,8 @@ const ProjectRoute = ({ project }) => {
   const heroImage =
     heroImageFormats?.large ||
     heroImageFormats?.medium ||
-    heroImageFormats?.small;
+    heroImageFormats?.small ||
+    project?.heroImage?.url;
   return (
     <>
       <Head>
