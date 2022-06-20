@@ -17,6 +17,7 @@ const STAGING = {
 };
 
 export const env = () => {
+  /*
   if (typeof window !== "undefined") {
     const currentUrl = window.location.href;
     if (
@@ -26,5 +27,7 @@ export const env = () => {
       return STAGING;
     }
   }
+  */
+  // Changed to always use production api
   return PROD;
 };
