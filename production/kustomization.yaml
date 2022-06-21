@@ -6,7 +6,7 @@ bases:
 images:
 - name: devlaunchers/site-projects
   newName: devlaunchers/site-projects
-  newTag: 1.1.4 # {"$imagepolicy": "site-projects:site-projects:tag"}
+  newTag: 1.2.0 # {"$imagepolicy": "site-projects:site-projects:tag"}
 patchesStrategicMerge:
 - |-
   apiVersion: apps/v1
