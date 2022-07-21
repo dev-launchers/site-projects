@@ -6,4 +6,4 @@ bases:
 images:
 - name: devlaunchers/site-projects
   newName: devlaunchers/site-projects
-  newTag: "8d55080-202206202343" # {"$imagepolicy": "site-projects-staging:site-projects:tag"}
+  newTag: "079ab53-202207212256" # {"$imagepolicy": "site-projects-staging:site-projects:tag"}
