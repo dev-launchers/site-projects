@@ -15,7 +15,7 @@ const OpenPositions = (props) => {
         <u>Open Positions</u>
       </h4>
       <OpenRolesContainer>
-        {projectData?.openPositions.map((element, i) => (
+        {projectData?.opportunities.map((element, i) => (
           <OpenRoleListing key={i}>
             <h5>{element.title}</h5>
             <p>{element.description}</p>

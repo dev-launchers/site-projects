@@ -20,6 +20,7 @@ import RainbowBar from "../RainbowBar";
 
 import CardTitle from "./CardTitle";
 import Attachments from "./Attachments";
+import { Cards } from "../../modules/Projects/Project/Role/RoleCards/StyledRoleCards";
 
 /**
  * Props:
@@ -34,14 +35,38 @@ import Attachments from "./Attachments";
  *  - imageHolderBackgroundColor: changes bgColor if passed otherwise it defaults to black bgColor
  *  - cardFlexDirection: changes flex-direction if existed otherwise delete flex-direction
  */
-export default function Card(props) {
+
+
+export interface CardProps {
+  size?: number,
+  style?: React.CSSProperties,
+  cardData?: {
+    onClick?: React.MouseEventHandler<HTMLDivElement>,
+    textAlignment?: string,
+    flexDirection?: string,
+    imageSrc?: string,
+    imageHolderBackgroundColor?: string,
+    tags?: string[],
+    href?: string,
+    secondaryText?: string,
+    description?: string,
+    actions?: boolean,
+    attachments?: boolean,
+    items?: {}
+  },
+  bgColor?: string,
+  isLinkingInside?: boolean,
+  attachment?: string
+}
+
+const Card: React.FC<CardProps> = (props) => {
+
   const router = useRouter();
 
   return (
     <Container
       style={props.style}
       size={props.size}
-      key={props.i}
       onClick={props.cardData.onClick}
     >
       <Content
@@ -61,7 +86,7 @@ export default function Card(props) {
             </TagsContainer>
           )}
           {props.isLinkingInside ? (
-            <Link href={`${router.asPath}${props.cardData.href}`} passHref>
+            <Link href={`${router?.asPath}${props.cardData.href}`} passHref>
               <a rel="noopener noreferrer">
                 <Image alt="" imageSrc={props.cardData.imageSrc} />
               </a>
@@ -81,7 +106,7 @@ export default function Card(props) {
           <CardTitle
             data={props.cardData}
             isLinkingInside={props.isLinkingInside}
-            pathname={router.asPath}
+            pathname={router?.asPath}
           />
           {props.cardData.secondaryText && (
             <SecondaryText>{props.cardData.secondaryText}</SecondaryText>
@@ -100,3 +125,5 @@ export default function Card(props) {
     </Container>
   );
 }
+
+export default Card; 
