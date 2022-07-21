@@ -11,7 +11,7 @@ const Projects = ({ projects }) => {
 
   const options = {
     includeScore: true,
-    keys: ["keywords.keyword"],
+    keys: ["interests?.interest"],
     threshold: 0.3,
     ignoreFieldNorm: true,
   };
@@ -68,10 +68,10 @@ const Projects = ({ projects }) => {
                 id: project.id,
                 title: project.title,
                 secondaryText: `Commitment level: ${project.commitmentLevel}`,
-                tags: project.interests.map(({ interest }) => interest),
+                tags: project.interests?.map(({ interest }) => interest),
                 description: project.catchPhrase,
                 href: project.slug,
-                imageSrc: project.heroImage?.url,
+                imageSrc: project?.heroImage?.url,
                 actions: (
                   <>
                     <Link href={`${router?.asPath}${project.slug}`} passHref>

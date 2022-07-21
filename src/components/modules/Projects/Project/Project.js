@@ -44,7 +44,7 @@ const Project = ({ project, theme }) => {
         projectCatchPhrase={project.catchPhrase}
         heroImage={project.heroImage}
       />
-      <Tags tags={project?.keywords} />
+      <Tags tags={project?.interests} />
       <Vision
         vision={project?.vision || ""}
         scrollMethods={{
