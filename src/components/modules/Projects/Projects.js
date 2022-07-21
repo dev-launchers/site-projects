@@ -68,7 +68,7 @@ const Projects = ({ projects }) => {
                 id: project.id,
                 title: project.title,
                 secondaryText: `Commitment level: ${project.commitmentLevel}`,
-                tags: project.keywords.map(({ keyword }) => keyword),
+                tags: project.interests.map(({ interest }) => interest),
                 description: project.catchPhrase,
                 href: project.slug,
                 imageSrc: project.heroImage?.url,

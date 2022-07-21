@@ -56,7 +56,7 @@ const Project = ({ project, theme }) => {
         description={project?.description}
         images={project?.Images}
       />
-      <Role ref={roleRef} data={project?.openPositions} projectSlug={project.slug} />
+      <Role ref={roleRef} data={project?.opportunities} projectSlug={project.slug} />
       <Milestones data={project?.board?.ProjectMilestone} />
       {userData.id && <Sessions calendarId={project.calendarId} />}
       <Team data={project.team} />
